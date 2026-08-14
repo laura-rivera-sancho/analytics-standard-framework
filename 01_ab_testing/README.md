@@ -19,7 +19,7 @@ This module defines a repeatable process for designing, validating, analyzing, a
 
 ## Case study
 
-The guided example in this module uses **NovaPay**, a fictional payments company testing a simplified digital checkout experience. All data are synthetic and generated solely for training and portfolio purposes.
+The example in this module uses **NovaPay**, a fictional payments company testing a simplified digital checkout experience. All data are synthetic and generated solely for training and portfolio purposes.
 
 See:
 
@@ -27,10 +27,11 @@ See:
 - `case_study/business_case.md` for the business scenario.
 - `case_study/data_dictionary.md` for field definitions.
 - `notebooks/guided_ab_test_analysis.ipynb` for the step-by-step guided analysis.
+- `notebooks/challenge_ab_test_analysis.ipynb` for the independent practice version with TODO cells and no solutions.
 - `src/generate_synthetic_data.py` to generate a reproducible dataset.
 - `src/analyze_experiment.py` for a reference analysis workflow.
 
-## Running the guided notebook
+## Running the notebooks
 
 From the `01_ab_testing` directory:
 
@@ -39,7 +40,13 @@ pip install -r requirements.txt
 jupyter notebook notebooks/guided_ab_test_analysis.ipynb
 ```
 
-The notebook generates the full synthetic raw dataset in memory, performs the data-quality and experiment-health checks, evaluates the primary and guardrail KPIs, explores segments, and builds a business recommendation.
+or:
+
+```bash
+jupyter notebook notebooks/challenge_ab_test_analysis.ipynb
+```
+
+The guided notebook demonstrates the full workflow from raw data to recommendation. The challenge notebook gives the same business problem and synthetic data, but requires the analyst to build the data-quality checks, statistical analysis, segmentation, business-impact estimate, and executive recommendation independently.
 
 ## Important principle
 
