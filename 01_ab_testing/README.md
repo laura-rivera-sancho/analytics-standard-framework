@@ -1,6 +1,25 @@
 # A/B Testing Standard Framework
 
-This module defines a repeatable process for designing, validating, analyzing, and communicating controlled experiments.
+This module defines a repeatable process for understanding, designing, validating, analyzing, and communicating controlled experiments.
+
+## How to use this module
+
+The module is organized in three layers:
+
+1. **Fundamentals** — understand the concepts behind experimentation.
+2. **Methodology** — follow the standard execution process.
+3. **Practice** — apply the framework using the synthetic NovaPay case.
+
+Start here:
+
+- `ab_testing_fundamentals.md` for what A/B testing is, when to use it, experiment types, statistical concepts, common failure modes, and interpretation principles.
+- `methodology.md` for the analytical execution standard.
+- `case_study/business_case.md` for the fictional NovaPay business scenario.
+- `case_study/data_dictionary.md` for field definitions.
+- `notebooks/guided_ab_test_analysis.ipynb` for the step-by-step worked analysis.
+- `notebooks/challenge_ab_test_analysis.ipynb` for independent practice with TODO cells and no solutions.
+- `src/generate_synthetic_data.py` to generate the reproducible synthetic dataset.
+- `src/analyze_experiment.py` for the reference analysis workflow.
 
 ## Standard lifecycle
 
@@ -20,16 +39,6 @@ This module defines a repeatable process for designing, validating, analyzing, a
 ## Case study
 
 The example in this module uses **NovaPay**, a fictional payments company testing a simplified digital checkout experience. All data are synthetic and generated solely for training and portfolio purposes.
-
-See:
-
-- `methodology.md` for the analytical standard.
-- `case_study/business_case.md` for the business scenario.
-- `case_study/data_dictionary.md` for field definitions.
-- `notebooks/guided_ab_test_analysis.ipynb` for the step-by-step guided analysis.
-- `notebooks/challenge_ab_test_analysis.ipynb` for the independent practice version with TODO cells and no solutions.
-- `src/generate_synthetic_data.py` to generate a reproducible dataset.
-- `src/analyze_experiment.py` for a reference analysis workflow.
 
 ## Running the notebooks
 
