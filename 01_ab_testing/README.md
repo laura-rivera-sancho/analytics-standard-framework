@@ -13,7 +13,8 @@ The module is organized in four layers:
 
 Start here:
 
-- `ab_testing_fundamentals.md` for what A/B testing is, when to use it, experiment types, statistical concepts, common failure modes, and interpretation principles.
+- `ab_testing_fundamentals.md` for the **beginner-friendly** version using simple vocabulary and examples.
+- `ab_testing_fundamentals_detailed.md` for the **more technical/detailed reference** version.
 - `methodology.md` for the analytical execution standard.
 - `case_study/business_case.md` for the fictional NovaPay business scenario.
 - `case_study/data_dictionary.md` for field definitions.
