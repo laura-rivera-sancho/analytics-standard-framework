@@ -32,11 +32,13 @@ Before analysis:
 9. Confirm a customer does not appear in both groups.
 10. Report the final analytical population after exclusions.
 
-## Synthetic raw-sample imperfections
+## Synthetic raw-data imperfections
 
-The committed sample dataset intentionally contains:
-- 10 duplicate customer rows
-- 10 records with missing experiment assignment
-- 10 records with lowercase country values
+The generator deliberately introduces examples of:
+- duplicate customer records
+- missing experiment assignments
+- inconsistent country casing
 
-These issues are deliberate and should be detected by the standard validation workflow.
+The committed sample file also contains examples of these issues so the validation workflow can be practiced without generating the full dataset.
+
+These issues are deliberate and should be identified and resolved before statistical inference.
