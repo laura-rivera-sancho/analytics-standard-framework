@@ -26,8 +26,20 @@ See:
 - `methodology.md` for the analytical standard.
 - `case_study/business_case.md` for the business scenario.
 - `case_study/data_dictionary.md` for field definitions.
+- `notebooks/guided_ab_test_analysis.ipynb` for the step-by-step guided analysis.
 - `src/generate_synthetic_data.py` to generate a reproducible dataset.
 - `src/analyze_experiment.py` for a reference analysis workflow.
+
+## Running the guided notebook
+
+From the `01_ab_testing` directory:
+
+```bash
+pip install -r requirements.txt
+jupyter notebook notebooks/guided_ab_test_analysis.ipynb
+```
+
+The notebook generates the full synthetic raw dataset in memory, performs the data-quality and experiment-health checks, evaluates the primary and guardrail KPIs, explores segments, and builds a business recommendation.
 
 ## Important principle
 
