@@ -4,11 +4,12 @@ This module defines a repeatable process for understanding, designing, validatin
 
 ## How to use this module
 
-The module is organized in three layers:
+The module is organized in four layers:
 
 1. **Fundamentals** — understand the concepts behind experimentation.
 2. **Methodology** — follow the standard execution process.
 3. **Practice** — apply the framework using the synthetic NovaPay case.
+4. **Stakeholder communication** — convert analytical findings into a concise decision-focused readout.
 
 Start here:
 
@@ -18,6 +19,7 @@ Start here:
 - `case_study/data_dictionary.md` for field definitions.
 - `notebooks/guided_ab_test_analysis.ipynb` for the step-by-step worked analysis.
 - `notebooks/challenge_ab_test_analysis.ipynb` for independent practice with TODO cells and no solutions.
+- `templates/stakeholder_readout_deck.md` for the standard stakeholder presentation structure, slide-by-slide guidance, and communication rules.
 - `src/generate_synthetic_data.py` to generate the reproducible synthetic dataset.
 - `src/analyze_experiment.py` for the reference analysis workflow.
 
@@ -35,6 +37,7 @@ Start here:
 10. Investigate segments, confounders, and experiment integrity.
 11. Translate the result into business impact.
 12. Recommend rollout, iteration, retest, or stop.
+13. Communicate the decision using the standard stakeholder readout.
 
 ## Case study
 
