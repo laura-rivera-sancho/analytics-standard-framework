@@ -24,16 +24,21 @@ The project is designed as both an **analytics operating model** and a **trainin
 | Module | Status | Purpose |
 |---|---|---|
 | `01_ab_testing` | In progress | Controlled experiments and causal product/process decisions |
-| `02_pre_post_analysis` | Planned | Impact analysis when randomized Control is unavailable |
+| `02_pre_post_analysis` | In progress | Impact analysis when randomized Control is unavailable |
 | `03_target_analysis` | Planned | Segmentation, opportunity sizing, and target-population definition |
 | `04_predictive_analytics` | Planned | Predictive modeling from problem framing through validation |
 | `05_ad_hoc_analysis` | Planned | Structured diagnostic and exploratory analysis |
 
-## Current case study
+## Current case studies
 
-The first module uses **NovaPay**, a fictional digital-payments company testing a simplified checkout experience. All data are synthetic and contain deliberately engineered analytical and data-quality characteristics.
+- **NovaPay** — fictional digital-payments A/B test of a simplified checkout experience.
+- **FinFlow** — fictional payments pre/post evaluation of an automated transaction-verification workflow launched without a randomized Control group.
 
-Start with [`01_ab_testing/README.md`](01_ab_testing/README.md).
+All case-study data are synthetic and contain deliberately engineered analytical and data-quality characteristics.
+
+Start with:
+- [`01_ab_testing/README.md`](01_ab_testing/README.md)
+- [`02_pre_post_analysis/README.md`](02_pre_post_analysis/README.md)
 
 ## Design principles
 
