@@ -24,7 +24,7 @@ The project is designed as both an **analytics operating model** and a **trainin
 | Module | Status | Purpose |
 |---|---|---|
 | `01_ab_testing` | In progress | Controlled experiments and causal product/process decisions |
-| `02_pre_post_analysis` | In progress | Impact analysis when randomized Control is unavailable |
+| `02_pre_post_analysis` | Complete | Impact analysis when randomized Control is unavailable |
 | `03_target_analysis` | Planned | Segmentation, opportunity sizing, and target-population definition |
 | `04_predictive_analytics` | Planned | Predictive modeling from problem framing through validation |
 | `05_ad_hoc_analysis` | Planned | Structured diagnostic and exploratory analysis |
