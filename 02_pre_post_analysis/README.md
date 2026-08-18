@@ -16,9 +16,12 @@ Start here:
 - `pre_post_fundamentals.md` for core concepts and terminology.
 - `methodology.md` for the analytical execution standard.
 - `case_study/business_case.md` for the fictional FinFlow scenario.
-- `case_study/data_dictionary.md` for the planned synthetic dataset.
+- `case_study/data_dictionary.md` for the synthetic dataset definition.
+- `src/generate_synthetic_data.py` to generate reproducible raw and clean FinFlow datasets.
+- `src/analyze_pre_post.py` for the reference analysis, including simple Pre/Post comparisons and an adjusted interrupted-time-series model.
+- `requirements.txt` for the Python environment.
 
-Guided and challenge notebooks, reusable code, and stakeholder templates will be added next.
+Guided and challenge notebooks and the stakeholder readout template will be added next.
 
 ## Standard lifecycle
 
@@ -39,11 +42,25 @@ Guided and challenge notebooks, reusable code, and stakeholder templates will be
 
 ## Case study
 
-The first case uses **FinFlow**, a fictional payments company that introduced an automated transaction-verification workflow to reduce manual review time while maintaining payment quality and fraud controls.
+The case uses **FinFlow**, a fictional payments company that introduced an automated transaction-verification workflow to reduce manual review time while maintaining payment quality and fraud controls.
 
 Because the workflow was launched to all eligible traffic at once, there is no randomized Control group. The analyst must compare outcomes before and after launch while accounting for trend, seasonality, traffic mix, and other concurrent changes.
 
+The generated dataset intentionally includes a mild baseline trend, day-of-week seasonality, a seven-day launch ramp, post-period mix shifts, a short marketing campaign, right-skewed verification time, rare fraud events, and a small number of raw data-quality defects.
+
 All data and results in this module are synthetic and created solely for training and portfolio purposes.
+
+## Running the reference workflow
+
+From the `02_pre_post_analysis` directory:
+
+```bash
+pip install -r requirements.txt
+python src/generate_synthetic_data.py
+python src/analyze_pre_post.py
+```
+
+The generator writes a full raw training dataset, a compact sample, and a clean reference dataset. The analysis script then validates quality, re-derives intervention timing from the transaction date, compares full and stable Post periods, evaluates guardrails and mix shifts, and fits an interrupted-time-series model for the primary KPI.
 
 ## Important principle
 
