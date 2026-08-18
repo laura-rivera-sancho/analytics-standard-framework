@@ -17,11 +17,12 @@ Start here:
 - `methodology.md` for the analytical execution standard.
 - `case_study/business_case.md` for the fictional FinFlow scenario.
 - `case_study/data_dictionary.md` for the synthetic dataset definition.
+- `notebooks/guided_pre_post_analysis.ipynb` for the step-by-step worked analysis from raw Pre/Post comparison through adjusted Interrupted Time Series and recommendation.
 - `src/generate_synthetic_data.py` to generate reproducible raw and clean FinFlow datasets.
 - `src/analyze_pre_post.py` for the reference analysis, including simple Pre/Post comparisons and an adjusted interrupted-time-series model.
 - `requirements.txt` for the Python environment.
 
-Guided and challenge notebooks and the stakeholder readout template will be added next.
+The independent challenge notebook and stakeholder readout template will be added next.
 
 ## Standard lifecycle
 
@@ -60,7 +61,13 @@ python src/generate_synthetic_data.py
 python src/analyze_pre_post.py
 ```
 
-The generator writes a full raw training dataset, a compact sample, and a clean reference dataset. The analysis script then validates quality, re-derives intervention timing from the transaction date, compares full and stable Post periods, evaluates guardrails and mix shifts, and fits an interrupted-time-series model for the primary KPI.
+To open the guided analysis:
+
+```bash
+jupyter notebook notebooks/guided_pre_post_analysis.ipynb
+```
+
+The guided notebook generates the synthetic raw dataset in memory and walks through data-quality validation, re-derivation of intervention timing, simple Pre/Post inference, full vs stable Post comparison, daily trend analysis, traffic-mix checks, continuous and guardrail metrics, basic and adjusted Interrupted Time Series, a model-based counterfactual, segment analysis, business impact, causal-confidence assessment, and stakeholder recommendation.
 
 ## Important principle
 
