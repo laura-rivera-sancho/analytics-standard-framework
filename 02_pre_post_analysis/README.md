@@ -18,11 +18,14 @@ Start here:
 - `case_study/business_case.md` for the fictional FinFlow scenario.
 - `case_study/data_dictionary.md` for the synthetic dataset definition.
 - `notebooks/guided_pre_post_analysis.ipynb` for the step-by-step worked analysis from raw Pre/Post comparison through adjusted Interrupted Time Series and recommendation.
+- `notebooks/challenge_pre_post_analysis.ipynb` for the independent practice version with TODO cells and no worked answers.
+- `templates/stakeholder_readout_template.md` for the standard stakeholder presentation structure and communication rules.
+- `templates/challenge_answer_key.md` for the expected analytical narrative and interpretation.
+- `templates/challenge_scoring_rubric.md` for a 100-point review rubric.
+- `templates/create_stakeholder_readout_pptx.js` to generate a reusable PowerPoint stakeholder readout template.
 - `src/generate_synthetic_data.py` to generate reproducible raw and clean FinFlow datasets.
 - `src/analyze_pre_post.py` for the reference analysis, including simple Pre/Post comparisons and an adjusted interrupted-time-series model.
 - `requirements.txt` for the Python environment.
-
-The independent challenge notebook and stakeholder readout template will be added next.
 
 ## Standard lifecycle
 
@@ -40,6 +43,7 @@ The independent challenge notebook and stakeholder readout template will be adde
 12. Separate observed association from causal claims.
 13. Translate findings into business impact.
 14. Recommend rollout continuation, iteration, rollback, or further validation.
+15. Communicate findings using the standard stakeholder readout.
 
 ## Case study
 
@@ -65,6 +69,20 @@ To open the guided analysis:
 
 ```bash
 jupyter notebook notebooks/guided_pre_post_analysis.ipynb
+```
+
+To open the challenge version:
+
+```bash
+jupyter notebook notebooks/challenge_pre_post_analysis.ipynb
+```
+
+To generate the stakeholder PowerPoint template:
+
+```bash
+cd templates
+npm install
+npm run build:pptx
 ```
 
 The guided notebook generates the synthetic raw dataset in memory and walks through data-quality validation, re-derivation of intervention timing, simple Pre/Post inference, full vs stable Post comparison, daily trend analysis, traffic-mix checks, continuous and guardrail metrics, basic and adjusted Interrupted Time Series, a model-based counterfactual, segment analysis, business impact, causal-confidence assessment, and stakeholder recommendation.
