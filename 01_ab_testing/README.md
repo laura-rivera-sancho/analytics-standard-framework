@@ -20,6 +20,7 @@ Start here:
 - `case_study/data_dictionary.md` for field definitions.
 - `notebooks/guided_ab_test_analysis.ipynb` for the step-by-step worked analysis.
 - `notebooks/challenge_ab_test_analysis.ipynb` for independent practice with TODO cells and no solutions.
+- `reports/stakeholder_readout.md` for the finished NovaPay decision memo, executive preview, and downloadable PowerPoint readout.
 - `templates/stakeholder_readout_deck.md` for the standard stakeholder presentation structure, slide-by-slide guidance, and communication rules.
 - `src/generate_synthetic_data.py` to generate the reproducible synthetic dataset.
 - `src/analyze_experiment.py` for the reference analysis workflow.

@@ -22,9 +22,9 @@ Each module combines a reusable methodology with a fictional business case, synt
 
 | Case study | Business decision | Analytical approach | Portfolio evidence |
 |---|---|---|---|
-| **NovaPay** | Should a simplified checkout experience be rolled out? | Randomized A/B test | Treatment increased checkout completion from **72.64% to 75.95%** (**+3.31 percentage points**, 95% CI **+2.45 to +4.17 pp**) while materially reducing checkout time. |
-| **FinFlow** | Should an automated verification workflow continue scaling? | Pre/Post analysis and adjusted interrupted time series | Completion, manual-review demand, and verification time improve after launch. The recommendation remains appropriately cautious because the design is observational and includes trend, ramp, campaign, and traffic-mix effects. |
-| **PayWave** | Which customers should receive capacity-constrained retention outreach? | Temporal binary-classification workflow | Gradient Boosting captures **3,853** future-inactive customers at 5,000-contact capacity—**552 more** than the recency rule—with **77.06% precision** and **2.58x lift** on the held-out Test cohort. |
+| **NovaPay** | Should a simplified checkout experience be rolled out? | Randomized A/B test | [Finished stakeholder readout](01_ab_testing/reports/stakeholder_readout.md): **+3.31 pp** completion lift, 95% CI **+2.45 to +4.17 pp**, with materially lower checkout time. |
+| **FinFlow** | Should an automated verification workflow continue scaling? | Pre/Post analysis and adjusted interrupted time series | [Finished stakeholder readout](02_pre_post_analysis/reports/stakeholder_readout.md): **+5.65 pp** observed completion change and **+3.20 pp** adjusted launch-level estimate, with moderate causal confidence. |
+| **PayWave** | Which customers should receive capacity-constrained retention outreach? | Temporal binary-classification workflow | [Finished stakeholder readout](04_predictive_analytics/reports/stakeholder_readout.md): **3,853** captures at capacity—**552 more** than the recency rule—with **77.06% precision** and **2.58x lift**. |
 
 ### NovaPay decision snapshot
 
@@ -36,13 +36,13 @@ Each module combines a reusable methodology with a fictional business case, synt
 | Payment decline rate | 5.495% | 5.180% | Small reduction; not statistically conclusive |
 | Fraud rate | 0.355% | 0.350% | No meaningful difference detected |
 
-**Recommendation:** proceed toward rollout with continued monitoring of fraud, payment declines, and segment stability. See the [full reference results](01_ab_testing/case_study/expected_results.md) and [guided analysis](01_ab_testing/notebooks/guided_ab_test_analysis.ipynb).
+**Recommendation:** proceed toward rollout with continued monitoring of fraud, payment declines, and segment stability. See the [finished stakeholder readout](01_ab_testing/reports/stakeholder_readout.md), [full reference results](01_ab_testing/case_study/expected_results.md), and [guided analysis](01_ab_testing/notebooks/guided_ab_test_analysis.ipynb).
 
 ### FinFlow decision snapshot
 
 The simple Pre/Post comparison is intentionally not treated as proof of causality. The workflow re-derives launch timing, separates the seven-day stabilization ramp, examines traffic-mix changes, and estimates an adjusted interrupted time-series model with baseline trend, weekday, campaign, ramp, and customer-mix controls.
 
-**Recommendation:** continue the automated workflow with defined guardrail monitoring and moderate—not high—causal confidence. See the [expected analytical narrative](02_pre_post_analysis/templates/challenge_answer_key.md) and [guided analysis](02_pre_post_analysis/notebooks/guided_pre_post_analysis.ipynb).
+**Recommendation:** continue the automated workflow with defined guardrail monitoring and moderate—not high—causal confidence. See the [finished stakeholder readout](02_pre_post_analysis/reports/stakeholder_readout.md), [expected analytical narrative](02_pre_post_analysis/templates/challenge_answer_key.md), and [guided analysis](02_pre_post_analysis/notebooks/guided_pre_post_analysis.ipynb).
 
 ## Modules and roadmap
 
@@ -64,12 +64,14 @@ analytics-standard-framework/
 │   ├── case_study/      # NovaPay business case, data dictionary, and reference results
 │   ├── data/raw/        # Compact synthetic sample
 │   ├── notebooks/       # Guided and challenge analyses
+│   ├── reports/         # Finished Markdown readout, preview, and PowerPoint deck
 │   ├── src/             # Data generator and reference analysis
 │   └── templates/       # Experiment planning, validation, and stakeholder readout
 ├── 02_pre_post_analysis/
 │   ├── case_study/      # FinFlow business case and data dictionary
 │   ├── data/raw/        # Compact synthetic sample
 │   ├── notebooks/       # Guided and challenge analyses
+│   ├── reports/         # Finished Markdown readout, preview, and PowerPoint deck
 │   ├── src/             # Data generator and Pre/Post/ITS analysis
 │   └── templates/       # Readout, answer key, rubric, and PowerPoint generator
 ├── 03_target_analysis/
@@ -78,6 +80,7 @@ analytics-standard-framework/
 │   ├── case_study/      # PayWave business case and data dictionary
 │   ├── data/raw/        # Compact synthetic sample
 │   ├── notebooks/       # Guided and challenge modeling workflows
+│   ├── reports/         # Finished Markdown readout, preview, and PowerPoint deck
 │   ├── src/             # Synthetic data and temporal model evaluation
 │   └── templates/       # Answer key, rubric, and stakeholder readout
 ├── 05_ad_hoc_analysis/

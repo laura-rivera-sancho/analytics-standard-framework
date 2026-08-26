@@ -20,6 +20,7 @@ Start here:
 - `case_study/expected_results.md` for the deterministic validation and held-out Test results.
 - `notebooks/guided_predictive_analytics.ipynb` for the complete decision-focused modeling workflow.
 - `notebooks/challenge_predictive_analytics.ipynb` for independent practice without worked solutions.
+- `reports/stakeholder_readout.md` for the finished PayWave decision memo, executive preview, and downloadable PowerPoint readout.
 - `src/generate_synthetic_data.py` to generate reproducible clean, raw, and compact PayWave datasets.
 - `src/train_evaluate_models.py` for the reference temporal modeling and evaluation workflow.
 - `templates/challenge_answer_key.md` for expected reasoning and interpretation.

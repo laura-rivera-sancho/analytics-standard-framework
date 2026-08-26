@@ -106,3 +106,18 @@ def test_citation_metadata_identifies_repository_and_license():
     assert 'title: "Analytics Standard Framework"' in citation
     assert "license: MIT" in citation
     assert "laura-rivera-sancho/analytics-standard-framework" in citation
+
+
+def test_completed_modules_publish_stakeholder_artifacts():
+    for module in ["01_ab_testing", "02_pre_post_analysis", "04_predictive_analytics"]:
+        report_root = ROOT / module / "reports"
+        markdown = report_root / "stakeholder_readout.md"
+        preview = report_root / "executive_summary.png"
+        deck = report_root / "stakeholder_readout.pptx"
+
+        text = markdown.read_text(encoding="utf-8")
+        assert "synthetically generated" in text
+        assert "![" in text and "executive_summary.png" in text
+        assert "[Download the five-slide PowerPoint readout](stakeholder_readout.pptx)" in text
+        assert preview.read_bytes().startswith(b"\x89PNG\r\n\x1a\n")
+        assert deck.read_bytes().startswith(b"PK")

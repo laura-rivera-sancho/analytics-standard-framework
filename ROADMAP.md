@@ -80,5 +80,5 @@ Repository-wide improvements are tracked separately from analytical module statu
 - [x] Centralize the Python environment and pin direct dependencies.
 - [x] Add analytical tests, repository-integrity checks, linting, formatting, and GitHub Actions.
 - [x] Add licensing, citation metadata, contributor guidance, and contribution templates.
-- [ ] Standardize richer visible reports and generated presentation artifacts.
+- [x] Standardize finished visible reports, executive previews, and PowerPoint readouts across completed modules.
 - [ ] Perform a final recruiter-experience and accessibility review.

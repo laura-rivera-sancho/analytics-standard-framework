@@ -20,6 +20,7 @@ Start here:
 - `data/raw/finflow_verification_pre_post_sample.csv` for a compact inspectable synthetic sample with deliberate data-quality defects.
 - `notebooks/guided_pre_post_analysis.ipynb` for the step-by-step worked analysis from raw Pre/Post comparison through adjusted Interrupted Time Series and recommendation.
 - `notebooks/challenge_pre_post_analysis.ipynb` for the independent practice version with TODO cells and no worked answers.
+- `reports/stakeholder_readout.md` for the finished FinFlow decision memo, executive preview, and downloadable PowerPoint readout.
 - `templates/stakeholder_readout_template.md` for the standard stakeholder presentation structure and communication rules.
 - `templates/challenge_answer_key.md` for the expected analytical narrative and interpretation.
 - `templates/challenge_scoring_rubric.md` for a 100-point review rubric.
