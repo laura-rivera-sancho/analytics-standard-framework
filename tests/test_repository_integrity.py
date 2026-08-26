@@ -80,3 +80,29 @@ def test_module_requirements_delegate_to_root_environment():
     for module in ["01_ab_testing", "02_pre_post_analysis", "04_predictive_analytics"]:
         requirement = (ROOT / module / "requirements.txt").read_text(encoding="utf-8")
         assert "-r ../requirements.txt" in requirement
+
+
+def test_community_health_files_exist_and_are_linked():
+    expected = [
+        "LICENSE",
+        "CONTRIBUTING.md",
+        "CITATION.cff",
+        ".github/pull_request_template.md",
+        ".github/ISSUE_TEMPLATE/bug_report.yml",
+        ".github/ISSUE_TEMPLATE/module_proposal.yml",
+        ".github/ISSUE_TEMPLATE/config.yml",
+    ]
+    assert all((ROOT / relative).exists() for relative in expected)
+
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    assert "[CONTRIBUTING.md](CONTRIBUTING.md)" in readme
+    assert "[MIT License](LICENSE)" in readme
+    assert "[citation metadata](CITATION.cff)" in readme
+
+
+def test_citation_metadata_identifies_repository_and_license():
+    citation = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
+    assert "cff-version: 1.2.0" in citation
+    assert 'title: "Analytics Standard Framework"' in citation
+    assert "license: MIT" in citation
+    assert "laura-rivera-sancho/analytics-standard-framework" in citation

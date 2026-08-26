@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Review the repository roadmap
+    url: https://github.com/laura-rivera-sancho/analytics-standard-framework/blob/main/ROADMAP.md
+    about: Check the current module scope and repository-quality sequence before proposing work.

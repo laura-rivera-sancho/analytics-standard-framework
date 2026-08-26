@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this framework, please cite it using the metadata below."
+title: "Analytics Standard Framework"
+type: software
+authors:
+  - family-names: "Rivera"
+    given-names: "Laura"
+repository-code: "https://github.com/laura-rivera-sancho/analytics-standard-framework"
+url: "https://github.com/laura-rivera-sancho/analytics-standard-framework"
+license: MIT
+version: 0.1.0
+date-released: 2026-08-26
+keywords:
+  - analytics
+  - experimentation
+  - causal inference
+  - predictive modeling
+  - synthetic data

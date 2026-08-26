@@ -1,0 +1,42 @@
+name: Bug report
+description: Report an error, broken workflow, or reproducibility problem.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping make the framework more reliable.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What happened, and what did you expect instead?
+      placeholder: Include the module, file, or workflow involved.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Provide the smallest set of steps that demonstrates the problem.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Include your operating system and Python version when relevant.
+      placeholder: Windows 11, Python 3.12
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Add error output, screenshots, or other useful context. Remove sensitive information.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I have removed credentials, personal data, and confidential information.
+          required: true

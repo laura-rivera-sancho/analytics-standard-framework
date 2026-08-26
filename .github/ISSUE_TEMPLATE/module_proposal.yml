@@ -1,0 +1,39 @@
+name: Module or enhancement proposal
+description: Propose a module, method, case study, or reusable framework improvement.
+title: "[Proposal]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: decision
+    attributes:
+      label: Decision or learner need
+      description: What business decision or learning objective should this address?
+    validations:
+      required: true
+  - type: textarea
+    id: approach
+    attributes:
+      label: Proposed analytical approach
+      description: Describe the method, assumptions, and why it fits the need.
+    validations:
+      required: true
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Proposed deliverables
+      description: List the documentation, code, notebooks, tests, data, and stakeholder artifact involved.
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks and limitations
+      description: Note potential bias, misuse, privacy, scope, or interpretation concerns.
+  - type: checkboxes
+    id: data
+    attributes:
+      label: Data commitment
+      options:
+        - label: Any contributed data will be fictional or synthetically generated.
+          required: true

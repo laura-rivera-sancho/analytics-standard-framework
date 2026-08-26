@@ -161,6 +161,16 @@ Equivalent instructions and module-specific assumptions are documented in each m
 
 All companies, scenarios, customer identifiers, datasets, and results in this repository are fictional or synthetically generated for education and portfolio demonstration. They do not represent confidential information from any employer or client.
 
+## Contributing and reuse
+
+Contributions that improve analytical rigor, reproducibility, documentation, or
+accessibility are welcome. Review [CONTRIBUTING.md](CONTRIBUTING.md) for the
+module standard, synthetic-data policy, local checks, and pull request workflow.
+
+This project is available under the [MIT License](LICENSE). If you reference the
+framework in academic or professional work, GitHub can generate a citation from
+the repository's [citation metadata](CITATION.cff).
+
 ## Project status
 
 Three modules are complete and two are planned. Target Analysis and Ad Hoc Analysis now have explicit scope pages rather than invisible numbering gaps. See the [roadmap](ROADMAP.md) for the completion standard and repository-quality sequence.
