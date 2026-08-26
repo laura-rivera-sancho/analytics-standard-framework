@@ -17,6 +17,7 @@ Start here:
 - `methodology.md` for the analytical execution standard.
 - `case_study/business_case.md` for the fictional FinFlow scenario.
 - `case_study/data_dictionary.md` for the synthetic dataset definition.
+- `data/raw/finflow_verification_pre_post_sample.csv` for a compact inspectable synthetic sample with deliberate data-quality defects.
 - `notebooks/guided_pre_post_analysis.ipynb` for the step-by-step worked analysis from raw Pre/Post comparison through adjusted Interrupted Time Series and recommendation.
 - `notebooks/challenge_pre_post_analysis.ipynb` for the independent practice version with TODO cells and no worked answers.
 - `templates/stakeholder_readout_template.md` for the standard stakeholder presentation structure and communication rules.
@@ -86,6 +87,8 @@ npm run build:pptx
 ```
 
 The guided notebook generates the synthetic raw dataset in memory and walks through data-quality validation, re-derivation of intervention timing, simple Pre/Post inference, full vs stable Post comparison, daily trend analysis, traffic-mix checks, continuous and guardrail metrics, basic and adjusted Interrupted Time Series, a model-based counterfactual, segment analysis, business impact, causal-confidence assessment, and stakeholder recommendation.
+
+The full raw and clean reference datasets are generated locally and excluded from Git. The compact 1,000-row sample remains tracked so reviewers can inspect the schema and intentional defects without running the generator first.
 
 ## Important principle
 

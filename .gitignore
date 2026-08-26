@@ -210,6 +210,8 @@ tempCodeRunnerFile.py
 .pypirc
 
 # Generated full-size analytics datasets (compact portfolio samples remain tracked)
+02_pre_post_analysis/data/raw/finflow_verification_pre_post_full.csv
+02_pre_post_analysis/data/processed/
 04_predictive_analytics/data/raw/paywave_inactivity_full.csv
 04_predictive_analytics/data/processed/
 

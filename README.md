@@ -46,13 +46,13 @@ The simple Pre/Post comparison is intentionally not treated as proof of causalit
 
 | Module | Status | Focus | Start here |
 |---|---|---|---|
-| `01_ab_testing` | Core module complete | Controlled experiments and causal product or process decisions | [A/B Testing](01_ab_testing/README.md) |
+| `01_ab_testing` | Complete | Controlled experiments and causal product or process decisions | [A/B Testing](01_ab_testing/README.md) |
 | `02_pre_post_analysis` | Complete | Impact analysis when randomized control is unavailable | [Pre/Post Analysis](02_pre_post_analysis/README.md) |
-| `03_target_analysis` | Planned | Segmentation, opportunity sizing, and target-population definition | Roadmap item |
+| `03_target_analysis` | Planned | Segmentation, opportunity sizing, and target-population definition | [Module plan](03_target_analysis/README.md) |
 | `04_predictive_analytics` | Complete | Predictive modeling from framing through validation and operationalization | [Predictive Analytics](04_predictive_analytics/README.md) |
-| `05_ad_hoc_analysis` | Planned | Structured diagnostic and exploratory analysis | Roadmap item |
+| `05_ad_hoc_analysis` | Planned | Structured diagnostic and exploratory analysis | [Module plan](05_ad_hoc_analysis/README.md) |
 
-`Core module complete` means the principal A/B methodology, case study, code, guided notebook, challenge notebook, reference results, and communication templates are present. Repository-wide automation and presentation improvements remain on the project roadmap.
+See the [project roadmap and module completion standard](ROADMAP.md) for objective status definitions, planned deliverables, and repository-wide improvements.
 
 ## Repository map
 
@@ -66,16 +66,22 @@ analytics-standard-framework/
 │   └── templates/       # Experiment planning, validation, and stakeholder readout
 ├── 02_pre_post_analysis/
 │   ├── case_study/      # FinFlow business case and data dictionary
+│   ├── data/raw/        # Compact synthetic sample
 │   ├── notebooks/       # Guided and challenge analyses
 │   ├── src/             # Data generator and Pre/Post/ITS analysis
 │   └── templates/       # Readout, answer key, rubric, and PowerPoint generator
+├── 03_target_analysis/
+│   └── README.md         # Planned scope and completion criteria
 ├── 04_predictive_analytics/
 │   ├── case_study/      # PayWave business case and data dictionary
 │   ├── data/raw/        # Compact synthetic sample
 │   ├── notebooks/       # Guided and challenge modeling workflows
 │   ├── src/             # Synthetic data and temporal model evaluation
 │   └── templates/       # Answer key, rubric, and stakeholder readout
-└── README.md
+├── 05_ad_hoc_analysis/
+│   └── README.md         # Planned scope and completion criteria
+├── ROADMAP.md            # Status definitions and cross-module completion standard
+└── README.md             # Portfolio landing page
 ```
 
 ## Quick start
@@ -141,4 +147,4 @@ All companies, scenarios, customer identifiers, datasets, and results in this re
 
 ## Project status
 
-This repository is under active development. The next planned modules are Target Analysis and Ad Hoc Analysis. Automated tests, continuous integration, dependency locking, licensing, and richer visual result previews are part of the repository-improvement roadmap.
+Three modules are complete and two are planned. Target Analysis and Ad Hoc Analysis now have explicit scope pages rather than invisible numbering gaps. See the [roadmap](ROADMAP.md) for the completion standard and repository-quality sequence.
