@@ -63,13 +63,19 @@ def quality_report(df):
     dates = pd.to_datetime(df["scoring_date"], errors="coerce")
     report = {
         "rows": len(df),
-        "duplicate_customer_scoring_date": int(df.duplicated(["customer_id", "scoring_date"]).sum()),
+        "duplicate_customer_scoring_date": int(
+            df.duplicated(["customer_id", "scoring_date"]).sum()
+        ),
         "missing_scoring_date": int(dates.isna().sum()),
         "invalid_target": int((~df[TARGET].isin([0, 1]) & df[TARGET].notna()).sum()),
         "lowercase_country_values": int(df["country"].astype(str).str.fullmatch(r"[a-z]{2}").sum()),
-        "negative_recency": int((pd.to_numeric(df["days_since_last_transaction"], errors="coerce") < 0).sum()),
+        "negative_recency": int(
+            (pd.to_numeric(df["days_since_last_transaction"], errors="coerce") < 0).sum()
+        ),
         "negative_txn30": int((pd.to_numeric(df["transactions_30d"], errors="coerce") < 0).sum()),
-        "negative_tenure": int((pd.to_numeric(df["customer_tenure_days"], errors="coerce") < 0).sum()),
+        "negative_tenure": int(
+            (pd.to_numeric(df["customer_tenure_days"], errors="coerce") < 0).sum()
+        ),
         "leakage_columns_present": sum(col in df.columns for col in LEAKAGE_COLUMNS),
     }
     return report
@@ -96,65 +102,94 @@ def clean_data(df):
 def temporal_split(df):
     """Train on Jan-May, validate on Jun-Jul, test on Aug."""
     train = df[df["scoring_date"] <= pd.Timestamp("2026-05-04")].copy()
-    validation = df[df["scoring_date"].between(pd.Timestamp("2026-06-01"), pd.Timestamp("2026-07-06"))].copy()
+    validation = df[
+        df["scoring_date"].between(pd.Timestamp("2026-06-01"), pd.Timestamp("2026-07-06"))
+    ].copy()
     test = df[df["scoring_date"] >= pd.Timestamp("2026-08-03")].copy()
     return train, validation, test
 
 
 def _linear_preprocessor():
-    numeric = Pipeline([
-        ("imputer", SimpleImputer(strategy="median")),
-        ("scale", StandardScaler()),
-    ])
-    categorical = Pipeline([
-        ("imputer", SimpleImputer(strategy="most_frequent")),
-        ("onehot", OneHotEncoder(handle_unknown="ignore")),
-    ])
-    return ColumnTransformer([
-        ("num", numeric, NUMERIC_COLUMNS),
-        ("cat", categorical, CATEGORICAL_COLUMNS),
-    ])
+    numeric = Pipeline(
+        [
+            ("imputer", SimpleImputer(strategy="median")),
+            ("scale", StandardScaler()),
+        ]
+    )
+    categorical = Pipeline(
+        [
+            ("imputer", SimpleImputer(strategy="most_frequent")),
+            ("onehot", OneHotEncoder(handle_unknown="ignore")),
+        ]
+    )
+    return ColumnTransformer(
+        [
+            ("num", numeric, NUMERIC_COLUMNS),
+            ("cat", categorical, CATEGORICAL_COLUMNS),
+        ]
+    )
 
 
 def _tree_preprocessor():
     numeric = Pipeline([("imputer", SimpleImputer(strategy="median"))])
-    categorical = Pipeline([
-        ("imputer", SimpleImputer(strategy="most_frequent")),
-        ("ordinal", OrdinalEncoder(handle_unknown="use_encoded_value", unknown_value=-1)),
-    ])
-    return ColumnTransformer([
-        ("num", numeric, NUMERIC_COLUMNS),
-        ("cat", categorical, CATEGORICAL_COLUMNS),
-    ])
+    categorical = Pipeline(
+        [
+            ("imputer", SimpleImputer(strategy="most_frequent")),
+            ("ordinal", OrdinalEncoder(handle_unknown="use_encoded_value", unknown_value=-1)),
+        ]
+    )
+    return ColumnTransformer(
+        [
+            ("num", numeric, NUMERIC_COLUMNS),
+            ("cat", categorical, CATEGORICAL_COLUMNS),
+        ]
+    )
 
 
 def build_models(random_state=42):
     return {
-        "logistic_regression": Pipeline([
-            ("prep", _linear_preprocessor()),
-            ("model", LogisticRegression(max_iter=1500, class_weight="balanced", random_state=random_state)),
-        ]),
-        "random_forest": Pipeline([
-            ("prep", _tree_preprocessor()),
-            ("model", RandomForestClassifier(
-                n_estimators=250,
-                max_depth=12,
-                min_samples_leaf=20,
-                class_weight="balanced_subsample",
-                n_jobs=-1,
-                random_state=random_state,
-            )),
-        ]),
-        "gradient_boosting": Pipeline([
-            ("prep", _tree_preprocessor()),
-            ("model", HistGradientBoostingClassifier(
-                learning_rate=0.07,
-                max_iter=220,
-                max_leaf_nodes=24,
-                l2_regularization=1.0,
-                random_state=random_state,
-            )),
-        ]),
+        "logistic_regression": Pipeline(
+            [
+                ("prep", _linear_preprocessor()),
+                (
+                    "model",
+                    LogisticRegression(
+                        max_iter=1500, class_weight="balanced", random_state=random_state
+                    ),
+                ),
+            ]
+        ),
+        "random_forest": Pipeline(
+            [
+                ("prep", _tree_preprocessor()),
+                (
+                    "model",
+                    RandomForestClassifier(
+                        n_estimators=250,
+                        max_depth=12,
+                        min_samples_leaf=20,
+                        class_weight="balanced_subsample",
+                        n_jobs=-1,
+                        random_state=random_state,
+                    ),
+                ),
+            ]
+        ),
+        "gradient_boosting": Pipeline(
+            [
+                ("prep", _tree_preprocessor()),
+                (
+                    "model",
+                    HistGradientBoostingClassifier(
+                        learning_rate=0.07,
+                        max_iter=220,
+                        max_leaf_nodes=24,
+                        l2_regularization=1.0,
+                        random_state=random_state,
+                    ),
+                ),
+            ]
+        ),
     }
 
 
@@ -220,7 +255,9 @@ def fit_and_score(models, train, validation, test):
         probability_scores=False,
     )
     validation_rows.append({"model": "recency_business_rule", **rule_metrics.__dict__})
-    validation_table = pd.DataFrame(validation_rows).set_index("model").sort_values("pr_auc", ascending=False)
+    validation_table = (
+        pd.DataFrame(validation_rows).set_index("model").sort_values("pr_auc", ascending=False)
+    )
 
     # Select model using validation PR AUC, with top-k lift and calibration reviewed alongside it.
     candidate_names = [name for name in validation_table.index if name in fitted]
@@ -253,14 +290,16 @@ def segment_metrics(df, scores, segment):
     for value, group in work.groupby(segment, dropna=False):
         if group[TARGET].nunique() < 2:
             continue
-        rows.append({
-            "segment": value,
-            "n": len(group),
-            "prevalence": group[TARGET].mean(),
-            "roc_auc": roc_auc_score(group[TARGET], group["score"]),
-            "pr_auc": average_precision_score(group[TARGET], group["score"]),
-            "brier": brier_score_loss(group[TARGET], group["score"]),
-        })
+        rows.append(
+            {
+                "segment": value,
+                "n": len(group),
+                "prevalence": group[TARGET].mean(),
+                "roc_auc": roc_auc_score(group[TARGET], group["score"]),
+                "pr_auc": average_precision_score(group[TARGET], group["score"]),
+                "brier": brier_score_loss(group[TARGET], group["score"]),
+            }
+        )
     return pd.DataFrame(rows).set_index("segment")
 
 
@@ -271,11 +310,16 @@ def threshold_metrics(y_true, scores, threshold):
         "threshold": threshold,
         "precision": precision_score(y_true, pred, zero_division=0),
         "recall": recall_score(y_true, pred, zero_division=0),
-        "tn": int(tn), "fp": int(fp), "fn": int(fn), "tp": int(tp),
+        "tn": int(tn),
+        "fp": int(fp),
+        "fn": int(fn),
+        "tp": int(tp),
     }
 
 
-def estimate_business_value(metrics, intervention_success_rate=0.18, retained_value=85.0, contact_cost=2.5):
+def estimate_business_value(
+    metrics, intervention_success_rate=0.18, retained_value=85.0, contact_cost=2.5
+):
     """Illustrative economics for the selected top-k outreach list."""
     expected_saves = metrics.captured_positives * intervention_success_rate
     retained_value_total = expected_saves * retained_value
@@ -305,7 +349,14 @@ def main():
 
     print("\nTEMPORAL SPLIT")
     for name, part in [("Train", train), ("Validation", validation), ("Test", test)]:
-        print(name, len(part), part.scoring_date.min().date(), part.scoring_date.max().date(), "prevalence", round(part[TARGET].mean(), 4))
+        print(
+            name,
+            len(part),
+            part.scoring_date.min().date(),
+            part.scoring_date.max().date(),
+            "prevalence",
+            round(part[TARGET].mean(), 4),
+        )
 
     results = fit_and_score(build_models(), train, validation, test)
     print("\nVALIDATION MODEL COMPARISON")

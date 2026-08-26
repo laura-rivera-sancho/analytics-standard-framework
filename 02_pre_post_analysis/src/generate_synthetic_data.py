@@ -42,7 +42,9 @@ def generate_clean_data(seed=SEED):
         daily_n = max(250, int(rng.normal(mean_volume, 30)))
 
         # Post period intentionally shifts traffic mix modestly.
-        country_probs = np.array([0.48, 0.22, 0.10, 0.20]) if not post else np.array([0.44, 0.24, 0.10, 0.22])
+        country_probs = (
+            np.array([0.48, 0.22, 0.10, 0.20]) if not post else np.array([0.44, 0.24, 0.10, 0.22])
+        )
         device_probs = np.array([0.67, 0.33]) if not post else np.array([0.72, 0.28])
         new_share = 0.36 + (0.07 if post else 0.0) + (0.10 if campaign else 0.0)
         new_share = min(new_share, 0.62)
@@ -65,7 +67,9 @@ def generate_clean_data(seed=SEED):
         ramp_penalty = -0.022 if ramp else 0.0
         weekend_penalty = -0.008 if dow >= 5 else 0.0
 
-        base_completion = 0.842 + pre_trend + level_effect + post_slope + ramp_penalty + weekend_penalty
+        base_completion = (
+            0.842 + pre_trend + level_effect + post_slope + ramp_penalty + weekend_penalty
+        )
         logodds = _logit(base_completion)
         logodds += np.where(devices == "Mobile", -0.08, 0.03)
         logodds += np.where(tenures == "Existing", 0.14, -0.08)
@@ -92,7 +96,9 @@ def generate_clean_data(seed=SEED):
         verification_time = np.clip(verification_time, 5, 1800)
 
         # Guardrails. Fraud is intentionally rare and slightly noisy post-launch.
-        decline_prob = 0.061 + np.select([risks == "Medium", risks == "High"], [0.028, 0.115], default=-0.010)
+        decline_prob = 0.061 + np.select(
+            [risks == "Medium", risks == "High"], [0.028, 0.115], default=-0.010
+        )
         decline_prob += np.where(countries == "BR", 0.010, 0.0)
         decline_prob += 0.001 if post else 0.0
         declined = rng.binomial(1, np.clip(decline_prob, 0.005, 0.35))
@@ -105,7 +111,9 @@ def generate_clean_data(seed=SEED):
 
         fraud_prob = 0.0032 + (0.00035 if post else 0.0)
         fraud_prob = np.full(daily_n, fraud_prob, dtype=float)
-        fraud_prob += np.select([risks == "Medium", risks == "High"], [0.0018, 0.0095], default=-0.0008)
+        fraud_prob += np.select(
+            [risks == "Medium", risks == "High"], [0.0018, 0.0095], default=-0.0008
+        )
         fraud_prob += np.where(values > 350, 0.0022, 0.0)
         fraud = rng.binomial(1, np.clip(fraud_prob, 0.0005, 0.04))
 
@@ -183,7 +191,9 @@ def build_training_sample(raw, n=1000, seed=SEED):
     casing["country"] = casing["country"].astype(str).str.lower()
     anomalies = base.sample(10, random_state=seed + 3).copy()
     anomalies.loc[anomalies.index[:4], "verification_time_seconds"] = -5
-    anomalies.loc[anomalies.index[4:], "verification_time_seconds"] = rng.integers(5000, 9000, size=6)
+    anomalies.loc[anomalies.index[4:], "verification_time_seconds"] = rng.integers(
+        5000, 9000, size=6
+    )
 
     sample = pd.concat([base, duplicates, casing, anomalies], ignore_index=True)
     return sample.sample(frac=1, random_state=seed + 4).reset_index(drop=True)

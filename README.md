@@ -1,5 +1,7 @@
 # Analytics Standard Framework
 
+[![Repository quality](https://github.com/laura-rivera-sancho/analytics-standard-framework/actions/workflows/ci.yml/badge.svg)](https://github.com/laura-rivera-sancho/analytics-standard-framework/actions/workflows/ci.yml)
+
 **A portfolio-ready analytics operating model for turning business questions into reproducible analysis, defensible decisions, and stakeholder communication.**
 
 This repository demonstrates how I approach common analytics engagements from end to end: framing the decision, defining metrics and assumptions, validating data, selecting an appropriate method, interpreting uncertainty, estimating business impact, and communicating a recommendation.
@@ -88,7 +90,7 @@ analytics-standard-framework/
 
 ### Requirements
 
-- Python 3.11 or newer
+- Python 3.11 or 3.12
 - `pip`
 - Jupyter for the guided and challenge notebooks
 - Node.js only when generating the PowerPoint readout templates
@@ -107,6 +109,20 @@ pip install -r requirements.txt
 
 python src/generate_synthetic_data.py
 python src/analyze_experiment.py
+```
+
+All completed modules use the same pinned root environment. From the repository root, install the full runtime with:
+
+```bash
+pip install -r requirements.txt
+```
+
+For tests and linting:
+
+```bash
+pip install -r requirements-dev.txt
+ruff check .
+pytest
 ```
 
 Open the guided notebook:

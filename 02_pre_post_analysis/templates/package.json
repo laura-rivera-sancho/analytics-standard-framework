@@ -1,9 +1,12 @@
 {
+  "name": "pre-post-stakeholder-readout-template",
+  "version": "1.0.0",
+  "description": "Reusable PowerPoint stakeholder readout template for Pre/Post analysis results.",
+  "private": true,
   "scripts": {
     "build:pptx": "node create_stakeholder_readout_pptx.js"
   },
   "dependencies": {
-    "pptxgenjs": "latest"
-  },
-  "devDependencies": {}
+    "pptxgenjs": "^3.12.0"
+  }
 }

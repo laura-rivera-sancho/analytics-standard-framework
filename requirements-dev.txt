@@ -1,0 +1,7 @@
+-r requirements.txt
+
+# Repository quality and verification tooling.
+pytest==8.4.2
+pytest-cov==7.0.0
+ruff==0.13.2
+nbformat==5.10.4

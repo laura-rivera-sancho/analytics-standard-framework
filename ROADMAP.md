@@ -75,10 +75,10 @@ See the [module plan](05_ad_hoc_analysis/README.md).
 
 ## Repository-quality sequence
 
-After the module roadmap is established, repository-wide work proceeds in this order:
+Repository-wide improvements are tracked separately from analytical module status:
 
-1. centralize environment and dependency management
-2. add automated tests, linting, and GitHub Actions
-3. add licensing and contributor guidance
-4. standardize visible reports and generated presentation artifacts
-5. perform a final recruiter-experience and accessibility review
+- [x] Centralize the Python environment and pin direct dependencies.
+- [x] Add analytical tests, repository-integrity checks, linting, formatting, and GitHub Actions.
+- [ ] Add licensing and contributor guidance.
+- [ ] Standardize richer visible reports and generated presentation artifacts.
+- [ ] Perform a final recruiter-experience and accessibility review.

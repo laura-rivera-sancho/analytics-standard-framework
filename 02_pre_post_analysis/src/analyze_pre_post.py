@@ -64,8 +64,12 @@ def quality_report(df):
         "missing_device_type": int(df["device_type"].isna().sum()),
         "missing_verification_time": int(df["verification_time_seconds"].isna().sum()),
         "lowercase_country_values": int(df["country"].astype(str).str.fullmatch(r"[a-z]{2}").sum()),
-        "negative_duration_rows": int((pd.to_numeric(df["verification_time_seconds"], errors="coerce") < 0).sum()),
-        "implausibly_high_duration_rows": int((pd.to_numeric(df["verification_time_seconds"], errors="coerce") > 3600).sum()),
+        "negative_duration_rows": int(
+            (pd.to_numeric(df["verification_time_seconds"], errors="coerce") < 0).sum()
+        ),
+        "implausibly_high_duration_rows": int(
+            (pd.to_numeric(df["verification_time_seconds"], errors="coerce") > 3600).sum()
+        ),
     }
     for col in BINARY_COLUMNS:
         report[f"invalid_binary_{col}"] = int((~df[col].isin([0, 1]) & df[col].notna()).sum())
@@ -84,8 +88,12 @@ def clean_data(df):
     out["period"] = np.where(out["transaction_date"] < LAUNCH_DATE, "Pre", "Post")
     out["post_flag"] = (out["transaction_date"] >= LAUNCH_DATE).astype(int)
     out["days_from_launch"] = (out["transaction_date"] - LAUNCH_DATE).dt.days
-    out["ramp_flag"] = ((out["transaction_date"] >= LAUNCH_DATE) & (out["transaction_date"] <= RAMP_END)).astype(int)
-    out["campaign_flag"] = ((out["transaction_date"] >= CAMPAIGN_START) & (out["transaction_date"] <= CAMPAIGN_END)).astype(int)
+    out["ramp_flag"] = (
+        (out["transaction_date"] >= LAUNCH_DATE) & (out["transaction_date"] <= RAMP_END)
+    ).astype(int)
+    out["campaign_flag"] = (
+        (out["transaction_date"] >= CAMPAIGN_START) & (out["transaction_date"] <= CAMPAIGN_END)
+    ).astype(int)
 
     # Exclude impossible duration values from duration analysis while keeping rows for rate KPIs.
     duration = pd.to_numeric(out["verification_time_seconds"], errors="coerce")
@@ -178,9 +186,15 @@ def daily_aggregate(df):
     daily["time_index"] = np.arange(len(daily))
     daily["post"] = (daily["transaction_date"] >= LAUNCH_DATE).astype(int)
     launch_index = int(daily.loc[daily["transaction_date"].eq(LAUNCH_DATE), "time_index"].iloc[0])
-    daily["time_after_launch"] = np.where(daily["post"].eq(1), daily["time_index"] - launch_index, 0)
-    daily["ramp"] = ((daily["transaction_date"] >= LAUNCH_DATE) & (daily["transaction_date"] <= RAMP_END)).astype(int)
-    daily["campaign"] = ((daily["transaction_date"] >= CAMPAIGN_START) & (daily["transaction_date"] <= CAMPAIGN_END)).astype(int)
+    daily["time_after_launch"] = np.where(
+        daily["post"].eq(1), daily["time_index"] - launch_index, 0
+    )
+    daily["ramp"] = (
+        (daily["transaction_date"] >= LAUNCH_DATE) & (daily["transaction_date"] <= RAMP_END)
+    ).astype(int)
+    daily["campaign"] = (
+        (daily["transaction_date"] >= CAMPAIGN_START) & (daily["transaction_date"] <= CAMPAIGN_END)
+    ).astype(int)
     daily["dow"] = daily["transaction_date"].dt.day_name().str[:3]
     return daily
 
@@ -206,7 +220,11 @@ def mix_comparison(df, column):
 
 
 def segment_completion(df, segment):
-    grouped = df.groupby([segment, "period"])["verification_completed"].agg(["mean", "count"]).reset_index()
+    grouped = (
+        df.groupby([segment, "period"])["verification_completed"]
+        .agg(["mean", "count"])
+        .reset_index()
+    )
     rates = grouped.pivot(index=segment, columns="period", values="mean")
     counts = grouped.pivot(index=segment, columns="period", values="count")
     out = pd.DataFrame(index=rates.index)
@@ -226,9 +244,7 @@ def main():
     module_root = Path(__file__).resolve().parents[1]
     path = module_root / "data" / "raw" / "finflow_verification_pre_post_full.csv"
     if not path.exists():
-        raise FileNotFoundError(
-            f"{path} does not exist. Run src/generate_synthetic_data.py first."
-        )
+        raise FileNotFoundError(f"{path} does not exist. Run src/generate_synthetic_data.py first.")
 
     raw = pd.read_csv(path)
     print("DATA QUALITY")

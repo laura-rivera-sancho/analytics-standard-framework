@@ -5,6 +5,7 @@ reproduced by any analyst.
 """
 
 from pathlib import Path
+
 import numpy as np
 import pandas as pd
 
@@ -42,9 +43,9 @@ def generate_clean_data(n: int = N_CUSTOMERS, seed: int = SEED) -> pd.DataFrame:
     checkout_time = np.maximum(10, rng.lognormal(mu, sigma, size=n)).round(1)
 
     # Transaction values are intentionally strongly right-skewed.
-    transaction_value = np.clip(
-        rng.lognormal(mean=np.log(70), sigma=0.90, size=n), 5, 2000
-    ).round(2)
+    transaction_value = np.clip(rng.lognormal(mean=np.log(70), sigma=0.90, size=n), 5, 2000).round(
+        2
+    )
 
     decline_p = 0.054 - (group == "Treatment") * 0.001 + (country == "BR") * 0.008
     payment_declined = rng.binomial(1, np.clip(decline_p, 0.005, 0.30))
@@ -60,9 +61,7 @@ def generate_clean_data(n: int = N_CUSTOMERS, seed: int = SEED) -> pd.DataFrame:
     )
     fraud_flag = rng.binomial(1, np.clip(fraud_p, 0.0, 0.05))
 
-    dates = pd.to_datetime("2026-06-01") + pd.to_timedelta(
-        rng.integers(0, 14, size=n), unit="D"
-    )
+    dates = pd.to_datetime("2026-06-01") + pd.to_timedelta(rng.integers(0, 14, size=n), unit="D")
 
     return pd.DataFrame(
         {
