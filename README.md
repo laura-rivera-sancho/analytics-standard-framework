@@ -22,7 +22,7 @@ Each module combines a reusable methodology with a fictional business case, synt
 |---|---|---|---|
 | **NovaPay** | Should a simplified checkout experience be rolled out? | Randomized A/B test | Treatment increased checkout completion from **72.64% to 75.95%** (**+3.31 percentage points**, 95% CI **+2.45 to +4.17 pp**) while materially reducing checkout time. |
 | **FinFlow** | Should an automated verification workflow continue scaling? | Pre/Post analysis and adjusted interrupted time series | Completion, manual-review demand, and verification time improve after launch. The recommendation remains appropriately cautious because the design is observational and includes trend, ramp, campaign, and traffic-mix effects. |
-| **PayWave** | Which customers should receive capacity-constrained retention outreach? | Temporal binary-classification workflow | Active module comparing a business-rule baseline with logistic regression, random forest, and gradient boosting using PR AUC, calibration, lift, and precision at outreach capacity. |
+| **PayWave** | Which customers should receive capacity-constrained retention outreach? | Temporal binary-classification workflow | Gradient Boosting captures **3,853** future-inactive customers at 5,000-contact capacity—**552 more** than the recency rule—with **77.06% precision** and **2.58x lift** on the held-out Test cohort. |
 
 ### NovaPay decision snapshot
 
@@ -49,7 +49,7 @@ The simple Pre/Post comparison is intentionally not treated as proof of causalit
 | `01_ab_testing` | Core module complete | Controlled experiments and causal product or process decisions | [A/B Testing](01_ab_testing/README.md) |
 | `02_pre_post_analysis` | Complete | Impact analysis when randomized control is unavailable | [Pre/Post Analysis](02_pre_post_analysis/README.md) |
 | `03_target_analysis` | Planned | Segmentation, opportunity sizing, and target-population definition | Roadmap item |
-| `04_predictive_analytics` | In progress | Predictive modeling from framing through validation and operationalization | [Predictive Analytics](04_predictive_analytics/README.md) |
+| `04_predictive_analytics` | Complete | Predictive modeling from framing through validation and operationalization | [Predictive Analytics](04_predictive_analytics/README.md) |
 | `05_ad_hoc_analysis` | Planned | Structured diagnostic and exploratory analysis | Roadmap item |
 
 `Core module complete` means the principal A/B methodology, case study, code, guided notebook, challenge notebook, reference results, and communication templates are present. Repository-wide automation and presentation improvements remain on the project roadmap.
@@ -71,7 +71,10 @@ analytics-standard-framework/
 │   └── templates/       # Readout, answer key, rubric, and PowerPoint generator
 ├── 04_predictive_analytics/
 │   ├── case_study/      # PayWave business case and data dictionary
-│   └── src/             # Synthetic data and temporal model evaluation
+│   ├── data/raw/        # Compact synthetic sample
+│   ├── notebooks/       # Guided and challenge modeling workflows
+│   ├── src/             # Synthetic data and temporal model evaluation
+│   └── templates/       # Answer key, rubric, and stakeholder readout
 └── README.md
 ```
 
@@ -138,4 +141,4 @@ All companies, scenarios, customer identifiers, datasets, and results in this re
 
 ## Project status
 
-This repository is under active development. The next planned work is to complete the Predictive Analytics learning artifacts, then add Target Analysis and Ad Hoc Analysis modules. Automated tests, continuous integration, dependency locking, licensing, and richer visual result previews are part of the repository-improvement roadmap.
+This repository is under active development. The next planned modules are Target Analysis and Ad Hoc Analysis. Automated tests, continuous integration, dependency locking, licensing, and richer visual result previews are part of the repository-improvement roadmap.

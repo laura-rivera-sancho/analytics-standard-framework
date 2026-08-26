@@ -171,12 +171,15 @@ def top_k_metrics(y_true, scores, k=OUTREACH_CAPACITY):
     return precision_k, recall_k, lift_k, int(selected.sum()), k
 
 
-def evaluate_predictions(y_true, scores, k=OUTREACH_CAPACITY):
+def evaluate_predictions(y_true, scores, k=OUTREACH_CAPACITY, probability_scores=True):
     precision_k, recall_k, lift_k, captured, actual_k = top_k_metrics(y_true, scores, k)
     return RankingMetrics(
         roc_auc=float(roc_auc_score(y_true, scores)),
         pr_auc=float(average_precision_score(y_true, scores)),
-        brier=float(brier_score_loss(y_true, scores)),
+        # Brier loss is defined only for probability estimates in [0, 1].
+        # The business-rule baseline is an uncalibrated ranking score, so its
+        # calibration is intentionally reported as not applicable.
+        brier=float(brier_score_loss(y_true, scores)) if probability_scores else np.nan,
         precision_at_k=float(precision_k),
         recall_at_k=float(recall_k),
         lift_at_k=float(lift_k),
@@ -199,15 +202,23 @@ def fit_and_score(models, train, validation, test):
     x_test, y_test = test[FEATURE_COLUMNS], test[TARGET]
 
     validation_rows = []
+    # Validation spans two scoring cycles. Aggregate the capacity available in
+    # both cycles so its top-k policy is comparable with 5,000 contacts per cycle.
+    validation_k = OUTREACH_CAPACITY * validation["scoring_date"].nunique()
     fitted = {}
     for name, model in models.items():
         model.fit(x_train, y_train)
         fitted[name] = model
         scores = model.predict_proba(x_val)[:, 1]
-        metrics = evaluate_predictions(y_val, scores)
+        metrics = evaluate_predictions(y_val, scores, k=validation_k)
         validation_rows.append({"model": name, **metrics.__dict__})
 
-    rule_metrics = evaluate_predictions(y_val, business_rule_scores(validation))
+    rule_metrics = evaluate_predictions(
+        y_val,
+        business_rule_scores(validation),
+        k=validation_k,
+        probability_scores=False,
+    )
     validation_rows.append({"model": "recency_business_rule", **rule_metrics.__dict__})
     validation_table = pd.DataFrame(validation_rows).set_index("model").sort_values("pr_auc", ascending=False)
 
@@ -218,7 +229,11 @@ def fit_and_score(models, train, validation, test):
 
     test_scores = selected.predict_proba(x_test)[:, 1]
     test_metrics = evaluate_predictions(y_test, test_scores)
-    rule_test = evaluate_predictions(y_test, business_rule_scores(test))
+    rule_test = evaluate_predictions(
+        y_test,
+        business_rule_scores(test),
+        probability_scores=False,
+    )
 
     return {
         "models": fitted,
@@ -294,7 +309,7 @@ def main():
 
     results = fit_and_score(build_models(), train, validation, test)
     print("\nVALIDATION MODEL COMPARISON")
-    print(results["validation_table"].round(4))
+    print(results["validation_table"].round(4).to_string())
     print("\nSELECTED MODEL:", results["selected_name"])
 
     print("\nTEST METRICS")
@@ -305,7 +320,7 @@ def main():
     print("\nSEGMENT PERFORMANCE")
     for segment in ["country", "device_type", "customer_value_tier"]:
         print(f"\n{segment}")
-        print(segment_metrics(test, results["test_scores"], segment).round(4))
+        print(segment_metrics(test, results["test_scores"], segment).round(4).to_string())
 
     print("\nILLUSTRATIVE BUSINESS VALUE")
     print(pd.Series(estimate_business_value(results["test_metrics"])).round(2))

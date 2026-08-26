@@ -107,9 +107,9 @@ Candidate models should be compared with:
 
 A more complex model should demonstrate meaningful incremental value.
 
-## Planned model candidates
+## Model candidates
 
-The case will compare:
+The case compares:
 - Logistic Regression
 - Random Forest
 - Gradient Boosting
@@ -118,9 +118,9 @@ The objective is not to force the most complex model to win. Selection should co
 
 ## Temporal validation design
 
-The synthetic history will cover multiple monthly scoring cohorts.
+The synthetic history covers multiple monthly scoring cohorts.
 
-Planned split:
+Reference split:
 - **Training:** earlier scoring months
 - **Validation:** subsequent scoring month(s)
 - **Test:** most recent held-out scoring period
@@ -129,7 +129,7 @@ This mirrors the production question: can a model trained on past behavior predi
 
 ## Intentional analytical challenges
 
-The synthetic case will include realistic modeling complications.
+The synthetic case includes realistic modeling complications.
 
 ### 1. Class imbalance
 Only a minority of eligible customers become inactive during the prediction horizon, making accuracy misleading.
@@ -141,7 +141,7 @@ Customer behavior and target prevalence will shift modestly over time.
 Customers may appear in more than one scoring cohort, requiring careful feature construction and temporal evaluation.
 
 ### 4. Leakage candidates
-The raw training dataset will include fields that appear highly predictive but are not valid at scoring time. The analyst must identify and exclude them.
+The raw training dataset includes fields that appear highly predictive but are not valid at scoring time. The analyst must identify and exclude them.
 
 ### 5. Missing values
 Some behavioral features will contain realistic missingness that must be handled reproducibly.

@@ -209,6 +209,10 @@ tempCodeRunnerFile.py
 # PyPI configuration file
 .pypirc
 
+# Generated full-size analytics datasets (compact portfolio samples remain tracked)
+04_predictive_analytics/data/raw/paywave_inactivity_full.csv
+04_predictive_analytics/data/processed/
+
 # Marimo
 marimo/_static/
 marimo/_lsp/

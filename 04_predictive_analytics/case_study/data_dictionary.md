@@ -1,6 +1,6 @@
 # PayWave Synthetic Data Dictionary
 
-The planned dataset is customer-at-scoring-date level. One row represents an eligible customer evaluated on a historical scoring date using only information available at that time.
+The dataset is customer-at-scoring-date level. One row represents an eligible customer evaluated on a historical scoring date using only information available at that time.
 
 | Field | Type | Description |
 |---|---|---|
@@ -28,7 +28,7 @@ The planned dataset is customer-at-scoring-date level. One row represents an eli
 
 ## Deliberate leakage fields in the raw training data
 
-The raw dataset will intentionally contain several fields that **must not be used as predictors** because they are generated after the scoring date or directly reveal the target.
+The raw dataset intentionally contains several fields that **must not be used as predictors** because they are generated after the scoring date or directly reveal the target.
 
 | Field | Why invalid |
 |---|---|
@@ -82,9 +82,9 @@ The target should never be reconstructed using information that overlaps the fea
 - `device_type`
 - `customer_tenure_days`
 
-## Planned synthetic behavior
+## Synthetic behavior
 
-The generator will intentionally encode:
+The generator intentionally encodes:
 - minority positive-class prevalence
 - increasing inactivity risk with greater transaction recency
 - elevated risk when recent transaction frequency/volume declines
@@ -120,7 +120,7 @@ The generated case will contain multiple monthly or weekly historical scoring co
 - Validation
 - Test
 
-The exact dates will be defined by the generator and documented in the notebook.
+The supplied workflow uses January-May 2026 for Train, June-July 2026 for Validation, and August 2026 for Test.
 
 ## Operational evaluation
 

@@ -17,11 +17,15 @@ Start here:
 - `methodology.md` for the analytical and modeling execution standard.
 - `case_study/business_case.md` for the fictional PayWave scenario.
 - `case_study/data_dictionary.md` for the synthetic dataset definition.
+- `case_study/expected_results.md` for the deterministic validation and held-out Test results.
+- `notebooks/guided_predictive_analytics.ipynb` for the complete decision-focused modeling workflow.
+- `notebooks/challenge_predictive_analytics.ipynb` for independent practice without worked solutions.
 - `src/generate_synthetic_data.py` to generate reproducible clean, raw, and compact PayWave datasets.
 - `src/train_evaluate_models.py` for the reference temporal modeling and evaluation workflow.
+- `templates/challenge_answer_key.md` for expected reasoning and interpretation.
+- `templates/challenge_scoring_rubric.md` for a 100-point portfolio review standard.
+- `templates/stakeholder_readout_template.md` for the executive presentation structure.
 - `requirements.txt` for the Python environment.
-
-Guided/challenge notebooks, evaluation artifacts, and a stakeholder readout template will be added next.
 
 ## Standard lifecycle
 
@@ -80,6 +84,36 @@ The reference workflow then:
 7. evaluates the held-out Test cohort
 8. checks segment-level model performance
 9. estimates illustrative business value under explicit retention assumptions
+
+To open the guided analysis:
+
+```bash
+jupyter notebook notebooks/guided_predictive_analytics.ipynb
+```
+
+To complete the independent challenge:
+
+```bash
+jupyter notebook notebooks/challenge_predictive_analytics.ipynb
+```
+
+## Reference decision snapshot
+
+The deterministic held-out Test cohort contains 29,999 customers and an outreach capacity of 5,000.
+
+| Metric | Gradient Boosting | Recency rule |
+|---|---:|---:|
+| PR AUC | 0.6943 | 0.6122 |
+| Precision@5,000 | 77.06% | 66.02% |
+| Recall@5,000 | 42.99% | 36.83% |
+| Lift@5,000 | 2.58x | 2.21x |
+| Inactive customers captured | 3,853 | 3,301 |
+
+Within the same capacity, the selected model identifies 552 more future-inactive customers than the current rule. Under the documented illustrative assumptions, estimated net value is $46,450.90 per scoring cycle.
+
+**Recommendation:** proceed to a controlled operational pilot, validate retention intervention lift separately, and monitor calibration, drift, segment outcomes, and realized value before wider deployment.
+
+See the [full expected results](case_study/expected_results.md) for assumptions, segment performance, and limitations.
 
 ## Important principle
 
