@@ -39,7 +39,7 @@ A scoring rubric and generated presentation template are encouraged enhancements
 | 02 | [Pre/Post Analysis](02_pre_post_analysis/README.md) | Complete | FinFlow observational workflow evaluation |
 | 03 | [Target Analysis](03_target_analysis/README.md) | Complete | LuminaPay rule-based merchant targeting and activation handoff |
 | 04 | [Predictive Analytics](04_predictive_analytics/README.md) | Complete | PayWave capacity-constrained inactivity model |
-| 05 | [Ad Hoc Analysis](05_ad_hoc_analysis/README.md) | Planned | Scope and deliverable plan documented |
+| 05 | [Ad Hoc Analysis](05_ad_hoc_analysis/README.md) | Complete | OrbitMart bounded KPI diagnostic and operational handoff |
 
 ## Complete Module 03 — Target Analysis
 
@@ -57,11 +57,11 @@ Completed portfolio evidence:
 
 See the [completed module](03_target_analysis/README.md) and [finished stakeholder readout](03_target_analysis/reports/stakeholder_readout.md).
 
-## Planned Module 05 — Ad Hoc Analysis
+## Complete Module 05 — Ad Hoc Analysis
 
-The module will focus on turning ambiguous stakeholder questions into structured, time-bounded diagnostic analysis without sacrificing data quality or decision clarity.
+The module demonstrates how to turn ambiguous stakeholder questions into structured, time-bounded diagnostic analysis without sacrificing data quality or decision clarity.
 
-Planned portfolio evidence:
+Completed portfolio evidence:
 
 - intake and problem-framing standard
 - KPI tree and hypothesis map
@@ -71,7 +71,11 @@ Planned portfolio evidence:
 - concise analytical memo or stakeholder readout
 - follow-up measurement plan
 
-See the [module plan](05_ad_hoc_analysis/README.md).
+See the [completed module](05_ad_hoc_analysis/README.md) and [finished stakeholder readout](05_ad_hoc_analysis/reports/stakeholder_readout.md).
+
+## Framework completion
+
+All five modules now meet the repository-wide completion standard. Together they cover randomized experimentation, observational change analysis, target-population design, predictive decision systems, and time-bounded diagnostic analysis.
 
 ## Repository-quality sequence
 

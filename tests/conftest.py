@@ -67,3 +67,15 @@ def predictive_analysis():
     return load_source_module(
         "predictive_analysis", "04_predictive_analytics/src/train_evaluate_models.py"
     )
+
+
+@pytest.fixture(scope="session")
+def adhoc_generator():
+    return load_source_module(
+        "adhoc_generator", "05_ad_hoc_analysis/src/generate_synthetic_data.py"
+    )
+
+
+@pytest.fixture(scope="session")
+def adhoc_analysis():
+    return load_source_module("adhoc_analysis", "05_ad_hoc_analysis/src/diagnose_kpi_change.py")

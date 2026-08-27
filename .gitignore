@@ -216,6 +216,8 @@ tempCodeRunnerFile.py
 04_predictive_analytics/data/processed/
 03_target_analysis/data/raw/lumina_settlement_target_full.csv
 03_target_analysis/data/processed/
+05_ad_hoc_analysis/data/raw/orbitmart_checkout_diagnostic_full.csv
+05_ad_hoc_analysis/data/processed/
 
 # Marimo
 marimo/_static/

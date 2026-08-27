@@ -59,7 +59,7 @@ Run these checks before opening a pull request:
 ```bash
 ruff check .
 ruff format --check .
-python -m compileall 01_ab_testing 02_pre_post_analysis 03_target_analysis 04_predictive_analytics
+python -m compileall 01_ab_testing 02_pre_post_analysis 03_target_analysis 04_predictive_analytics 05_ad_hoc_analysis
 pytest --cov
 ```
 

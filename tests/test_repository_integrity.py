@@ -46,12 +46,13 @@ def test_notebooks_are_valid_json_and_code_cells_compile():
     assert not errors, "Notebook errors:\n" + "\n".join(errors)
 
 
-def test_completed_modules_and_planned_placeholders_exist():
+def test_completed_modules_exist():
     completed = [
         "01_ab_testing",
         "02_pre_post_analysis",
         "03_target_analysis",
         "04_predictive_analytics",
+        "05_ad_hoc_analysis",
     ]
     for module in completed:
         root = ROOT / module
@@ -63,10 +64,6 @@ def test_completed_modules_and_planned_placeholders_exist():
         assert list((root / "notebooks").glob("challenge*.ipynb"))
         assert list((root / "src").glob("*.py"))
         assert list((root / "templates").glob("*readout*.md"))
-
-    for module in ["05_ad_hoc_analysis"]:
-        text = (ROOT / module / "README.md").read_text(encoding="utf-8")
-        assert "Status: Planned" in text
 
 
 def test_repository_does_not_track_large_generated_datasets():
@@ -87,6 +84,7 @@ def test_module_requirements_delegate_to_root_environment():
         "02_pre_post_analysis",
         "03_target_analysis",
         "04_predictive_analytics",
+        "05_ad_hoc_analysis",
     ]:
         requirement = (ROOT / module / "requirements.txt").read_text(encoding="utf-8")
         assert "-r ../requirements.txt" in requirement
@@ -124,6 +122,7 @@ def test_completed_modules_publish_stakeholder_artifacts():
         "02_pre_post_analysis",
         "03_target_analysis",
         "04_predictive_analytics",
+        "05_ad_hoc_analysis",
     ]:
         report_root = ROOT / module / "reports"
         markdown = report_root / "stakeholder_readout.md"
@@ -182,6 +181,7 @@ def test_recruiter_shortcuts_link_to_finished_reports():
         "02_pre_post_analysis",
         "03_target_analysis",
         "04_predictive_analytics",
+        "05_ad_hoc_analysis",
     ]:
         module_readme = (ROOT / module / "README.md").read_text(encoding="utf-8")
         assert "**Portfolio shortcut:**" in module_readme
