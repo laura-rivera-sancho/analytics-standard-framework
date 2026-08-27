@@ -43,10 +43,10 @@ jobs:
         run: ruff check .
 
       - name: Check Python formatting
-        run: ruff format --check 01_ab_testing/src 02_pre_post_analysis/src 04_predictive_analytics/src tests
+        run: ruff format --check 01_ab_testing/src 02_pre_post_analysis/src 03_target_analysis/src 04_predictive_analytics/src tests
 
       - name: Verify Python syntax
-        run: python -m compileall -q 01_ab_testing/src 02_pre_post_analysis/src 04_predictive_analytics/src tests
+        run: python -m compileall -q 01_ab_testing/src 02_pre_post_analysis/src 03_target_analysis/src 04_predictive_analytics/src tests
 
       - name: Run analytical and repository tests
         run: pytest --cov --cov-report=term-missing

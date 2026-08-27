@@ -44,6 +44,18 @@ def prepost_analysis():
 
 
 @pytest.fixture(scope="session")
+def target_generator():
+    return load_source_module(
+        "target_generator", "03_target_analysis/src/generate_synthetic_data.py"
+    )
+
+
+@pytest.fixture(scope="session")
+def target_analysis():
+    return load_source_module("target_analysis", "03_target_analysis/src/analyze_targets.py")
+
+
+@pytest.fixture(scope="session")
 def predictive_generator():
     return load_source_module(
         "predictive_generator", "04_predictive_analytics/src/generate_synthetic_data.py"

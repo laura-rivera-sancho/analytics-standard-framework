@@ -214,6 +214,8 @@ tempCodeRunnerFile.py
 02_pre_post_analysis/data/processed/
 04_predictive_analytics/data/raw/paywave_inactivity_full.csv
 04_predictive_analytics/data/processed/
+03_target_analysis/data/raw/lumina_settlement_target_full.csv
+03_target_analysis/data/processed/
 
 # Marimo
 marimo/_static/

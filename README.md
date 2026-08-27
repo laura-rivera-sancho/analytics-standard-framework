@@ -17,6 +17,7 @@ the fastest route to the strongest evidence:
 |---|---|---|
 | Decision communication | [NovaPay A/B testing readout](01_ab_testing/reports/stakeholder_readout.md) | Experiment validity, effect size, guardrails, and a rollout recommendation |
 | Causal judgment | [FinFlow Pre/Post readout](02_pre_post_analysis/reports/stakeholder_readout.md) | Interrupted time series, confounder review, limitations, and risk monitoring |
+| Target-population design | [LuminaPay targeting readout](03_target_analysis/reports/stakeholder_readout.md) | Eligibility governance, opportunity sizing, transparent prioritization, and activation controls |
 | Predictive decision design | [PayWave modeling readout](04_predictive_analytics/reports/stakeholder_readout.md) | Temporal validation, capacity metrics, business value, and a controlled-pilot plan |
 | Reproducible implementation | [Source workflows](01_ab_testing/src) and [automated tests](tests) | Reusable Python, deterministic data, analytical tests, and repository checks |
 | Project scope and next modules | [Roadmap](ROADMAP.md) | Completion criteria, current status, and planned work |
@@ -27,6 +28,7 @@ the fastest route to the strongest evidence:
 - **Experimentation and causal reasoning** — distinguishing randomized evidence from observational comparisons.
 - **Statistical analysis** — effect sizes, confidence intervals, hypothesis tests, guardrails, and practical significance.
 - **Predictive modeling** — leakage-safe features, temporal validation, calibration, capacity-aware evaluation, and business value.
+- **Target design** — auditable eligibility rules, denominator-consistent funnels, opportunity sizing, and capacity allocation.
 - **Data quality** — deliberate validation of duplicates, missingness, invalid values, inconsistent categories, and timing logic.
 - **Reproducible analytics** — deterministic synthetic-data generators, reusable analysis functions, and documented assumptions.
 - **Stakeholder communication** — concise recommendations that separate evidence, limitations, and next actions.
@@ -37,6 +39,7 @@ the fastest route to the strongest evidence:
 |---|---|---|---|
 | **NovaPay** | Should a simplified checkout experience be rolled out? | Randomized A/B test | [Finished stakeholder readout](01_ab_testing/reports/stakeholder_readout.md): **+3.31 pp** completion lift, 95% CI **+2.45 to +4.17 pp**, with materially lower checkout time. |
 | **FinFlow** | Should an automated verification workflow continue scaling? | Pre/Post analysis and adjusted interrupted time series | [Finished stakeholder readout](02_pre_post_analysis/reports/stakeholder_readout.md): **+5.65 pp** observed completion change and **+3.20 pp** adjusted launch-level estimate, with moderate causal confidence. |
+| **LuminaPay** | Which eligible merchants should receive limited Instant Settlement outreach? | Rule-based target analysis and capacity sensitivity | [Finished stakeholder readout](03_target_analysis/reports/stakeholder_readout.md): **25,805** eligible merchants and a controlled **6,000-contact** first wave with explicit activation safeguards. |
 | **PayWave** | Which customers should receive capacity-constrained retention outreach? | Temporal binary-classification workflow | [Finished stakeholder readout](04_predictive_analytics/reports/stakeholder_readout.md): **3,853** captures at capacity—**552 more** than the recency rule—with **77.06% precision** and **2.58x lift**. |
 
 ### NovaPay decision snapshot
@@ -63,7 +66,7 @@ The simple Pre/Post comparison is intentionally not treated as proof of causalit
 |---|---|---|---|
 | `01_ab_testing` | Complete | Controlled experiments and causal product or process decisions | [A/B Testing](01_ab_testing/README.md) |
 | `02_pre_post_analysis` | Complete | Impact analysis when randomized control is unavailable | [Pre/Post Analysis](02_pre_post_analysis/README.md) |
-| `03_target_analysis` | Planned | Segmentation, opportunity sizing, and target-population definition | [Module plan](03_target_analysis/README.md) |
+| `03_target_analysis` | Complete | Eligibility, segmentation, opportunity sizing, prioritization, and activation handoff | [Target Analysis](03_target_analysis/README.md) |
 | `04_predictive_analytics` | Complete | Predictive modeling from framing through validation and operationalization | [Predictive Analytics](04_predictive_analytics/README.md) |
 | `05_ad_hoc_analysis` | Planned | Structured diagnostic and exploratory analysis | [Module plan](05_ad_hoc_analysis/README.md) |
 
@@ -88,7 +91,12 @@ analytics-standard-framework/
 │   ├── src/             # Data generator and Pre/Post/ITS analysis
 │   └── templates/       # Authoring guide, answer key, rubric, and reusable template
 ├── 03_target_analysis/
-│   └── README.md         # Planned scope and completion criteria
+│   ├── case_study/      # LuminaPay decision, dictionary, and expected results
+│   ├── data/raw/        # Compact synthetic merchant sample
+│   ├── notebooks/       # Guided and challenge targeting workflows
+│   ├── reports/         # Finished Markdown readout, preview, and PowerPoint deck
+│   ├── src/             # Synthetic data, eligibility, sizing, and prioritization
+│   └── templates/       # Answer key, rubric, and activation readout
 ├── 04_predictive_analytics/
 │   ├── case_study/      # PayWave business case and data dictionary
 │   ├── data/raw/        # Compact synthetic sample

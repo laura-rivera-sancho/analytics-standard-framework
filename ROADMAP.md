@@ -37,15 +37,15 @@ A scoring rubric and generated presentation template are encouraged enhancements
 |---:|---|---|---|
 | 01 | [A/B Testing](01_ab_testing/README.md) | Complete | NovaPay randomized checkout experiment |
 | 02 | [Pre/Post Analysis](02_pre_post_analysis/README.md) | Complete | FinFlow observational workflow evaluation |
-| 03 | [Target Analysis](03_target_analysis/README.md) | Planned | Scope and deliverable plan documented |
+| 03 | [Target Analysis](03_target_analysis/README.md) | Complete | LuminaPay rule-based merchant targeting and activation handoff |
 | 04 | [Predictive Analytics](04_predictive_analytics/README.md) | Complete | PayWave capacity-constrained inactivity model |
 | 05 | [Ad Hoc Analysis](05_ad_hoc_analysis/README.md) | Planned | Scope and deliverable plan documented |
 
-## Planned Module 03 — Target Analysis
+## Complete Module 03 — Target Analysis
 
-The module will focus on defensible target-population definition, segmentation, eligibility logic, opportunity sizing, prioritization, and activation handoff.
+The module demonstrates defensible target-population definition, segmentation, eligibility logic, opportunity sizing, prioritization, and activation handoff.
 
-Planned portfolio evidence:
+Completed portfolio evidence:
 
 - fundamentals and methodology
 - synthetic business case and data dictionary
@@ -55,7 +55,7 @@ Planned portfolio evidence:
 - guided and challenge notebooks
 - reference results and stakeholder readout
 
-See the [module plan](03_target_analysis/README.md).
+See the [completed module](03_target_analysis/README.md) and [finished stakeholder readout](03_target_analysis/reports/stakeholder_readout.md).
 
 ## Planned Module 05 — Ad Hoc Analysis
 

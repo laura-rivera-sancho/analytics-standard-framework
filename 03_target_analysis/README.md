@@ -1,53 +1,74 @@
 # Target Analysis Standard Framework
 
-> **Status: Planned.** This page documents the intended scope and completion criteria. Analysis code, data, and results have not been added yet.
+> **Status: Complete.** This module defines, sizes, profiles, and prioritizes an activation-ready population using transparent business rules and explicit assumptions.
 
-This module will define a repeatable process for identifying, sizing, describing, and prioritizing a target population for a specific business action.
+**Portfolio shortcut:** Review the [Finished stakeholder readout](reports/stakeholder_readout.md) for the recommendation, population funnel, capacity tradeoff, safeguards, and activation plan.
 
-## Intended business questions
+## Business decision
 
-The framework will support questions such as:
+LuminaPay can contact 6,000 merchants about Instant Settlement. The decision is not who is most likely to adopt; it is which merchants are operationally eligible and should be prioritized using interpretable need, value, and fit criteria.
 
-- Which customers, merchants, products, or locations are eligible for an initiative?
-- How large is the realistically addressable opportunity?
-- Which segments contribute most to the opportunity or risk?
-- How should a limited budget or operational capacity be prioritized?
-- What measurement plan is required after activation?
+The reference result identifies **25,805 eligible merchants** from a clean population of 59,960 and recommends a first wave of **6,000**: every high-priority merchant plus the strongest medium-priority merchants. Under explicitly illustrative assumptions, the wave is expected to produce about **806 adopters** and **$386.8K annualized contribution**.
 
-## Planned analytical lifecycle
+## What this module demonstrates
 
-1. Define the business action and decision owner.
-2. Define the unit of analysis and as-of date.
-3. Translate policy and business rules into reproducible eligibility criteria.
-4. Build the population funnel from total population to addressable target.
-5. Validate data coverage, exclusions, overlaps, and denominator consistency.
-6. Size the opportunity using transparent assumptions.
-7. Profile meaningful segments without confusing description with causation.
-8. Define prioritization tiers under capacity or budget constraints.
-9. Test sensitivity to thresholds, missing data, and uncertain assumptions.
-10. Produce an activation-ready target definition and measurement handoff.
+- decision framing, unit of analysis, as-of date, and ownership
+- denominator-consistent eligibility funnel and exclusion audit
+- target sizing and descriptive segment profiling
+- transparent prioritization under a hard capacity constraint
+- sensitivity analysis for scale, expected adoption, and value assumptions
+- activation controls, suppression rules, monitoring, and measurement handoff
+- reproducible synthetic data, analysis code, tests, and executive communication
 
-## Planned portfolio deliverables
+## Navigate the module
 
-- `target_analysis_fundamentals.md`
-- `methodology.md`
-- `case_study/business_case.md`
-- `case_study/data_dictionary.md`
-- `case_study/expected_results.md`
-- compact synthetic sample data
-- deterministic data generator
-- reusable target-sizing and segmentation analysis
-- guided notebook
-- independent challenge notebook
-- stakeholder readout template
+| Resource | Purpose |
+|---|---|
+| [Target-analysis fundamentals](target_analysis_fundamentals.md) | Core concepts, boundaries, failure modes, and review questions |
+| [Methodology](methodology.md) | Reusable end-to-end workflow and quality gates |
+| [Business case](case_study/business_case.md) | LuminaPay decision, constraints, assumptions, and stakeholders |
+| [Data dictionary](case_study/data_dictionary.md) | Field definitions, lineage, timing, and allowed uses |
+| [Expected results](case_study/expected_results.md) | Deterministic reference outputs and interpretation |
+| [Guided notebook](notebooks/guided_target_analysis.ipynb) | Worked analysis from validation through activation handoff |
+| [Challenge notebook](notebooks/challenge_target_analysis.ipynb) | Independent practice with decision prompts and safeguards |
+| [Reference analysis](src/analyze_targets.py) | Reusable eligibility, scoring, sizing, and sensitivity functions |
+| [Synthetic generator](src/generate_synthetic_data.py) | Deterministic population with deliberate quality defects |
+| [Stakeholder readout](reports/stakeholder_readout.md) | Finished recommendation and executive artifacts |
 
-## Boundaries with other modules
+## Analytical lifecycle
 
-- Use [A/B Testing](../01_ab_testing/README.md) when the primary question is whether an intervention caused an outcome.
-- Use [Pre/Post Analysis](../02_pre_post_analysis/README.md) when evaluating a change without randomized control.
-- Use [Predictive Analytics](../04_predictive_analytics/README.md) when estimating a future individual-level outcome from historical data.
-- Use Target Analysis when the immediate need is to define, size, profile, and prioritize an actionable population.
+1. Define the action, decision owner, unit, and as-of date.
+2. Validate source coverage, uniqueness, missingness, and valid values.
+3. Translate policy into ordered and auditable eligibility rules.
+4. Reconcile the population funnel to a stable denominator.
+5. Profile the eligible population without causal claims.
+6. Assign transparent need, value, and fit points.
+7. Rank deterministically and select to operational capacity.
+8. Test alternative capacities and planning assumptions.
+9. Export only activation-required fields and document suppression logic.
+10. Monitor delivery, adoption, segment coverage, complaints, and incremental impact.
 
-## Completion rule
+## Run locally
 
-This module will remain **Planned** until substantive implementation begins and will not be marked **Complete** until it satisfies the repository-wide [module completion standard](../ROADMAP.md#module-completion-standard).
+From the repository root:
+
+```bash
+python -m venv .venv
+.venv/Scripts/activate
+pip install -r requirements-dev.txt
+python 03_target_analysis/src/generate_synthetic_data.py
+python 03_target_analysis/src/analyze_targets.py
+pytest tests/test_target_analysis.py
+```
+
+On macOS or Linux, activate with `source .venv/bin/activate`.
+
+The generator writes a full local population and a compact tracked sample. The full dataset and activation export are intentionally ignored; regenerate them locally from the fixed seed.
+
+## Interpretation boundary
+
+The priority score is an auditable policy device, not a predicted probability, causal effect, or entitlement. Expected adoption and contribution are planning scenarios, not observed results. Country and industry are used to monitor operational coverage, not to infer protected characteristics or award points. A controlled activation test is still required to estimate incremental impact.
+
+## Next module
+
+Use [Ad Hoc Analysis](../05_ad_hoc_analysis/README.md) when the question is exploratory, time-bounded, and does not yet warrant a standardized recurring workflow.

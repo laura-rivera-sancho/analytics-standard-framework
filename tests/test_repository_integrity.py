@@ -47,7 +47,12 @@ def test_notebooks_are_valid_json_and_code_cells_compile():
 
 
 def test_completed_modules_and_planned_placeholders_exist():
-    completed = ["01_ab_testing", "02_pre_post_analysis", "04_predictive_analytics"]
+    completed = [
+        "01_ab_testing",
+        "02_pre_post_analysis",
+        "03_target_analysis",
+        "04_predictive_analytics",
+    ]
     for module in completed:
         root = ROOT / module
         assert (root / "README.md").exists()
@@ -59,7 +64,7 @@ def test_completed_modules_and_planned_placeholders_exist():
         assert list((root / "src").glob("*.py"))
         assert list((root / "templates").glob("*readout*.md"))
 
-    for module in ["03_target_analysis", "05_ad_hoc_analysis"]:
+    for module in ["05_ad_hoc_analysis"]:
         text = (ROOT / module / "README.md").read_text(encoding="utf-8")
         assert "Status: Planned" in text
 
@@ -77,7 +82,12 @@ def test_repository_does_not_track_large_generated_datasets():
 
 
 def test_module_requirements_delegate_to_root_environment():
-    for module in ["01_ab_testing", "02_pre_post_analysis", "04_predictive_analytics"]:
+    for module in [
+        "01_ab_testing",
+        "02_pre_post_analysis",
+        "03_target_analysis",
+        "04_predictive_analytics",
+    ]:
         requirement = (ROOT / module / "requirements.txt").read_text(encoding="utf-8")
         assert "-r ../requirements.txt" in requirement
 
@@ -109,7 +119,12 @@ def test_citation_metadata_identifies_repository_and_license():
 
 
 def test_completed_modules_publish_stakeholder_artifacts():
-    for module in ["01_ab_testing", "02_pre_post_analysis", "04_predictive_analytics"]:
+    for module in [
+        "01_ab_testing",
+        "02_pre_post_analysis",
+        "03_target_analysis",
+        "04_predictive_analytics",
+    ]:
         report_root = ROOT / module / "reports"
         markdown = report_root / "stakeholder_readout.md"
         preview = report_root / "executive_summary.png"
@@ -162,7 +177,12 @@ def test_recruiter_shortcuts_link_to_finished_reports():
     root_readme = (ROOT / "README.md").read_text(encoding="utf-8")
     assert "## Recommended portfolio review path" in root_readme
 
-    for module in ["01_ab_testing", "02_pre_post_analysis", "04_predictive_analytics"]:
+    for module in [
+        "01_ab_testing",
+        "02_pre_post_analysis",
+        "03_target_analysis",
+        "04_predictive_analytics",
+    ]:
         module_readme = (ROOT / module / "README.md").read_text(encoding="utf-8")
         assert "**Portfolio shortcut:**" in module_readme
         assert "[Finished stakeholder readout](reports/stakeholder_readout.md)" in module_readme
