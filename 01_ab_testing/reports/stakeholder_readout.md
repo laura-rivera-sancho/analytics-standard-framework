@@ -3,7 +3,7 @@
 > **Portfolio case study:** NovaPay, its customers, and every result below are
 > fictional and synthetically generated.
 
-![NovaPay executive summary](executive_summary.png)
+![NovaPay executive summary showing a 3.31 percentage-point checkout-completion lift, 25.19-second reduction in checkout time, and 40,000 randomized customers](executive_summary.png)
 
 [Download the five-slide PowerPoint readout](stakeholder_readout.pptx)
 

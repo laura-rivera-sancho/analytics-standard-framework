@@ -2,6 +2,9 @@
 
 This module defines a repeatable process for estimating the impact of a business, product, or operational change when a randomized Control group is not available.
 
+**Portfolio shortcut:** Review the [finished FinFlow stakeholder readout](reports/stakeholder_readout.md)
+or [download the five-slide PowerPoint deck](reports/stakeholder_readout.pptx).
+
 ## How to use this module
 
 The module follows the same portfolio structure as the A/B testing section:
@@ -13,21 +16,14 @@ The module follows the same portfolio structure as the A/B testing section:
 
 Start here:
 
-- `pre_post_fundamentals.md` for core concepts and terminology.
-- `methodology.md` for the analytical execution standard.
-- `case_study/business_case.md` for the fictional FinFlow scenario.
-- `case_study/data_dictionary.md` for the synthetic dataset definition.
-- `data/raw/finflow_verification_pre_post_sample.csv` for a compact inspectable synthetic sample with deliberate data-quality defects.
-- `notebooks/guided_pre_post_analysis.ipynb` for the step-by-step worked analysis from raw Pre/Post comparison through adjusted Interrupted Time Series and recommendation.
-- `notebooks/challenge_pre_post_analysis.ipynb` for the independent practice version with TODO cells and no worked answers.
-- `reports/stakeholder_readout.md` for the finished FinFlow decision memo, executive preview, and downloadable PowerPoint readout.
-- `templates/stakeholder_readout_template.md` for the standard stakeholder presentation structure and communication rules.
-- `templates/challenge_answer_key.md` for the expected analytical narrative and interpretation.
-- `templates/challenge_scoring_rubric.md` for a 100-point review rubric.
-- `templates/create_stakeholder_readout_pptx.js` to generate a reusable PowerPoint stakeholder readout template.
-- `src/generate_synthetic_data.py` to generate reproducible raw and clean FinFlow datasets.
-- `src/analyze_pre_post.py` for the reference analysis, including simple Pre/Post comparisons and an adjusted interrupted-time-series model.
-- `requirements.txt` for the Python environment.
+- [Finished stakeholder readout](reports/stakeholder_readout.md) for the FinFlow decision memo, executive preview, and PowerPoint deck.
+- [Guided analysis notebook](notebooks/guided_pre_post_analysis.ipynb) for the worked analysis through adjusted interrupted time series and recommendation.
+- [Challenge notebook](notebooks/challenge_pre_post_analysis.ipynb) for independent practice with TODO cells and no worked answers.
+- [Pre/Post fundamentals](pre_post_fundamentals.md) and [analytical methodology](methodology.md) for concepts and execution standards.
+- [FinFlow business case](case_study/business_case.md), [data dictionary](case_study/data_dictionary.md), and [inspectable synthetic sample](data/raw/finflow_verification_pre_post_sample.csv).
+- [Expected analytical narrative](templates/challenge_answer_key.md) and [100-point scoring rubric](templates/challenge_scoring_rubric.md) for self-review.
+- [Stakeholder presentation guide](templates/stakeholder_readout_template.md) and [reusable PowerPoint generator](templates/create_stakeholder_readout_pptx.js).
+- [Synthetic-data generator](src/generate_synthetic_data.py) and [reference analysis](src/analyze_pre_post.py) for the reproducible workflow.
 
 ## Standard lifecycle
 

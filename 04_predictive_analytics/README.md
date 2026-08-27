@@ -2,6 +2,9 @@
 
 This module defines a repeatable process for building, validating, interpreting, and operationalizing predictive models for business decision support.
 
+**Portfolio shortcut:** Review the [finished PayWave stakeholder readout](reports/stakeholder_readout.md)
+or [download the five-slide PowerPoint deck](reports/stakeholder_readout.pptx).
+
 ## How to use this module
 
 The module follows the same portfolio structure as the experimentation sections:
@@ -13,20 +16,14 @@ The module follows the same portfolio structure as the experimentation sections:
 
 Start here:
 
-- `predictive_analytics_fundamentals.md` for core concepts and terminology.
-- `methodology.md` for the analytical and modeling execution standard.
-- `case_study/business_case.md` for the fictional PayWave scenario.
-- `case_study/data_dictionary.md` for the synthetic dataset definition.
-- `case_study/expected_results.md` for the deterministic validation and held-out Test results.
-- `notebooks/guided_predictive_analytics.ipynb` for the complete decision-focused modeling workflow.
-- `notebooks/challenge_predictive_analytics.ipynb` for independent practice without worked solutions.
-- `reports/stakeholder_readout.md` for the finished PayWave decision memo, executive preview, and downloadable PowerPoint readout.
-- `src/generate_synthetic_data.py` to generate reproducible clean, raw, and compact PayWave datasets.
-- `src/train_evaluate_models.py` for the reference temporal modeling and evaluation workflow.
-- `templates/challenge_answer_key.md` for expected reasoning and interpretation.
-- `templates/challenge_scoring_rubric.md` for a 100-point portfolio review standard.
-- `templates/stakeholder_readout_template.md` for the executive presentation structure.
-- `requirements.txt` for the Python environment.
+- [Finished stakeholder readout](reports/stakeholder_readout.md) for the PayWave decision memo, executive preview, and PowerPoint deck.
+- [Guided analysis notebook](notebooks/guided_predictive_analytics.ipynb) for the complete decision-focused modeling workflow.
+- [Challenge notebook](notebooks/challenge_predictive_analytics.ipynb) for independent practice without worked solutions.
+- [Predictive analytics fundamentals](predictive_analytics_fundamentals.md) and [modeling methodology](methodology.md) for concepts and execution standards.
+- [PayWave business case](case_study/business_case.md), [data dictionary](case_study/data_dictionary.md), and [deterministic expected results](case_study/expected_results.md).
+- [Expected reasoning](templates/challenge_answer_key.md) and [100-point scoring rubric](templates/challenge_scoring_rubric.md) for self-review.
+- [Executive presentation guide](templates/stakeholder_readout_template.md) for decision-focused communication.
+- [Synthetic-data generator](src/generate_synthetic_data.py) and [reference modeling workflow](src/train_evaluate_models.py) for reproducible implementation.
 
 ## Standard lifecycle
 

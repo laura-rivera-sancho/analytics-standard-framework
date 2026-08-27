@@ -21,6 +21,7 @@
 - [ ] Assumptions, limitations, and decision implications are explicit
 - [ ] Expected results or answer keys were updated when outputs changed
 - [ ] Documentation and relative links were checked
+- [ ] Headings, link labels, image descriptions, tables, and charts were checked for accessibility
 - [ ] Data is fictional or synthetic and contains no confidential information
 - [ ] No credentials, large generated outputs, or unrelated files are included
 

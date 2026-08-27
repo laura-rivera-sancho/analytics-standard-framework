@@ -3,7 +3,7 @@
 > **Portfolio case study:** FinFlow, its transactions, and every result below are
 > fictional and synthetically generated.
 
-![FinFlow executive summary](executive_summary.png)
+![FinFlow executive summary showing a 5.65 percentage-point observed completion increase, 3.20-point adjusted launch estimate, and 0.54-point payment-decline increase](executive_summary.png)
 
 [Download the five-slide PowerPoint readout](stakeholder_readout.pptx)
 

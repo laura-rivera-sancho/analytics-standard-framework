@@ -66,6 +66,15 @@ pytest --cov
 Also run any changed analysis workflow end to end and confirm that documented
 results still match its expected-results file or answer key.
 
+## Accessibility and inclusive communication
+
+- Use one level-one heading per standalone Markdown document and do not skip heading levels.
+- Give links descriptive labels that make sense outside the surrounding sentence.
+- Describe the evidence or purpose of every image in its alternative text.
+- Use real table headers and never rely on color alone to communicate status or meaning.
+- Keep charts labeled directly and state important findings in text as well as visually.
+- Prefer plain language, expand uncommon abbreviations, and explain analytical limitations explicitly.
+
 ## Pull requests
 
 Use the pull request template and explain the decision or learner need addressed,

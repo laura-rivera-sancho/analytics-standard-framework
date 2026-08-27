@@ -8,6 +8,19 @@ This repository demonstrates how I approach common analytics engagements from en
 
 Each module combines a reusable methodology with a fictional business case, synthetic data, reproducible Python code, guided practice, and an executive communication standard. No employer, client, or confidential data are used.
 
+## Recommended portfolio review path
+
+If you are reviewing this repository for a role or project, these links provide
+the fastest route to the strongest evidence:
+
+| What to assess | Start here | What it demonstrates |
+|---|---|---|
+| Decision communication | [NovaPay A/B testing readout](01_ab_testing/reports/stakeholder_readout.md) | Experiment validity, effect size, guardrails, and a rollout recommendation |
+| Causal judgment | [FinFlow Pre/Post readout](02_pre_post_analysis/reports/stakeholder_readout.md) | Interrupted time series, confounder review, limitations, and risk monitoring |
+| Predictive decision design | [PayWave modeling readout](04_predictive_analytics/reports/stakeholder_readout.md) | Temporal validation, capacity metrics, business value, and a controlled-pilot plan |
+| Reproducible implementation | [Source workflows](01_ab_testing/src) and [automated tests](tests) | Reusable Python, deterministic data, analytical tests, and repository checks |
+| Project scope and next modules | [Roadmap](ROADMAP.md) | Completion criteria, current status, and planned work |
+
 ## What this project demonstrates
 
 - **Business problem framing** — translating broad requests into decision-ready analytical questions.
@@ -73,7 +86,7 @@ analytics-standard-framework/
 │   ├── notebooks/       # Guided and challenge analyses
 │   ├── reports/         # Finished Markdown readout, preview, and PowerPoint deck
 │   ├── src/             # Data generator and Pre/Post/ITS analysis
-│   └── templates/       # Readout, answer key, rubric, and PowerPoint generator
+│   └── templates/       # Authoring guide, answer key, rubric, and reusable template
 ├── 03_target_analysis/
 │   └── README.md         # Planned scope and completion criteria
 ├── 04_predictive_analytics/
@@ -96,7 +109,7 @@ analytics-standard-framework/
 - Python 3.11 or 3.12
 - `pip`
 - Jupyter for the guided and challenge notebooks
-- Node.js only when generating the PowerPoint readout templates
+- Node.js only for the optional reusable PowerPoint template generators
 
 ### Run an analysis
 
@@ -173,7 +186,3 @@ module standard, synthetic-data policy, local checks, and pull request workflow.
 This project is available under the [MIT License](LICENSE). If you reference the
 framework in academic or professional work, GitHub can generate a citation from
 the repository's [citation metadata](CITATION.cff).
-
-## Project status
-
-Three modules are complete and two are planned. Target Analysis and Ad Hoc Analysis now have explicit scope pages rather than invisible numbering gaps. See the [roadmap](ROADMAP.md) for the completion standard and repository-quality sequence.

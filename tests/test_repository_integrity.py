@@ -121,3 +121,48 @@ def test_completed_modules_publish_stakeholder_artifacts():
         assert "[Download the five-slide PowerPoint readout](stakeholder_readout.pptx)" in text
         assert preview.read_bytes().startswith(b"\x89PNG\r\n\x1a\n")
         assert deck.read_bytes().startswith(b"PK")
+
+
+def test_markdown_accessibility_basics():
+    image_pattern = re.compile(r"!\[([^]]*)\]\([^)]+\)")
+    link_pattern = re.compile(r"(?<!!)\[([^]]+)\]\([^)]+\)")
+    generic_labels = {"click here", "here", "link", "read more", "learn more"}
+    errors = []
+
+    for path in ROOT.rglob("*.md"):
+        if ".venv" in path.parts or ".github" in path.parts:
+            continue
+        text = path.read_text(encoding="utf-8")
+        headings = []
+        for line_number, line in enumerate(text.splitlines(), start=1):
+            match = re.match(r"^(#{1,6})\s+", line)
+            if match:
+                headings.append((line_number, len(match.group(1))))
+
+        if sum(level == 1 for _, level in headings) != 1:
+            errors.append(f"{path.relative_to(ROOT)}: expected exactly one level-one heading")
+        for previous, current in zip(headings, headings[1:]):
+            if current[1] > previous[1] + 1:
+                errors.append(
+                    f"{path.relative_to(ROOT)}:{current[0]}: heading level jumps "
+                    f"from {previous[1]} to {current[1]}"
+                )
+
+        for alt_text in image_pattern.findall(text):
+            if len(alt_text.strip()) < 12:
+                errors.append(f"{path.relative_to(ROOT)}: image needs descriptive alt text")
+        for label in link_pattern.findall(text):
+            if label.strip().lower() in generic_labels:
+                errors.append(f"{path.relative_to(ROOT)}: generic link label '{label}'")
+
+    assert not errors, "Markdown accessibility errors:\n" + "\n".join(errors)
+
+
+def test_recruiter_shortcuts_link_to_finished_reports():
+    root_readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    assert "## Recommended portfolio review path" in root_readme
+
+    for module in ["01_ab_testing", "02_pre_post_analysis", "04_predictive_analytics"]:
+        module_readme = (ROOT / module / "README.md").read_text(encoding="utf-8")
+        assert "**Portfolio shortcut:**" in module_readme
+        assert "[Finished stakeholder readout](reports/stakeholder_readout.md)" in module_readme

@@ -241,9 +241,9 @@ Include:
 
 ---
 
-# Optional Appendix Slides
+## Optional Appendix Slides
 
-## Appendix A — Methodology
+### Appendix A — Methodology
 
 Include:
 - Pre/Post design rationale
@@ -253,7 +253,7 @@ Include:
 - assumptions
 - limitations
 
-## Appendix B — Full Data Quality Details
+### Appendix B — Full Data Quality Details
 
 Include:
 - exclusion counts
@@ -263,19 +263,19 @@ Include:
 - date coverage
 - derived field logic
 
-## Appendix C — Full Segment Tables
+### Appendix C — Full Segment Tables
 
 Use this for detailed country/device/customer-tenure/risk-tier results.
 
-## Appendix D — Model Output
+### Appendix D — Model Output
 
 Include detailed model coefficients for technical reviewers.
 
 ---
 
-# Communication Standards
+## Communication Standards
 
-## Do not overstate causality
+### Do not overstate causality
 Avoid saying:
 
 > The launch caused a X% improvement.
@@ -286,7 +286,7 @@ Prefer:
 
 Use stronger causal language only when the design supports it.
 
-## Separate observed movement from adjusted evidence
+### Separate observed movement from adjusted evidence
 A strong readout distinguishes:
 
 - simple Pre/Post movement
@@ -294,7 +294,7 @@ A strong readout distinguishes:
 - adjusted ITS estimate
 - causal-confidence rating
 
-## Use percentage points correctly
+### Use percentage points correctly
 If a rate moves from 80% to 84%:
 
 - Absolute change = **+4 percentage points**
@@ -302,15 +302,15 @@ If a rate moves from 80% to 84%:
 
 Do not use them interchangeably.
 
-## Explain rare events carefully
+### Explain rare events carefully
 For low-frequency metrics such as fraud, show event counts and confidence intervals. A large relative change may represent only a few cases.
 
-## End with a decision
+### End with a decision
 Every Pre/Post readout should end with one clear recommendation and a monitoring plan.
 
 ---
 
-# Standard Storyline
+## Standard Storyline
 
 Every Pre/Post stakeholder readout should answer these questions in order:
 

@@ -3,7 +3,7 @@
 > **Portfolio case study:** PayWave, its customers, and every result below are
 > fictional and synthetically generated.
 
-![PayWave executive summary](executive_summary.png)
+![PayWave executive summary showing 552 incremental at-risk customer captures, 2.58-times lift at capacity, and 46,451 dollars in illustrative net value](executive_summary.png)
 
 [Download the five-slide PowerPoint readout](stakeholder_readout.pptx)
 

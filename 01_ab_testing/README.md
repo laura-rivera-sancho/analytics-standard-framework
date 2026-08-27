@@ -2,6 +2,9 @@
 
 This module defines a repeatable process for understanding, designing, validating, analyzing, and communicating controlled experiments.
 
+**Portfolio shortcut:** Review the [finished NovaPay stakeholder readout](reports/stakeholder_readout.md)
+or [download the five-slide PowerPoint deck](reports/stakeholder_readout.pptx).
+
 ## How to use this module
 
 The module is organized in four layers:
@@ -13,17 +16,15 @@ The module is organized in four layers:
 
 Start here:
 
-- `ab_testing_fundamentals.md` for the **beginner-friendly** version using simple vocabulary and examples.
-- `ab_testing_fundamentals_detailed.md` for the **more technical/detailed reference** version.
-- `methodology.md` for the analytical execution standard.
-- `case_study/business_case.md` for the fictional NovaPay business scenario.
-- `case_study/data_dictionary.md` for field definitions.
-- `notebooks/guided_ab_test_analysis.ipynb` for the step-by-step worked analysis.
-- `notebooks/challenge_ab_test_analysis.ipynb` for independent practice with TODO cells and no solutions.
-- `reports/stakeholder_readout.md` for the finished NovaPay decision memo, executive preview, and downloadable PowerPoint readout.
-- `templates/stakeholder_readout_deck.md` for the standard stakeholder presentation structure, slide-by-slide guidance, and communication rules.
-- `src/generate_synthetic_data.py` to generate the reproducible synthetic dataset.
-- `src/analyze_experiment.py` for the reference analysis workflow.
+- [Finished stakeholder readout](reports/stakeholder_readout.md) for the NovaPay decision memo, executive preview, and PowerPoint deck.
+- [Guided analysis notebook](notebooks/guided_ab_test_analysis.ipynb) for the step-by-step worked analysis.
+- [Challenge notebook](notebooks/challenge_ab_test_analysis.ipynb) for independent practice with TODO cells and no solutions.
+- [Beginner-friendly fundamentals](ab_testing_fundamentals.md) for simple vocabulary and examples.
+- [Detailed fundamentals](ab_testing_fundamentals_detailed.md) for the more technical reference.
+- [Analytical methodology](methodology.md) for the execution standard.
+- [NovaPay business case](case_study/business_case.md) and [data dictionary](case_study/data_dictionary.md) for scenario and field definitions.
+- [Stakeholder presentation guide](templates/stakeholder_readout_deck.md) for slide-by-slide communication guidance.
+- [Synthetic-data generator](src/generate_synthetic_data.py) and [reference analysis](src/analyze_experiment.py) for the reproducible workflow.
 
 ## Standard lifecycle
 

@@ -220,11 +220,11 @@ Avoid generic next steps such as “continue monitoring” without defining what
 
 ---
 
-# Optional Appendix Slides
+## Optional Appendix Slides
 
 Use only when needed.
 
-## Appendix A — Statistical Method
+### Appendix A — Statistical Method
 
 Include:
 - Test selected and why
@@ -234,7 +234,7 @@ Include:
 - Assumptions
 - Sensitivity checks
 
-## Appendix B — Sample Size / Power
+### Appendix B — Sample Size / Power
 
 Include:
 - Baseline rate
@@ -244,7 +244,7 @@ Include:
 - Required sample
 - Actual sample
 
-## Appendix C — Data Quality Details
+### Appendix C — Data Quality Details
 
 Include:
 - Exclusion counts
@@ -253,41 +253,41 @@ Include:
 - Metric definitions
 - Assignment / exposure rules
 
-## Appendix D — Full Segment Table
+### Appendix D — Full Segment Table
 
 Provide supporting segment detail without cluttering the main narrative.
 
 ---
 
-# Presentation Standards
+## Presentation Standards
 
-## Lead with decisions
+### Lead with decisions
 The first slide should answer: **What happened, does it matter, and what should we do?**
 
-## Use percentage points correctly
+### Use percentage points correctly
 If conversion increases from 70% to 73%:
 - Absolute lift = **+3 percentage points**
 - Relative lift = **+4.3%**
 
 Do not use the terms interchangeably.
 
-## Separate evidence from interpretation
+### Separate evidence from interpretation
 Example:
 - **Evidence:** Treatment increased completion by +3.2 pp; 95% CI +1.9 to +4.5 pp.
 - **Interpretation:** The change is both statistically credible and large enough to justify rollout.
 
-## Show uncertainty
+### Show uncertainty
 Confidence intervals are preferred over presenting a single estimate with no context.
 
-## Avoid causal overstatement
+### Avoid causal overstatement
 If randomization, exposure, or tracking is compromised, qualify causal language.
 
-## Keep technical detail proportional to the audience
+### Keep technical detail proportional to the audience
 Executives need decision implications. Analysts may require test details. Keep deep methodology in the appendix unless it changes the decision.
 
 ---
 
-# Standard Stakeholder Storyline
+## Standard Stakeholder Storyline
 
 Every A/B testing readout should answer these questions in order:
 
