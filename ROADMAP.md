@@ -119,7 +119,7 @@ This sequence is directional, not date-bound. Target dates will be added only af
 
 ## GitHub Project workflow
 
-The repository's GitHub Project is the execution layer for this roadmap. It should provide:
+The [Data & AI Portfolio Roadmap](https://github.com/users/laura-rivera-sancho/projects/2) GitHub Project is the execution layer for this roadmap. It provides:
 
 - a **Board** view grouped by status: Backlog, Planned, In progress, In review, and Complete
 - a **Roadmap** view for sequencing portfolio tracks once target dates are agreed
