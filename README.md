@@ -73,7 +73,7 @@ The simple Pre/Post comparison is intentionally not treated as proof of causalit
 | `04_predictive_analytics` | Complete | Predictive modeling from framing through validation and operationalization | [Predictive Analytics](04_predictive_analytics/README.md) |
 | `05_ad_hoc_analysis` | Complete | Structured, time-bounded KPI diagnosis and decision handoff | [Ad Hoc Analysis](05_ad_hoc_analysis/README.md) |
 
-See the [project roadmap and module completion standard](ROADMAP.md) for objective status definitions, completed deliverables, and repository-wide improvements.
+These five completed modules form the **Analytics** pillar of a broader Data & AI portfolio. See the [portfolio roadmap](ROADMAP.md) for the planned Machine Learning, Large Language Model, AI Agentic Framework, and Data Architecture tracks, along with shared evidence standards and delivery gates.
 
 ## Repository map
 
