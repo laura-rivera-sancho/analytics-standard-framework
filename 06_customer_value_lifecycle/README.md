@@ -25,12 +25,12 @@ The reference analysis finds that **Champions represent 23.1% of customers but 5
 
 | Resource | Purpose |
 |---|---|
+| [Fundamentals](customer_value_lifecycle_fundamentals.md) | Core RFM, lifecycle, prioritization, governance, and interpretation concepts |
 | [Methodology](methodology.md) | Reusable customer-value workflow and analytical quality gates |
 | [Business case](case_study/business_case.md) | Decision, audience, constraints, and success criteria |
 | [Data dictionary](case_study/data_dictionary.md) | Transaction grain, fields, derived measures, and exclusions |
 | [Expected results](case_study/expected_results.md) | Deterministic findings and interpretation boundary |
 | [Guided notebook](notebooks/guided_customer_value_lifecycle.ipynb) | Worked RFM, profile, migration, and activation analysis |
-| [Challenge notebook](notebooks/challenge_customer_value_lifecycle.ipynb) | Independent customer-lifecycle exercise |
 | [Reference analysis](src/analyze_customer_value.py) | Reusable quality, RFM, migration, and prioritization functions |
 | [Synthetic generator](src/generate_synthetic_data.py) | Deterministic customer-order history with deliberate defects |
 | [Stakeholder readout](reports/stakeholder_readout.md) | Executive recommendation and portfolio artifacts |

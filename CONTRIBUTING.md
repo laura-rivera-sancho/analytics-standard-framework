@@ -36,7 +36,7 @@ A module described as complete should include:
 3. a fictional business case and data dictionary
 4. deterministic synthetic-data generation with a small reviewable sample
 5. reusable analysis code with explicit validation and assumptions
-6. a guided notebook and an independent challenge notebook
+6. one guided notebook; do not add a separate challenge notebook unless a future module explicitly requires one
 7. deterministic expected results or an answer key
 8. a stakeholder communication template
 9. limitations, privacy disclosure, and a monitoring or follow-up plan

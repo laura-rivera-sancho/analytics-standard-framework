@@ -192,7 +192,10 @@ def test_recruiter_shortcuts_link_to_finished_reports():
 def test_a6_review_artifacts_are_publishable():
     module = ROOT / "06_customer_value_lifecycle"
     assert (module / "README.md").exists()
+    assert (module / "customer_value_lifecycle_fundamentals.md").exists()
     assert (module / "methodology.md").exists()
     assert (module / "case_study/expected_results.md").exists()
+    assert list((module / "notebooks").glob("guided*.ipynb"))
+    assert not list((module / "notebooks").glob("challenge*.ipynb"))
     assert (module / "reports/executive_summary.png").read_bytes().startswith(b"\x89PNG\r\n\x1a\n")
     assert (module / "reports/stakeholder_readout.pptx").read_bytes().startswith(b"PK")

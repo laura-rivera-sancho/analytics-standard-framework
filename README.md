@@ -123,7 +123,7 @@ analytics-standard-framework/
 ├── 06_customer_value_lifecycle/
 │   ├── case_study/      # Harbor & Pine decision, dictionary, and reference results
 │   ├── data/raw/        # Compact synthetic customer-order sample
-│   ├── notebooks/       # Guided and challenge lifecycle analyses
+│   ├── notebooks/       # Guided lifecycle analysis
 │   ├── reports/         # Finished Markdown readout, preview, and PowerPoint deck
 │   ├── src/             # Synthetic data, RFM, migration, prioritization, and visualization
 │   └── templates/       # Reusable lifecycle stakeholder readout
@@ -137,7 +137,7 @@ analytics-standard-framework/
 
 - Python 3.11 or 3.12
 - `pip`
-- Jupyter for the guided and challenge notebooks
+- Jupyter for the guided notebooks
 - Node.js only for the optional reusable PowerPoint template generators
 
 ### Run an analysis
