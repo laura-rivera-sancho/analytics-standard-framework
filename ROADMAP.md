@@ -15,7 +15,7 @@ The portfolio is organized around two complementary business domains:
 | 2. Machine Learning | `machine-learning-standard-framework` | Supervised and unsupervised models tied to measurable business decisions | **Planned** |
 | 3. Large Language Models | `llm-systems-framework` | A cited, evaluated trading research copilot | **Planned** |
 | 4. AI Agentic Frameworks | `agentic-ai-framework` | A controlled research and paper-trading workflow with mandatory human approval | **Planned** |
-| 5. Data Warehousing & Modeling | [`data-architecture-standard-framework`](https://github.com/laura-rivera-sancho/data-architecture-standard-framework) | A governed omnichannel marketing warehouse, marts, and semantic layer | **In progress** |
+| 5. Data Warehousing & Modeling | [`data-architecture-standard-framework`](https://github.com/laura-rivera-sancho/data-architecture-standard-framework) | A governed omnichannel marketing warehouse, marts, and semantic layer | **Complete** |
 
 The three remaining repository names are working names and will become links after those repositories are created. A future GitHub profile README will act as the portfolio landing page, while the [Data & AI Portfolio Roadmap](https://github.com/users/laura-rivera-sancho/projects/2) GitHub Project coordinates work across all five repositories.
 
@@ -165,14 +165,14 @@ The copilot is a research system, not a buy/sell signal generator. It should dis
 
 **Objective:** Build a governed omnichannel marketing data platform that supports the Analytics and Machine Learning marketing cases with trusted, reusable data products.
 
-### Planned Data Architecture milestones
+### Completed Data Architecture milestones
 
 | Milestone | Capability | Core evidence | Status |
 |---|---|---|---|
-| **DA1 — Source Contracts & Staging** | Standardize customer, order, campaign, experiment, and behavioral event data | Source contracts, ingestion assumptions, staging models, identifiers, freshness rules, and data-quality tests | Planned |
-| **DA2 — Dimensional Warehouse** | Create a defensible cross-channel analytical model | Declared grain; order, item, touchpoint, exposure, and event facts; conformed customer, product, campaign, channel, and date dimensions; slowly changing dimensions | Planned |
-| **DA3 — Business Data Marts** | Serve consistent data for specific analytical decisions | `customer_360`, `rfm_segments`, `campaign_performance`, `experiment_results`, `ml_features`, and `executive_growth` marts | Planned |
-| **DA4 — Semantic Governance & Operations** | Make metrics trusted and maintainable | Governed metric definitions, lineage, ownership, tests, documentation, performance, freshness monitoring, and change management | Planned |
+| **DA1 — Source Contracts & Staging** | Standardize customer, order, campaign, experiment, and behavioral event data | Source contracts, ingestion assumptions, staging models, identifiers, freshness rules, and data-quality tests | Complete |
+| **DA2 — Dimensional Warehouse** | Create a defensible cross-channel analytical model | Declared grain; order, item, touchpoint, exposure, and event facts; conformed customer, product, campaign, channel, and date dimensions; slowly changing dimensions | Complete |
+| **DA3 — Business Data Marts** | Serve consistent data for specific analytical decisions | `customer_360`, `rfm_segments`, `campaign_performance`, `experiment_results`, `ml_features`, and `executive_growth` marts | Complete |
+| **DA4 — Semantic Governance & Operations** | Make metrics trusted and maintainable | Governed metric definitions, lineage, ownership, tests, documentation, performance, freshness monitoring, and change management | Complete |
 
 **Pillar completion gate:** transformations are reproducible and tested, business grain and rules are explicit, lineage is inspectable, metrics are consistent, and the marts directly support at least the RFM, experimentation, and campaign-response cases.
 
