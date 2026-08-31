@@ -15,9 +15,9 @@ The portfolio is organized around two complementary business domains:
 | 2. Machine Learning | `machine-learning-standard-framework` | Supervised and unsupervised models tied to measurable business decisions | **Planned** |
 | 3. Large Language Models | `llm-systems-framework` | A cited, evaluated trading research copilot | **Planned** |
 | 4. AI Agentic Frameworks | `agentic-ai-framework` | A controlled research and paper-trading workflow with mandatory human approval | **Planned** |
-| 5. Data Warehousing & Modeling | `data-architecture-standard-framework` | A governed omnichannel marketing warehouse, marts, and semantic layer | **Planned** |
+| 5. Data Warehousing & Modeling | [`data-architecture-standard-framework`](https://github.com/laura-rivera-sancho/data-architecture-standard-framework) | A governed omnichannel marketing warehouse, marts, and semantic layer | **In progress** |
 
-The four planned repository names are working names and will become links only after the repositories are created. A future GitHub profile README will act as the portfolio landing page, while the [Data & AI Portfolio Roadmap](https://github.com/users/laura-rivera-sancho/projects/2) GitHub Project coordinates work across all five repositories.
+The three remaining repository names are working names and will become links after those repositories are created. A future GitHub profile README will act as the portfolio landing page, while the [Data & AI Portfolio Roadmap](https://github.com/users/laura-rivera-sancho/projects/2) GitHub Project coordinates work across all five repositories.
 
 ## Repository strategy
 
@@ -161,7 +161,7 @@ The copilot is a research system, not a buy/sell signal generator. It should dis
 
 ## Pillar 5 — Data Warehousing, Data Marts & Data Modeling
 
-**Planned repository:** `data-architecture-standard-framework`
+**Repository:** [`data-architecture-standard-framework`](https://github.com/laura-rivera-sancho/data-architecture-standard-framework)
 
 **Objective:** Build a governed omnichannel marketing data platform that supports the Analytics and Machine Learning marketing cases with trusted, reusable data products.
 
