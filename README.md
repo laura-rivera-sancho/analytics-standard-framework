@@ -21,7 +21,7 @@ the fastest route to the strongest evidence:
 | Predictive decision design | [PayWave modeling readout](04_predictive_analytics/reports/stakeholder_readout.md) | Temporal validation, capacity metrics, business value, and a controlled-pilot plan |
 | Diagnostic judgment | [OrbitMart ad hoc readout](05_ad_hoc_analysis/reports/stakeholder_readout.md) | KPI trees, rate-and-mix decomposition, exploratory controls, and evidence-calibrated action |
 | Reproducible implementation | [Source workflows](01_ab_testing/src) and [automated tests](tests) | Reusable Python, deterministic data, analytical tests, and repository checks |
-| Project scope and completion | [Roadmap](ROADMAP.md) | Completion criteria, finished evidence, and repository-quality work |
+| Portfolio scope and milestones | [Roadmap](ROADMAP.md) | Five-repository architecture, planned case studies, completion criteria, and delivery sequence |
 
 ## What this project demonstrates
 
@@ -73,7 +73,9 @@ The simple Pre/Post comparison is intentionally not treated as proof of causalit
 | `04_predictive_analytics` | Complete | Predictive modeling from framing through validation and operationalization | [Predictive Analytics](04_predictive_analytics/README.md) |
 | `05_ad_hoc_analysis` | Complete | Structured, time-bounded KPI diagnosis and decision handoff | [Ad Hoc Analysis](05_ad_hoc_analysis/README.md) |
 
-These five completed modules form the **Analytics** pillar of a broader Data & AI portfolio. See the [portfolio roadmap](ROADMAP.md) for the planned Machine Learning, Large Language Model, AI Agentic Framework, and Data Architecture tracks, along with shared evidence standards and delivery gates. Delivery is tracked in the [Data & AI Portfolio Roadmap project](https://github.com/users/laura-rivera-sancho/projects/2).
+Four modules form the completed foundation of the **Analytics** pillar. The completed PayWave predictive module is now classified as a **Machine Learning seed case** and remains here temporarily so its links, tests, and reports continue to work until the dedicated Machine Learning repository is created.
+
+The broader portfolio will use one repository per pillar. See the [portfolio roadmap](ROADMAP.md) for the five-repository architecture, agreed marketing and trading projects, shared evidence standards, and delivery sequence. Execution is tracked in the [Data & AI Portfolio Roadmap project](https://github.com/users/laura-rivera-sancho/projects/2).
 
 ## Repository map
 
@@ -114,7 +116,7 @@ analytics-standard-framework/
 │   ├── reports/         # Finished Markdown readout, preview, and PowerPoint deck
 │   ├── src/             # Synthetic data, KPI tree, decomposition, and inference
 │   └── templates/       # Intake brief, answer key, rubric, and readout
-├── ROADMAP.md            # Status definitions and cross-module completion standard
+├── ROADMAP.md            # Five-repository portfolio plan and milestone definitions
 └── README.md             # Portfolio landing page
 ```
 

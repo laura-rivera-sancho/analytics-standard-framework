@@ -1,34 +1,50 @@
 # Data & AI Portfolio Roadmap
 
-This roadmap reframes the repository as the foundation of a broader professional portfolio spanning five complementary areas: **Analytics**, **Machine Learning**, **Large Language Models**, **AI Agentic Frameworks**, and **Data Warehousing, Data Marts & Data Modeling**.
+This roadmap defines a five-repository professional portfolio. Each repository represents one capability pillar and contains a small set of connected, end-to-end case studies rather than isolated demos.
 
-The current Analytics Standard Framework is the completed first portfolio pillar. The remaining pillars are staged tracks that will be scoped and delivered as evidence-based case studies rather than collections of disconnected demos.
+The portfolio is organized around two complementary business domains:
 
-## Portfolio north star
+- **Growth & Marketing Intelligence:** customer value, experimentation, campaign response, segmentation, and governed marketing data products
+- **Market & Trading Intelligence:** macro-market monitoring, cited research, and human-governed paper-trading workflows
 
-Each pillar should demonstrate an end-to-end business capability: frame a decision, design the technical approach, implement a reproducible solution, evaluate it honestly, and communicate the outcome to both technical and non-technical audiences.
+## Portfolio architecture
 
-| Pillar | Portfolio outcome | Current status |
-|---|---|---|
-| 1. Analytics | Decision-ready analysis across experimentation, change measurement, targeting, prediction, and rapid diagnostics | **Complete** |
-| 2. Machine Learning | Production-minded predictive systems with baselines, validation, explainability, deployment thinking, and monitoring | **Planned** |
-| 3. Large Language Models | Evaluated LLM applications using retrieval, structured generation, safety controls, and measurable quality | **Planned** |
-| 4. AI Agentic Frameworks | Reliable tool-using workflows with orchestration, state, human oversight, observability, and evaluation | **Planned** |
-| 5. Data Warehousing, Data Marts & Data Modeling | Governed analytical data products using dimensional models, tested transformations, lineage, and semantic definitions | **Planned** |
+| Pillar | Planned repository | Primary portfolio outcome | Status |
+|---|---|---|---|
+| 1. Analytics | [`analytics-standard-framework`](https://github.com/laura-rivera-sancho/analytics-standard-framework) | Decision-ready analytics, experimentation, customer insight, and live market monitoring | **In progress** |
+| 2. Machine Learning | `machine-learning-standard-framework` | Supervised and unsupervised models tied to measurable business decisions | **Planned** |
+| 3. Large Language Models | `llm-systems-framework` | A cited, evaluated trading research copilot | **Planned** |
+| 4. AI Agentic Frameworks | `agentic-ai-framework` | A controlled research and paper-trading workflow with mandatory human approval | **Planned** |
+| 5. Data Warehousing & Modeling | `data-architecture-standard-framework` | A governed omnichannel marketing warehouse, marts, and semantic layer | **Planned** |
+
+The four planned repository names are working names and will become links only after the repositories are created. A future GitHub profile README will act as the portfolio landing page, while the [Data & AI Portfolio Roadmap](https://github.com/users/laura-rivera-sancho/projects/2) GitHub Project coordinates work across all five repositories.
+
+## Repository strategy
+
+Use **one repository per pillar**, with multiple related case studies inside it. This keeps each repository substantial enough to show depth while giving recruiters a clear path to the capability they want to assess.
+
+Every repository should include:
+
+- a recruiter-friendly landing page and recommended review path
+- case-study folders with business context, data, implementation, tests, and results
+- shared utilities only when they are genuinely reused within that pillar
+- architecture or workflow documentation
+- representative visual previews and an executive-ready readout
+- automated quality checks, pinned dependencies, licensing, and citation metadata
 
 ## Status definitions
 
 | Status | Meaning |
 |---|---|
-| **Backlog** | A portfolio opportunity has been captured but not yet scoped. |
-| **Planned** | The business case, intended evidence, and acceptance criteria are documented. |
-| **In progress** | Implementation has started, but the track does not yet meet its evidence standard. |
-| **In review** | The work is complete and undergoing technical, narrative, and recruiter-experience review. |
-| **Complete** | The work meets its evidence standard and is ready for portfolio review. |
+| **Backlog** | The opportunity is recorded but has not been scoped. |
+| **Planned** | The business case, evidence, and acceptance criteria are defined. |
+| **In progress** | Implementation has started but does not yet meet the evidence standard. |
+| **In review** | The work is undergoing technical, narrative, and recruiter-experience review. |
+| **Complete** | The work meets its evidence standard and is ready to share publicly. |
 
 ## Shared portfolio evidence standard
 
-A portfolio case study is marked **Complete** only when it includes, where applicable:
+A case study is **Complete** only when it includes, where applicable:
 
 1. a clear business problem, decision, audience, and success criteria
 2. documented assumptions, constraints, risks, and ethical considerations
@@ -45,98 +61,159 @@ Pillar-specific criteria extend this standard; they do not replace it.
 
 ## Pillar 1 — Analytics
 
-**Objective:** Demonstrate structured decision support across the main analytical workflows used in product, operations, marketing, and strategy teams.
+**Repository:** `analytics-standard-framework`
 
-| Module | Status | Portfolio evidence |
-|---|---|---|
-| [A/B Testing](01_ab_testing/README.md) | Complete | NovaPay randomized checkout experiment |
-| [Pre/Post Analysis](02_pre_post_analysis/README.md) | Complete | FinFlow observational workflow evaluation |
-| [Target Analysis](03_target_analysis/README.md) | Complete | LuminaPay merchant targeting and activation handoff |
-| [Predictive Analytics](04_predictive_analytics/README.md) | Complete | PayWave capacity-constrained inactivity model |
-| [Ad Hoc Analysis](05_ad_hoc_analysis/README.md) | Complete | OrbitMart KPI diagnostic and operational handoff |
+**Objective:** Demonstrate rigorous analysis that turns business questions into defensible decisions across experimentation, customer strategy, operational diagnosis, and market intelligence.
 
-**Pillar evidence standard:** sound analytical design, reproducible results, decision-relevant interpretation, explicit limitations, and an executive-ready communication artifact.
+### Existing foundation
+
+| Case study | Classification | Status | Portfolio evidence |
+|---|---|---|---|
+| [NovaPay A/B Testing](01_ab_testing/README.md) | Analytics | Complete | Randomized checkout experiment and rollout recommendation |
+| [FinFlow Pre/Post Analysis](02_pre_post_analysis/README.md) | Analytics | Complete | Adjusted observational impact evaluation |
+| [LuminaPay Target Analysis](03_target_analysis/README.md) | Analytics | Complete | Governed merchant eligibility and prioritization |
+| [PayWave Predictive Analytics](04_predictive_analytics/README.md) | **Machine Learning seed case** | Complete | Capacity-constrained inactivity model with temporal validation |
+| [OrbitMart Ad Hoc Analysis](05_ad_hoc_analysis/README.md) | Analytics | Complete | KPI diagnosis and operational handoff |
+
+The PayWave module remains in this repository temporarily to preserve working links, tests, and reports. It is now classified as supervised Machine Learning evidence and will be migrated only after the Machine Learning repository foundation exists.
+
+### Planned Analytics milestones
+
+| Milestone | Business question | Core evidence | Status |
+|---|---|---|---|
+| **A6 — Customer Value & Lifecycle Analytics** | Which customers create the most value, and how should lifecycle treatment differ? | RFM scoring, segment profiles, migration analysis, recommended actions, and an executive dashboard | Planned |
+| **A7 — Marketing Experimentation Suite** | Which campaign, message, offer, or channel combination performs best? | Split testing and multivariate testing, power/MDE planning, interaction effects, multiplicity controls, guardrails, and rollout guidance | Planned |
+| **A8 — Macro Correlation Monitor** | How do Gold, the US 10-year Treasury yield, and the US Dollar Index move across market regimes? | API-based data pipeline, returns/changes, 30/90/252-day rolling correlations, volatility, drawdowns, lag exploration, regime views, and a live dashboard | Planned |
+
+The macro dashboard must display source and freshness metadata and clearly state that correlation does not establish causation. Exact DXY data access will be confirmed before implementation; a broad dollar index proxy must be labeled as a proxy if used.
+
+**Pillar completion gate:** existing Analytics cases remain portfolio-ready, A6–A8 meet the shared evidence standard, and the repository landing page presents the full Analytics review path.
 
 ## Pillar 2 — Machine Learning
 
-**Objective:** Demonstrate how a model progresses from a business need to a reliable and operationally useful system.
+**Planned repository:** `machine-learning-standard-framework`
 
-Initial portfolio scope:
+**Objective:** Demonstrate supervised and unsupervised modeling from business framing through reliable evaluation, operational decision design, explainability, and monitoring.
 
-- an end-to-end supervised learning case with a strong baseline, leakage controls, cross-validation, calibration, explainability, and threshold selection
-- a second case that broadens the modeling evidence, such as forecasting, ranking, recommendation, or anomaly detection
-- a production-readiness layer covering inference design, experiment tracking, model versioning, drift, performance monitoring, and retraining decisions
+### Planned Machine Learning milestones
 
-**Pillar evidence standard:** comparison against appropriate baselines, reproducible training and inference, decision-aware metrics, error analysis, documented model risks, and a credible monitoring plan.
+| Milestone | Use case | Core evidence | Status |
+|---|---|---|---|
+| **ML1 — Supervised Predictive Modeling** | Predict campaign response and allocate limited marketing capacity | Logistic-regression baseline, simple decision tree, tree-based champion, leakage controls, temporal/cross-validation design, calibration, lift/gains, threshold economics, explainability, and monitoring | Planned |
+| **ML1 transfer case — PayWave Inactivity** | Prioritize retention outreach under capacity constraints | Migrate or adapt the completed PayWave case to prove the supervised framework transfers across domains | Planned |
+| **ML2 — Unsupervised Customer Segmentation** | Discover stable, actionable customer groups beyond fixed RFM rules | RFM/behavioral features, K-means baseline, Gaussian-mixture comparison, density-based challenger, stability checks, interpretable personas, and activation guidance | Planned |
+| **ML3 — Production Readiness** | How would the selected models be operated responsibly? | Reproducible training/inference, model registry approach, drift and performance monitoring, retraining triggers, rollback, and model card | Planned |
+
+The campaign-response case is the primary supervised marketing project. PayWave is retained as a transfer case, not discarded. The unsupervised project extends the RFM work from descriptive customer rules into data-driven segmentation.
+
+**Pillar completion gate:** both modeling paradigms have defensible baselines, reproducible evaluation, decision-aware metrics, error/stability analysis, documented risks, and credible monitoring plans.
+
+### Proposed repository structure
+
+```text
+machine-learning-standard-framework/
+├── supervised_learning/
+│   ├── campaign_response_propensity/
+│   └── paywave_inactivity/
+├── unsupervised_learning/
+│   └── customer_segmentation/
+├── shared/
+├── tests/
+└── README.md
+```
 
 ## Pillar 3 — Large Language Models
 
-**Objective:** Demonstrate LLM applications whose quality is measured, traceable, and grounded in a real workflow.
+**Planned repository:** `llm-systems-framework`
 
-Initial portfolio scope:
+**Objective:** Build a cited trading research copilot that synthesizes evidence without presenting unsupported claims or autonomous investment instructions.
 
-- a retrieval-augmented generation application with ingestion, chunking, retrieval evaluation, citations, and grounded-answer checks
-- a structured-generation workflow with schema validation, prompt and model comparisons, and deterministic failure handling
-- an evaluation and safety layer covering curated test sets, hallucination checks, prompt-injection resistance, privacy, latency, and cost
+### Planned LLM milestones
 
-**Pillar evidence standard:** explicit task and quality definitions, representative evaluation data, reproducible model configuration, grounded outputs, safety controls, failure analysis, and cost/latency reporting.
+| Milestone | Capability | Core evidence | Status |
+|---|---|---|---|
+| **LLM1 — Research Corpus & Retrieval** | Retrieve relevant filings, macro releases, and approved research sources | Document ingestion, metadata, chunking, hybrid retrieval, reranking, source traceability, and retrieval evaluation | Planned |
+| **LLM2 — Cited Trading Research Copilot** | Produce a structured, evidence-grounded research brief | Thesis, counter-thesis, catalysts, risks, uncertainty, citations, numerical grounding, and schema-validated output | Planned |
+| **LLM3 — Evaluation, Safety & Operations** | Measure answer quality and control failure modes | Curated evaluation set, citation correctness, groundedness, hallucination and prompt-injection tests, privacy, latency, cost, and failure handling | Planned |
+
+The copilot is a research system, not a buy/sell signal generator. It should distinguish retrieved facts, model synthesis, and unresolved uncertainty.
+
+**Pillar completion gate:** representative evaluations demonstrate useful retrieval, valid citations, grounded claims, predictable structured output, safety controls, and transparent cost/latency reporting.
 
 ## Pillar 4 — AI Agentic Frameworks
 
-**Objective:** Demonstrate dependable multi-step systems that plan or route work, use tools, preserve state, and involve people at appropriate control points.
+**Planned repository:** `agentic-ai-framework`
 
-Initial portfolio scope:
+**Objective:** Demonstrate a dependable market-research and paper-trading workflow in which tools and agents can prepare actions but a person must approve every order submission.
 
-- a tool-using agent that completes a bounded business workflow with typed inputs and outputs
-- an orchestrated workflow that demonstrates routing, state management, retries, idempotency, and human approval gates
-- an observability and evaluation layer for traces, tool-selection accuracy, task completion, cost, latency, and recovery from failure
+### Planned Agentic AI milestones
 
-**Pillar evidence standard:** clear boundaries for agent autonomy, least-privilege tool access, deterministic controls around side effects, traceable execution, scenario-based evaluation, and documented recovery paths.
+| Milestone | Capability | Core evidence | Status |
+|---|---|---|---|
+| **AG1 — Governed Research Workflow** | Coordinate bounded specialist tasks for market and company research | Typed inputs/outputs, source policy, routing, state, tool permissions, retries, timeouts, and traceable synthesis | Planned |
+| **AG2 — Risk Review & Trade Proposal** | Convert an approved research thesis into a constrained paper-trade proposal | Position and exposure limits, freshness checks, policy validation, risk-agent review, rejection reasons, and immutable proposal record | Planned |
+| **AG3 — Mandatory Human Approval & Paper Execution** | Submit a paper order only after explicit human authorization | Approval checkpoint, separation of proposal and execution, idempotency, audit trail, paper-broker sandbox, and kill switch | Planned |
+| **AG4 — Observability & Scenario Evaluation** | Prove the workflow behaves safely under normal and failure conditions | Trace review, tool-selection accuracy, completion rate, cost/latency, stale-data and tool-failure scenarios, denied approval, duplicate request, and recovery tests | Planned |
+
+**Non-negotiable boundary:** no live trading. The system may research, draft, validate, and simulate, but it must never submit even a paper order without a recorded human approval.
+
+**Pillar completion gate:** the system demonstrates least-privilege access, deterministic controls around side effects, mandatory human approval, traceable execution, failure recovery, and scenario-based evaluation.
 
 ## Pillar 5 — Data Warehousing, Data Marts & Data Modeling
 
-**Objective:** Demonstrate how raw operational data becomes trusted, understandable, and reusable analytical data products.
+**Planned repository:** `data-architecture-standard-framework`
 
-Initial portfolio scope:
+**Objective:** Build a governed omnichannel marketing data platform that supports the Analytics and Machine Learning marketing cases with trusted, reusable data products.
 
-- a dimensional warehouse case with declared grain, conformed dimensions, fact tables, slowly changing dimensions, and documented business rules
-- tested transformation pipelines with staging, intermediate, and mart layers
-- role-oriented data marts and a semantic layer with governed metrics, lineage, freshness, and ownership
+### Planned Data Architecture milestones
 
-**Pillar evidence standard:** defensible modeling choices, reproducible transformations, source-to-target documentation, data-quality tests, lineage, performance considerations, and consistent metric definitions.
+| Milestone | Capability | Core evidence | Status |
+|---|---|---|---|
+| **DA1 — Source Contracts & Staging** | Standardize customer, order, campaign, experiment, and behavioral event data | Source contracts, ingestion assumptions, staging models, identifiers, freshness rules, and data-quality tests | Planned |
+| **DA2 — Dimensional Warehouse** | Create a defensible cross-channel analytical model | Declared grain; order, item, touchpoint, exposure, and event facts; conformed customer, product, campaign, channel, and date dimensions; slowly changing dimensions | Planned |
+| **DA3 — Business Data Marts** | Serve consistent data for specific analytical decisions | `customer_360`, `rfm_segments`, `campaign_performance`, `experiment_results`, `ml_features`, and `executive_growth` marts | Planned |
+| **DA4 — Semantic Governance & Operations** | Make metrics trusted and maintainable | Governed metric definitions, lineage, ownership, tests, documentation, performance, freshness monitoring, and change management | Planned |
 
-## Delivery sequence
+**Pillar completion gate:** transformations are reproducible and tested, business grain and rules are explicit, lineage is inspectable, metrics are consistent, and the marts directly support at least the RFM, experimentation, and campaign-response cases.
 
-The portfolio will be expanded one vertical slice at a time so that every completed increment is independently reviewable:
+## Cross-pillar delivery sequence
 
-1. **Foundation complete — Analytics:** retain and maintain the five finished analytical modules.
-2. **Next — Machine Learning:** define the first case study and reuse the strongest patterns from the predictive analytics module.
-3. **Then — Large Language Models:** build an evaluated LLM application on top of trusted data and retrieval foundations.
-4. **Then — AI Agentic Frameworks:** extend the LLM evidence into controlled, tool-using workflows.
-5. **Then — Data Architecture:** consolidate warehouse, mart, and modeling evidence into a reusable analytical foundation.
+The build order follows data and capability dependencies while delivering independently reviewable increments:
 
-This sequence is directional, not date-bound. Target dates will be added only after the scope and available delivery cadence are agreed.
+1. **Portfolio foundation:** maintain the completed case studies and update the profile-level portfolio navigation.
+2. **Marketing data foundation:** build the warehouse core and the customer/campaign/experiment marts needed by downstream work.
+3. **RFM analytics:** deliver Customer Value & Lifecycle Analytics on the trusted customer mart.
+4. **Marketing experimentation:** deliver the split and multivariate testing suite.
+5. **Supervised Machine Learning:** deliver campaign response propensity, then migrate/adapt PayWave as a transfer case.
+6. **Unsupervised Machine Learning:** extend RFM into stable, actionable customer segmentation.
+7. **Macro market dashboard:** deliver the Gold–US10Y–DXY correlation monitor and live site.
+8. **Cited LLM research copilot:** build and evaluate the trading research workflow.
+9. **Human-governed agentic workflow:** add risk review, mandatory approval, and paper execution only after the LLM research foundation is reliable.
+10. **Portfolio consolidation:** complete cross-repository navigation, consistent visual identity, final recruiter review, and public-launch readiness.
+
+This sequence is directional, not date-bound. Dates will be added only after delivery cadence and project scope are agreed.
 
 ## GitHub Project workflow
 
-The [Data & AI Portfolio Roadmap](https://github.com/users/laura-rivera-sancho/projects/2) GitHub Project is the execution layer for this roadmap. It provides:
+The [Data & AI Portfolio Roadmap](https://github.com/users/laura-rivera-sancho/projects/2) GitHub Project is the cross-repository execution layer. It should use:
 
-- a **Board** view grouped by status: Backlog, Planned, In progress, In review, and Complete
-- a **Roadmap** view for sequencing portfolio tracks once target dates are agreed
-- a **Pillar** field using the five portfolio areas above
-- lightweight planning fields for Priority, Start date, Target date, and repository linkage
+- **Board:** Backlog, Planned, In progress, In review, and Complete
+- **Roadmap:** sequencing by Start date and Target date once dates are agreed
+- **Pillar:** Analytics, Machine Learning, Large Language Models, AI Agentic Frameworks, and Data Warehouse & Modeling
+- **Priority:** High, Medium, or Low
+- **Repository:** the pillar repository that owns the work
 
-The Markdown roadmap remains the durable portfolio narrative. GitHub Project items track the work needed to deliver it and may evolve more frequently.
+Project items should represent the milestones above, not duplicate every technical task. Repository issues can hold implementation-level work and be linked to the appropriate milestone.
+
+The Markdown roadmap is the durable portfolio narrative; the GitHub Project tracks execution and may change more frequently.
 
 ## Review gates
 
-Before a new pillar is marked complete, it should pass four reviews:
+Before a case study or pillar is marked complete, it must pass four reviews:
 
 1. **Technical:** correctness, reproducibility, testing, security, and operational realism
 2. **Analytical:** appropriate evaluation, honest limitations, and decision relevance
 3. **Communication:** clear narrative, visuals, stakeholder readout, and concise outcomes
 4. **Portfolio:** intuitive navigation, representative previews, consistent styling, and no confidential data
 
-## Completed repository foundation
-
-The Analytics pillar already includes centralized dependencies, automated analytical and repository-integrity tests, linting and formatting, GitHub Actions, licensing and citation metadata, contribution guidance, standardized reports, PowerPoint readouts, and a completed recruiter-experience review.
+The portfolio and GitHub Project will remain private until these review gates are complete and the work is ready for a coordinated public launch.
