@@ -79,3 +79,17 @@ def adhoc_generator():
 @pytest.fixture(scope="session")
 def adhoc_analysis():
     return load_source_module("adhoc_analysis", "05_ad_hoc_analysis/src/diagnose_kpi_change.py")
+
+
+@pytest.fixture(scope="session")
+def lifecycle_generator():
+    return load_source_module(
+        "lifecycle_generator", "06_customer_value_lifecycle/src/generate_synthetic_data.py"
+    )
+
+
+@pytest.fixture(scope="session")
+def lifecycle_analysis():
+    return load_source_module(
+        "lifecycle_analysis", "06_customer_value_lifecycle/src/analyze_customer_value.py"
+    )

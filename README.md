@@ -20,6 +20,7 @@ the fastest route to the strongest evidence:
 | Target-population design | [LuminaPay targeting readout](03_target_analysis/reports/stakeholder_readout.md) | Eligibility governance, opportunity sizing, transparent prioritization, and activation controls |
 | Predictive decision design | [PayWave modeling readout](04_predictive_analytics/reports/stakeholder_readout.md) | Temporal validation, capacity metrics, business value, and a controlled-pilot plan |
 | Diagnostic judgment | [OrbitMart ad hoc readout](05_ad_hoc_analysis/reports/stakeholder_readout.md) | KPI trees, rate-and-mix decomposition, exploratory controls, and evidence-calibrated action |
+| Customer value strategy | [Harbor & Pine lifecycle readout](06_customer_value_lifecycle/reports/stakeholder_readout.md) | RFM value concentration, lifecycle migration, consent-aware prioritization, and test design |
 | Reproducible implementation | [Source workflows](01_ab_testing/src) and [automated tests](tests) | Reusable Python, deterministic data, analytical tests, and repository checks |
 | Portfolio scope and milestones | [Roadmap](ROADMAP.md) | Five-repository architecture, planned case studies, completion criteria, and delivery sequence |
 
@@ -31,6 +32,7 @@ the fastest route to the strongest evidence:
 - **Predictive modeling** — leakage-safe features, temporal validation, calibration, capacity-aware evaluation, and business value.
 - **Target design** — auditable eligibility rules, denominator-consistent funnels, opportunity sizing, and capacity allocation.
 - **Diagnostic analysis** — KPI trees, bounded exploration, rate-and-mix decomposition, and time-boxed decision support.
+- **Customer value analytics** — RFM scoring, value concentration, lifecycle migration, and controlled activation design.
 - **Data quality** — deliberate validation of duplicates, missingness, invalid values, inconsistent categories, and timing logic.
 - **Reproducible analytics** — deterministic synthetic-data generators, reusable analysis functions, and documented assumptions.
 - **Stakeholder communication** — concise recommendations that separate evidence, limitations, and next actions.
@@ -44,6 +46,7 @@ the fastest route to the strongest evidence:
 | **LuminaPay** | Which eligible merchants should receive limited Instant Settlement outreach? | Rule-based target analysis and capacity sensitivity | [Finished stakeholder readout](03_target_analysis/reports/stakeholder_readout.md): **25,805** eligible merchants and a controlled **6,000-contact** first wave with explicit activation safeguards. |
 | **PayWave** | Which customers should receive capacity-constrained retention outreach? | Temporal binary-classification workflow | [Finished stakeholder readout](04_predictive_analytics/reports/stakeholder_readout.md): **3,853** captures at capacity—**552 more** than the recency rule—with **77.06% precision** and **2.58x lift**. |
 | **OrbitMart** | Why did checkout completion fall while traffic increased? | KPI-tree diagnosis, rate/mix decomposition, and controlled segment drill-down | [Finished stakeholder readout](05_ad_hoc_analysis/reports/stakeholder_readout.md): **−0.97 pp** completion decline localized to Android 8.4 wallet traffic, with an estimated **254-order** gap. |
+| **Harbor & Pine** | Which customer groups create the most value, and where should limited retention capacity focus? | Point-in-time RFM scoring, lifecycle migration, and consent-aware prioritization | [Finished stakeholder readout](06_customer_value_lifecycle/reports/stakeholder_readout.md): Champions are **23.1%** of customers but **55.5%** of value; a controlled **500-customer** first wave represents **$323.2K** in trailing-year value. |
 
 ### NovaPay decision snapshot
 
@@ -72,6 +75,7 @@ The simple Pre/Post comparison is intentionally not treated as proof of causalit
 | `03_target_analysis` | Complete | Eligibility, segmentation, opportunity sizing, prioritization, and activation handoff | [Target Analysis](03_target_analysis/README.md) |
 | `04_predictive_analytics` | Complete | Predictive modeling from framing through validation and operationalization | [Predictive Analytics](04_predictive_analytics/README.md) |
 | `05_ad_hoc_analysis` | Complete | Structured, time-bounded KPI diagnosis and decision handoff | [Ad Hoc Analysis](05_ad_hoc_analysis/README.md) |
+| `06_customer_value_lifecycle` | In review | RFM segmentation, lifecycle migration, value concentration, and controlled retention activation | [Customer Value & Lifecycle](06_customer_value_lifecycle/README.md) |
 
 Four modules form the completed foundation of the **Analytics** pillar. The completed PayWave predictive module is now classified as a **Machine Learning seed case** and remains here temporarily so its links, tests, and reports continue to work until the dedicated Machine Learning repository is created.
 
@@ -116,6 +120,13 @@ analytics-standard-framework/
 │   ├── reports/         # Finished Markdown readout, preview, and PowerPoint deck
 │   ├── src/             # Synthetic data, KPI tree, decomposition, and inference
 │   └── templates/       # Intake brief, answer key, rubric, and readout
+├── 06_customer_value_lifecycle/
+│   ├── case_study/      # Harbor & Pine decision, dictionary, and reference results
+│   ├── data/raw/        # Compact synthetic customer-order sample
+│   ├── notebooks/       # Guided and challenge lifecycle analyses
+│   ├── reports/         # Finished Markdown readout, preview, and PowerPoint deck
+│   ├── src/             # Synthetic data, RFM, migration, prioritization, and visualization
+│   └── templates/       # Reusable lifecycle stakeholder readout
 ├── ROADMAP.md            # Five-repository portfolio plan and milestone definitions
 └── README.md             # Portfolio landing page
 ```

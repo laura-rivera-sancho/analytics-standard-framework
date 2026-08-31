@@ -85,6 +85,7 @@ def test_module_requirements_delegate_to_root_environment():
         "03_target_analysis",
         "04_predictive_analytics",
         "05_ad_hoc_analysis",
+        "06_customer_value_lifecycle",
     ]:
         requirement = (ROOT / module / "requirements.txt").read_text(encoding="utf-8")
         assert "-r ../requirements.txt" in requirement
@@ -186,3 +187,12 @@ def test_recruiter_shortcuts_link_to_finished_reports():
         module_readme = (ROOT / module / "README.md").read_text(encoding="utf-8")
         assert "**Portfolio shortcut:**" in module_readme
         assert "[Finished stakeholder readout](reports/stakeholder_readout.md)" in module_readme
+
+
+def test_a6_review_artifacts_are_publishable():
+    module = ROOT / "06_customer_value_lifecycle"
+    assert (module / "README.md").exists()
+    assert (module / "methodology.md").exists()
+    assert (module / "case_study/expected_results.md").exists()
+    assert (module / "reports/executive_summary.png").read_bytes().startswith(b"\x89PNG\r\n\x1a\n")
+    assert (module / "reports/stakeholder_readout.pptx").read_bytes().startswith(b"PK")

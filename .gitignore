@@ -218,6 +218,9 @@ tempCodeRunnerFile.py
 03_target_analysis/data/processed/
 05_ad_hoc_analysis/data/raw/orbitmart_checkout_diagnostic_full.csv
 05_ad_hoc_analysis/data/processed/
+06_customer_value_lifecycle/data/raw/harbor_pine_orders_full.csv
+06_customer_value_lifecycle/data/processed/
+06_customer_value_lifecycle/data/.matplotlib/
 
 # Marimo
 marimo/_static/
