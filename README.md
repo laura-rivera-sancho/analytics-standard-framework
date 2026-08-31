@@ -75,9 +75,9 @@ The simple Pre/Post comparison is intentionally not treated as proof of causalit
 | `03_target_analysis` | Complete | Eligibility, segmentation, opportunity sizing, prioritization, and activation handoff | [Target Analysis](03_target_analysis/README.md) |
 | `04_predictive_analytics` | Complete | Predictive modeling from framing through validation and operationalization | [Predictive Analytics](04_predictive_analytics/README.md) |
 | `05_ad_hoc_analysis` | Complete | Structured, time-bounded KPI diagnosis and decision handoff | [Ad Hoc Analysis](05_ad_hoc_analysis/README.md) |
-| `06_customer_value_lifecycle` | In review | RFM segmentation, lifecycle migration, value concentration, and controlled retention activation | [Customer Value & Lifecycle](06_customer_value_lifecycle/README.md) |
+| `06_customer_value_lifecycle` | Complete | RFM segmentation, lifecycle migration, value concentration, and controlled retention activation | [Customer Value & Lifecycle](06_customer_value_lifecycle/README.md) |
 
-Four modules form the completed foundation of the **Analytics** pillar. The completed PayWave predictive module is now classified as a **Machine Learning seed case** and remains here temporarily so its links, tests, and reports continue to work until the dedicated Machine Learning repository is created.
+Five modules form the completed foundation of the **Analytics** pillar. The completed PayWave predictive module is now classified as a **Machine Learning seed case** and remains here temporarily so its links, tests, and reports continue to work until the dedicated Machine Learning repository is created.
 
 The broader portfolio will use one repository per pillar. See the [portfolio roadmap](ROADMAP.md) for the five-repository architecture, agreed marketing and trading projects, shared evidence standards, and delivery sequence. Execution is tracked in the [Data & AI Portfolio Roadmap project](https://github.com/users/laura-rivera-sancho/projects/2).
 

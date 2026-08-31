@@ -53,6 +53,7 @@ def test_completed_modules_exist():
         "03_target_analysis",
         "04_predictive_analytics",
         "05_ad_hoc_analysis",
+        "06_customer_value_lifecycle",
     ]
     for module in completed:
         root = ROOT / module
@@ -60,8 +61,10 @@ def test_completed_modules_exist():
         assert (root / "methodology.md").exists()
         assert (root / "case_study/business_case.md").exists()
         assert (root / "case_study/data_dictionary.md").exists()
+        assert list(root.glob("*fundamentals*.md"))
         assert list((root / "notebooks").glob("guided*.ipynb"))
-        assert list((root / "notebooks").glob("challenge*.ipynb"))
+        if module != "06_customer_value_lifecycle":
+            assert list((root / "notebooks").glob("challenge*.ipynb"))
         assert list((root / "src").glob("*.py"))
         assert list((root / "templates").glob("*readout*.md"))
 
@@ -85,6 +88,7 @@ def test_module_requirements_delegate_to_root_environment():
         "03_target_analysis",
         "04_predictive_analytics",
         "05_ad_hoc_analysis",
+        "06_customer_value_lifecycle",
         "06_customer_value_lifecycle",
     ]:
         requirement = (ROOT / module / "requirements.txt").read_text(encoding="utf-8")
@@ -124,6 +128,7 @@ def test_completed_modules_publish_stakeholder_artifacts():
         "03_target_analysis",
         "04_predictive_analytics",
         "05_ad_hoc_analysis",
+        "06_customer_value_lifecycle",
     ]:
         report_root = ROOT / module / "reports"
         markdown = report_root / "stakeholder_readout.md"
@@ -189,7 +194,7 @@ def test_recruiter_shortcuts_link_to_finished_reports():
         assert "[Finished stakeholder readout](reports/stakeholder_readout.md)" in module_readme
 
 
-def test_a6_review_artifacts_are_publishable():
+def test_a6_completed_module_uses_guided_notebook_standard():
     module = ROOT / "06_customer_value_lifecycle"
     assert (module / "README.md").exists()
     assert (module / "customer_value_lifecycle_fundamentals.md").exists()

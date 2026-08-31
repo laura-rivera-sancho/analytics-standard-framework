@@ -81,7 +81,7 @@ The PayWave module remains in this repository temporarily to preserve working li
 
 | Milestone | Business question | Core evidence | Status |
 |---|---|---|---|
-| **A6 — Customer Value & Lifecycle Analytics** | Which customers create the most value, and how should lifecycle treatment differ? | RFM scoring, segment profiles, migration analysis, recommended actions, and an executive dashboard | In review |
+| **A6 — Customer Value & Lifecycle Analytics** | Which customers create the most value, and how should lifecycle treatment differ? | RFM scoring, segment profiles, migration analysis, recommended actions, and an executive dashboard | Complete |
 | **A7 — Marketing Experimentation Suite** | Which campaign, message, offer, or channel combination performs best? | Split testing and multivariate testing, power/MDE planning, interaction effects, multiplicity controls, guardrails, and rollout guidance | Planned |
 | **A8 — Macro Correlation Monitor** | How do Gold, the US 10-year Treasury yield, and the US Dollar Index move across market regimes? | API-based data pipeline, returns/changes, 30/90/252-day rolling correlations, volatility, drawdowns, lag exploration, regime views, and a live dashboard | Planned |
 

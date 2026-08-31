@@ -1,6 +1,6 @@
 # Customer Value & Lifecycle Analytics
 
-> **Status: In review.** This module turns governed customer and order data into reproducible RFM segments, lifecycle movement, and a controlled retention action plan.
+> **Status: Complete.** This module turns governed customer and order data into reproducible RFM segments, lifecycle movement, and a controlled retention action plan.
 
 **Portfolio shortcut:** Review the [Finished stakeholder readout](reports/stakeholder_readout.md) for the value concentration, migration risks, and recommended 500-customer activation.
 
