@@ -76,6 +76,7 @@ The simple Pre/Post comparison is intentionally not treated as proof of causalit
 | `04_predictive_analytics` | Complete | Predictive modeling from framing through validation and operationalization | [Predictive Analytics](04_predictive_analytics/README.md) |
 | `05_ad_hoc_analysis` | Complete | Structured, time-bounded KPI diagnosis and decision handoff | [Ad Hoc Analysis](05_ad_hoc_analysis/README.md) |
 | `06_customer_value_lifecycle` | Complete | RFM segmentation, lifecycle migration, value concentration, and controlled retention activation | [Customer Value & Lifecycle](06_customer_value_lifecycle/README.md) |
+| `07_marketing_experimentation` | In progress | Split testing, factorial multivariate testing, interaction effects, multiplicity, and rollout governance | [Marketing Experimentation Suite](07_marketing_experimentation/README.md) |
 
 Five modules form the completed foundation of the **Analytics** pillar. The completed PayWave predictive module is now classified as a **Machine Learning seed case** and remains here temporarily so its links, tests, and reports continue to work until the dedicated Machine Learning repository is created.
 
@@ -127,6 +128,10 @@ analytics-standard-framework/
 │   ├── reports/         # Finished Markdown readout, preview, and PowerPoint deck
 │   ├── src/             # Synthetic data, RFM, migration, prioritization, and visualization
 │   └── templates/       # Reusable lifecycle stakeholder readout
+├── 07_marketing_experimentation/
+│   ├── case_study/      # Harbor & Pine experiment charter and acceptance criteria
+│   ├── marketing_experimentation_fundamentals.md
+│   └── README.md        # A7 scope, navigation, and implementation status
 ├── ROADMAP.md            # Five-repository portfolio plan and milestone definitions
 └── README.md             # Portfolio landing page
 ```

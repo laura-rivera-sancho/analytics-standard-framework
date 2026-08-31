@@ -204,3 +204,16 @@ def test_a6_completed_module_uses_guided_notebook_standard():
     assert not list((module / "notebooks").glob("challenge*.ipynb"))
     assert (module / "reports/executive_summary.png").read_bytes().startswith(b"\x89PNG\r\n\x1a\n")
     assert (module / "reports/stakeholder_readout.pptx").read_bytes().startswith(b"PK")
+
+
+def test_a7_foundation_is_decision_ready():
+    module = ROOT / "07_marketing_experimentation"
+    assert (module / "README.md").exists()
+    assert (module / "marketing_experimentation_fundamentals.md").exists()
+    assert (module / "case_study/business_case.md").exists()
+    assert not list((module / "notebooks").glob("challenge*.ipynb"))
+
+    business_case = (module / "case_study/business_case.md").read_text(encoding="utf-8")
+    assert "Experiment 1 — Lifecycle-message split test" in business_case
+    assert "Experiment 2 — Full-factorial multivariate test" in business_case
+    assert "one guided notebook and no challenge notebook" in business_case
