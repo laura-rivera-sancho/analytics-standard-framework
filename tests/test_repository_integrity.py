@@ -7,6 +7,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
+GENERATED_PARTS = {".venv", ".next", ".vinext", "dist", "node_modules"}
 
 
 def test_relative_markdown_links_resolve():
@@ -14,7 +15,7 @@ def test_relative_markdown_links_resolve():
     pattern = re.compile(r"\[[^]]*\]\(([^)]+)\)")
 
     for path in ROOT.rglob("*.md"):
-        if ".venv" in path.parts:
+        if GENERATED_PARTS.intersection(path.parts):
             continue
         for target in pattern.findall(path.read_text(encoding="utf-8")):
             relative = target.split("#", 1)[0]
@@ -30,7 +31,7 @@ def test_notebooks_are_valid_json_and_code_cells_compile():
     assert notebooks
 
     for path in notebooks:
-        if ".venv" in path.parts:
+        if GENERATED_PARTS.intersection(path.parts):
             continue
         notebook = json.loads(path.read_text(encoding="utf-8"))
         if notebook.get("nbformat") != 4:
@@ -150,7 +151,7 @@ def test_markdown_accessibility_basics():
     errors = []
 
     for path in ROOT.rglob("*.md"):
-        if ".venv" in path.parts or ".github" in path.parts:
+        if GENERATED_PARTS.intersection(path.parts) or ".github" in path.parts:
             continue
         text = path.read_text(encoding="utf-8")
         headings = []

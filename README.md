@@ -22,6 +22,7 @@ the fastest route to the strongest evidence:
 | Diagnostic judgment | [OrbitMart ad hoc readout](05_ad_hoc_analysis/reports/stakeholder_readout.md) | KPI trees, rate-and-mix decomposition, exploratory controls, and evidence-calibrated action |
 | Customer value strategy | [Harbor & Pine lifecycle readout](06_customer_value_lifecycle/reports/stakeholder_readout.md) | RFM value concentration, lifecycle migration, consent-aware prioritization, and test design |
 | Marketing experimentation | [Harbor & Pine experimentation readout](07_marketing_experimentation/reports/stakeholder_readout.md) | Power planning, randomization checks, factorial effects, multiplicity control, economics, and rollout governance |
+| Live macro intelligence | [Private live Macro Correlation Monitor](https://macro-correlation-monitor.nachilu10.chatgpt.site) | Live API integration, comparable transformations, rolling relationships, source transparency, and research boundaries |
 | Reproducible implementation | [Source workflows](01_ab_testing/src) and [automated tests](tests) | Reusable Python, deterministic data, analytical tests, and repository checks |
 | Portfolio scope and milestones | [Roadmap](ROADMAP.md) | Five-repository architecture, planned case studies, completion criteria, and delivery sequence |
 
@@ -35,6 +36,7 @@ the fastest route to the strongest evidence:
 - **Diagnostic analysis** — KPI trees, bounded exploration, rate-and-mix decomposition, and time-boxed decision support.
 - **Customer value analytics** — RFM scoring, value concentration, lifecycle migration, and controlled activation design.
 - **Marketing experimentation** — split and factorial testing, power planning, multiplicity control, guardrails, and decision-stage governance.
+- **Macro correlation analysis** — live market data, returns and yield-change transformations, rolling-window comparisons, and regime-aware interpretation.
 - **Data quality** — deliberate validation of duplicates, missingness, invalid values, inconsistent categories, and timing logic.
 - **Reproducible analytics** — deterministic synthetic-data generators, reusable analysis functions, and documented assumptions.
 - **Stakeholder communication** — concise recommendations that separate evidence, limitations, and next actions.
@@ -50,6 +52,7 @@ the fastest route to the strongest evidence:
 | **OrbitMart** | Why did checkout completion fall while traffic increased? | KPI-tree diagnosis, rate/mix decomposition, and controlled segment drill-down | [Finished stakeholder readout](05_ad_hoc_analysis/reports/stakeholder_readout.md): **−0.97 pp** completion decline localized to Android 8.4 wallet traffic, with an estimated **254-order** gap. |
 | **Harbor & Pine** | Which customer groups create the most value, and where should limited retention capacity focus? | Point-in-time RFM scoring, lifecycle migration, and consent-aware prioritization | [Finished stakeholder readout](06_customer_value_lifecycle/reports/stakeholder_readout.md): Champions are **23.1%** of customers but **55.5%** of value; a controlled **500-customer** first wave represents **$323.2K** in trailing-year value. |
 | **Harbor & Pine Experimentation** | Which retention treatment should advance without approving broad rollout? | Split test and `2 × 2 × 2` factorial experiment | [Finished stakeholder readout](07_marketing_experimentation/reports/stakeholder_readout.md): the leading cell improves conversion by **+2.67 pp** after Holm correction, while margin uncertainty requires a controlled validation stage. |
+| **Macro Correlation Monitor** | When have gold's relationships with DXY and US10Y shifted enough to warrant deeper research? | Live API pipeline and rolling cross-asset correlation analysis | [Interactive module](08_macro_correlation_monitor/README.md): selectable **30/90/252-day** views, exact source/freshness metadata, deterministic fallback behavior, and explicit non-causal boundaries. |
 
 ### NovaPay decision snapshot
 
@@ -79,7 +82,8 @@ The simple Pre/Post comparison is intentionally not treated as proof of causalit
 | `04_predictive_analytics` | Complete | Predictive modeling from framing through validation and operationalization | [Predictive Analytics](04_predictive_analytics/README.md) |
 | `05_ad_hoc_analysis` | Complete | Structured, time-bounded KPI diagnosis and decision handoff | [Ad Hoc Analysis](05_ad_hoc_analysis/README.md) |
 | `06_customer_value_lifecycle` | Complete | RFM segmentation, lifecycle migration, value concentration, and controlled retention activation | [Customer Value & Lifecycle](06_customer_value_lifecycle/README.md) |
-| `07_marketing_experimentation` | In review | Split testing, factorial multivariate testing, interaction effects, multiplicity, and rollout governance | [Marketing Experimentation Suite](07_marketing_experimentation/README.md) |
+| `07_marketing_experimentation` | Complete | Split testing, factorial multivariate testing, interaction effects, multiplicity, and rollout governance | [Marketing Experimentation Suite](07_marketing_experimentation/README.md) |
+| `08_macro_correlation_monitor` | In review | Live gold–US10Y–DXY monitoring, rolling correlations, source governance, and regime-aware interpretation | [Macro Correlation Monitor](08_macro_correlation_monitor/README.md) |
 
 Five modules form the completed foundation of the **Analytics** pillar. The completed PayWave predictive module is now classified as a **Machine Learning seed case** and remains here temporarily so its links, tests, and reports continue to work until the dedicated Machine Learning repository is created.
 
@@ -138,6 +142,11 @@ analytics-standard-framework/
 │   ├── reports/         # Finished Markdown readout, preview, and PowerPoint deck
 │   ├── src/             # Generator, validation, analysis, and visualization
 │   └── templates/       # Reusable experiment stakeholder readout
+├── 08_macro_correlation_monitor/
+│   ├── case_study/      # Exact market-data source contract and limitations
+│   ├── reports/         # Research-oriented stakeholder readout
+│   ├── site/            # Live Sites dashboard and market-data API route
+│   └── src/             # Tested alignment, transformation, and risk utilities
 ├── ROADMAP.md            # Five-repository portfolio plan and milestone definitions
 └── README.md             # Portfolio landing page
 ```

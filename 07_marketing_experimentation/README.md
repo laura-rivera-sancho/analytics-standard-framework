@@ -1,6 +1,6 @@
 # Marketing Experimentation Suite
 
-> **Status: In review.** This module extends the Harbor & Pine customer-value case into a governed retention experimentation program covering a simple split test and a full-factorial multivariate test.
+> **Status: Complete.** This module extends the Harbor & Pine customer-value case into a governed retention experimentation program covering a simple split test and a full-factorial multivariate test.
 
 **Portfolio shortcut:** [Finished stakeholder readout](reports/stakeholder_readout.md)
 
@@ -44,7 +44,7 @@ The suite separates two learning goals:
 | [Readout template](templates/stakeholder_readout_template.md) | Reusable experiment decision communication structure |
 | [Portfolio roadmap](../ROADMAP.md) | A7 scope and relationship to the broader Data & AI portfolio |
 
-The publication package includes the executive preview, Markdown stakeholder readout, and editable five-slide PowerPoint deck. The module remains in review until final portfolio approval.
+The publication package includes the executive preview, Markdown stakeholder readout, and editable five-slide PowerPoint deck. The module passed its technical, analytical, communication, and portfolio review gates.
 
 ## Run the analysis
 
