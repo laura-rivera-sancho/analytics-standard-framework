@@ -14,7 +14,11 @@ SPEC.loader.exec_module(market)
 def sample_levels() -> pd.DataFrame:
     index = pd.date_range("2025-01-01", periods=8, freq="D")
     return pd.DataFrame(
-        {"gold": [100, 102, 101, 104, 106, 105, 108, 110], "dxy": [100, 99, 100, 98, 97, 98, 96, 95], "us10y": [4.0, 4.1, 4.05, 4.2, 4.1, 4.0, 3.9, 3.8]},
+        {
+            "gold": [100, 102, 101, 104, 106, 105, 108, 110],
+            "dxy": [100, 99, 100, 98, 97, 98, 96, 95],
+            "us10y": [4.0, 4.1, 4.05, 4.2, 4.1, 4.0, 3.9, 3.8],
+        },
         index=index,
     )
 
@@ -22,7 +26,9 @@ def sample_levels() -> pd.DataFrame:
 def test_align_market_series_inner_joins_and_deduplicates():
     levels = sample_levels()
     dxy = levels["dxy"].drop(levels.index[2])
-    aligned = market.align_market_series({"gold": levels["gold"], "dxy": dxy, "us10y": levels["us10y"]})
+    aligned = market.align_market_series(
+        {"gold": levels["gold"], "dxy": dxy, "us10y": levels["us10y"]}
+    )
     assert list(aligned.columns) == ["gold", "dxy", "us10y"]
     assert levels.index[2] not in aligned.index
     assert aligned.index.is_monotonic_increasing
@@ -55,4 +61,6 @@ def test_invalid_series_contract_fails_loudly():
     bad_gold = levels["gold"].copy()
     bad_gold.iloc[2] = 0
     with pytest.raises(ValueError, match="non-positive"):
-        market.align_market_series({"gold": bad_gold, "dxy": levels["dxy"], "us10y": levels["us10y"]})
+        market.align_market_series(
+            {"gold": bad_gold, "dxy": levels["dxy"], "us10y": levels["us10y"]}
+        )

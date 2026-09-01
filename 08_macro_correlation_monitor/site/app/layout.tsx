@@ -12,9 +12,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Macro Correlation Monitor',
     description: 'Live Gold · US10Y · DXY relationship monitoring across rolling market regimes.',
-    images: [{ url: '/social-preview.png', width: 1729, height: 910, alt: 'Macro Correlation Monitor with three abstract market series' }],
+    images: [{ url: '/social-preview.webp', width: 1200, height: 632, alt: 'Macro Correlation Monitor with three abstract market series' }],
   },
-  twitter: { card: 'summary_large_image', images: ['/social-preview.png'] },
+  twitter: { card: 'summary_large_image', images: ['/social-preview.webp'] },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
