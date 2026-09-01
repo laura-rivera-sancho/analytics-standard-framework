@@ -18,23 +18,53 @@ const instruments = [
 
 async function getSeries(symbol: string): Promise<YahooPoint[]> {
   const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?range=5y&interval=1d&events=history`;
-  const response = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 A8-Macro-Correlation-Monitor' }, next: { revalidate: 3600 } });
-  if (!response.ok) throw new Error(`Market data request failed (${response.status})`);
+  const response = await fetch(url, {
+    headers: { 'User-Agent': 'Mozilla/5.0 A8-Macro-Correlation-Monitor' },
+    next: { revalidate: 3600 },
+  });
+  if (!response.ok)
+    throw new Error(`Market data request failed (${response.status})`);
   const json = (await response.json()) as YahooResponse;
   const result = json.chart?.result?.[0];
-  if (!result?.timestamp?.length) throw new Error('Market data response was empty');
-  const close: Array<number | null> = result.indicators?.quote?.[0]?.close ?? [];
+  if (!result?.timestamp?.length)
+    throw new Error('Market data response was empty');
+  const close: Array<number | null> =
+    result.indicators?.quote?.[0]?.close ?? [];
   return result.timestamp.flatMap((timestamp: number, index: number) => {
     const value = close[index];
-    return Number.isFinite(value) ? [{ date: new Date(timestamp * 1000).toISOString().slice(0, 10), value: Number(value) }] : [];
+    return Number.isFinite(value)
+      ? [
+          {
+            date: new Date(timestamp * 1000).toISOString().slice(0, 10),
+            value: Number(value),
+          },
+        ]
+      : [];
   });
 }
 
 export async function GET() {
   try {
-    const fetched = await Promise.all(instruments.map(async (item) => ({ ...item, points: await getSeries(item.symbol) })));
-    return NextResponse.json({ status: 'live', provider: 'Yahoo Finance chart service', fetchedAt: new Date().toISOString(), instruments: fetched });
+    const fetched = await Promise.all(
+      instruments.map(async (item) => ({
+        ...item,
+        points: await getSeries(item.symbol),
+      })),
+    );
+    return NextResponse.json({
+      status: 'live',
+      provider: 'Yahoo Finance chart service',
+      fetchedAt: new Date().toISOString(),
+      instruments: fetched,
+    });
   } catch (error) {
-    return NextResponse.json({ status: 'unavailable', message: error instanceof Error ? error.message : 'Unknown market-data error' }, { status: 503 });
+    return NextResponse.json(
+      {
+        status: 'unavailable',
+        message:
+          error instanceof Error ? error.message : 'Unknown market-data error',
+      },
+      { status: 503 },
+    );
   }
 }

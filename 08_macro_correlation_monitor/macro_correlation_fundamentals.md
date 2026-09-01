@@ -1,6 +1,6 @@
 # Macro Correlation Fundamentals
 
-This interview-preparation reference explains the concepts behind the A8 monitor and the judgment required to use them responsibly.
+This reference explains the key concepts, transformations, interpretation choices, limitations, and practical knowledge required to perform macro correlation analysis responsibly.
 
 ## Core concepts
 
@@ -45,7 +45,7 @@ The statistic is sensitive to outliers, captures only linear association, and ca
 6. Treat regime labels and lag tests as exploratory unless independently specified and validated.
 7. Never translate correlation alone into a trade recommendation.
 
-## Common interview questions
+## Practical analytical questions
 
 **Why not correlate gold price and DXY level directly?**  
 Trending levels can create spurious correlation. Returns are usually closer to stationary and describe comparable daily movements.
@@ -68,6 +68,6 @@ Add real yields, inflation expectations, volatility, liquidity proxies, and even
 **How do you communicate uncertainty to a stakeholder?**  
 State the current association, show how it changes by window and regime, explain plausible mechanisms and alternatives, and recommend the next research step rather than a causal conclusion.
 
-## Portfolio talking point
+## Applied analysis summary
 
 “I built the monitor to make unstable relationships visible. The strongest analytical choice was not the chart—it was defining comparable transformations, labeling the exact instruments and freshness, and keeping the output inside a research boundary.”

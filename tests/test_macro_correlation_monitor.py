@@ -64,3 +64,15 @@ def test_invalid_series_contract_fails_loudly():
         market.align_market_series(
             {"gold": bad_gold, "dxy": levels["dxy"], "us10y": levels["us10y"]}
         )
+
+
+def test_fundamentals_and_intelligence_contract_preserve_analysis_scope():
+    module_root = MODULE.parents[1]
+    fundamentals = (module_root / "macro_correlation_fundamentals.md").read_text(encoding="utf-8")
+    contract = (module_root / "case_study" / "intelligence_layer_contract.md").read_text(
+        encoding="utf-8"
+    )
+    assert "interview" not in fundamentals.lower()
+    assert "correlation" in fundamentals.lower()
+    assert "cited llm research" in contract.lower()
+    assert "mandatory human approval" in contract.lower()

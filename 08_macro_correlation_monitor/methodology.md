@@ -30,6 +30,14 @@ Use independently observable context—policy periods, inflation surprises, or v
 
 The site displays live/reference status, latest common date, exact symbols, source, and retrieval time. A deterministic reference dataset prevents a blank demo but is always labeled. The live endpoint revalidates hourly.
 
-## 8. Communicate the boundary
+## 8. Emit reusable market context
+
+Translate prespecified correlation and directional states into transparent labels such as relationship regime, dollar pressure, yield pressure, and research priority. These labels must be reproducible from documented rules and must not be described as news sentiment or an LLM conclusion.
+
+## 9. Enrich in separate governed layers
+
+A future LLM layer may add cited macro releases, approved news, thesis/counter-thesis, and uncertainty. A future agentic layer may coordinate research and prepare a constrained paper-trade proposal. Generated narrative remains separate from observed metrics, and every paper execution requires recorded human approval.
+
+## 10. Communicate the boundary
 
 Every view states that correlation does not establish causation and the monitor is not investment advice, a forecast, or an automated trading signal.

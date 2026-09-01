@@ -83,9 +83,11 @@ The PayWave module remains in this repository temporarily to preserve working li
 |---|---|---|---|
 | **A6 — Customer Value & Lifecycle Analytics** | Which customers create the most value, and how should lifecycle treatment differ? | RFM scoring, segment profiles, migration analysis, recommended actions, and an executive dashboard | Complete |
 | **A7 — Marketing Experimentation Suite** | Which campaign, message, offer, or channel combination performs best? | Split testing and multivariate testing, power/MDE planning, interaction effects, multiplicity controls, guardrails, and rollout guidance | Complete |
-| **A8 — Macro Correlation Monitor** | How do Gold, the US 10-year Treasury yield, and the US Dollar Index move across market regimes? | API-based data pipeline, returns/changes, 30/90/252-day rolling correlations, volatility, drawdowns, regime views, and a live Sites dashboard | In review |
+| **A8 — Macro Correlation & Market Context Monitor** | How do Gold, the US 10-year Treasury yield, and the US Dollar Index move across market regimes, and what context should trigger deeper research? | API-based data pipeline, returns/changes, 30/90/252-day rolling correlations, volatility, drawdowns, transparent rules-based context, a live Sites dashboard, and a governed interface for later cited LLM and Agentic AI layers | In review |
 
 The macro dashboard displays source and freshness metadata and clearly states that correlation does not establish causation. The implemented source contract uses COMEX gold futures (`GC=F`), the ICE U.S. Dollar Index (`DX-Y.NYB`), and the Cboe 10-year yield index (`^TNX`), with exact instrument limitations documented in the module.
+
+A8 is the shared market-context foundation for the trading-focused LLM and Agentic AI projects. The Analytics layer owns validated observations, calculations, and reproducible rule labels. The LLM layer will own cited news and macro synthesis; the Agentic layer will own controlled orchestration, risk review, and mandatory human approval. These responsibilities must remain separately identifiable in data contracts and traces.
 
 **Pillar completion gate:** existing Analytics cases remain portfolio-ready, A6–A8 meet the shared evidence standard, and the repository landing page presents the full Analytics review path.
 
@@ -132,7 +134,7 @@ machine-learning-standard-framework/
 
 | Milestone | Capability | Core evidence | Status |
 |---|---|---|---|
-| **LLM1 — Research Corpus & Retrieval** | Retrieve relevant filings, macro releases, and approved research sources | Document ingestion, metadata, chunking, hybrid retrieval, reranking, source traceability, and retrieval evaluation | Planned |
+| **LLM1 — Research Corpus & Retrieval** | Retrieve relevant filings, macro releases, approved news, and research sources around the A8 market context | Document ingestion, publisher/source policy, metadata, chunking, hybrid retrieval, reranking, source traceability, and retrieval evaluation | Planned |
 | **LLM2 — Cited Trading Research Copilot** | Produce a structured, evidence-grounded research brief | Thesis, counter-thesis, catalysts, risks, uncertainty, citations, numerical grounding, and schema-validated output | Planned |
 | **LLM3 — Evaluation, Safety & Operations** | Measure answer quality and control failure modes | Curated evaluation set, citation correctness, groundedness, hallucination and prompt-injection tests, privacy, latency, cost, and failure handling | Planned |
 
@@ -150,7 +152,7 @@ The copilot is a research system, not a buy/sell signal generator. It should dis
 
 | Milestone | Capability | Core evidence | Status |
 |---|---|---|---|
-| **AG1 — Governed Research Workflow** | Coordinate bounded specialist tasks for market and company research | Typed inputs/outputs, source policy, routing, state, tool permissions, retries, timeouts, and traceable synthesis | Planned |
+| **AG1 — Governed Research Workflow** | Consume the A8 market-context payload and coordinate bounded specialist tasks for market and company research | Typed inputs/outputs, freshness validation, source policy, routing, state, tool permissions, retries, timeouts, and traceable synthesis | Planned |
 | **AG2 — Risk Review & Trade Proposal** | Convert an approved research thesis into a constrained paper-trade proposal | Position and exposure limits, freshness checks, policy validation, risk-agent review, rejection reasons, and immutable proposal record | Planned |
 | **AG3 — Mandatory Human Approval & Paper Execution** | Submit a paper order only after explicit human authorization | Approval checkpoint, separation of proposal and execution, idempotency, audit trail, paper-broker sandbox, and kill switch | Planned |
 | **AG4 — Observability & Scenario Evaluation** | Prove the workflow behaves safely under normal and failure conditions | Trace review, tool-selection accuracy, completion rate, cost/latency, stale-data and tool-failure scenarios, denied approval, duplicate request, and recovery tests | Planned |
