@@ -1,6 +1,6 @@
 # Macro Correlation Monitor
 
-> **Status: In review.** A live, decision-oriented research dashboard for exploring how gold, the U.S. 10-year Treasury yield, and the U.S. Dollar Index move across market regimes.
+> **Status: Complete.** A live, decision-oriented research dashboard for exploring how gold, the U.S. 10-year Treasury yield, and the U.S. Dollar Index move across market regimes.
 
 **Portfolio shortcut:** [Open the private live dashboard](https://macro-correlation-monitor.nachilu10.chatgpt.site)
 

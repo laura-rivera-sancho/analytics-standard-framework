@@ -36,7 +36,7 @@ A module described as complete should include:
 3. a fictional business case and data dictionary
 4. deterministic synthetic-data generation with a small reviewable sample
 5. reusable analysis code with explicit validation and assumptions
-6. one guided notebook; do not add a separate challenge notebook unless a future module explicitly requires one
+6. a guided notebook only when it materially improves the review experience; do not add challenge notebooks
 7. deterministic expected results or an answer key
 8. a stakeholder communication template
 9. limitations, privacy disclosure, and a monitoring or follow-up plan
@@ -59,7 +59,7 @@ Run these checks before opening a pull request:
 ```bash
 ruff check .
 ruff format --check .
-python -m compileall 01_ab_testing 02_pre_post_analysis 03_target_analysis 04_predictive_analytics 05_ad_hoc_analysis
+python -m compileall -q 01_ab_testing/src 02_pre_post_analysis/src 03_target_analysis/src 04_predictive_analytics/src 05_ad_hoc_analysis/src 06_customer_value_lifecycle/src 07_marketing_experimentation/src 08_macro_correlation_monitor/src tests
 pytest --cov
 ```
 

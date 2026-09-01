@@ -6,7 +6,7 @@
 
 This repository demonstrates how I approach common analytics engagements from end to end: framing the decision, defining metrics and assumptions, validating data, selecting an appropriate method, interpreting uncertainty, estimating business impact, and communicating a recommendation.
 
-Each module combines a reusable methodology with a fictional business case, synthetic data, reproducible Python code, guided practice, and an executive communication standard. No employer, client, or confidential data are used.
+Each module combines a reusable methodology with a fictional business case, inspectable data, reproducible implementation, practical learning material where relevant, and an executive communication standard. No employer, client, or confidential data are used.
 
 ## Recommended portfolio review path
 
@@ -83,9 +83,9 @@ The simple Pre/Post comparison is intentionally not treated as proof of causalit
 | `05_ad_hoc_analysis` | Complete | Structured, time-bounded KPI diagnosis and decision handoff | [Ad Hoc Analysis](05_ad_hoc_analysis/README.md) |
 | `06_customer_value_lifecycle` | Complete | RFM segmentation, lifecycle migration, value concentration, and controlled retention activation | [Customer Value & Lifecycle](06_customer_value_lifecycle/README.md) |
 | `07_marketing_experimentation` | Complete | Split testing, factorial multivariate testing, interaction effects, multiplicity, and rollout governance | [Marketing Experimentation Suite](07_marketing_experimentation/README.md) |
-| `08_macro_correlation_monitor` | In review | Live gold–US10Y–DXY monitoring, rolling correlations, source governance, and regime-aware interpretation | [Macro Correlation Monitor](08_macro_correlation_monitor/README.md) |
+| `08_macro_correlation_monitor` | Complete | Live gold–US10Y–DXY monitoring, rolling correlations, source governance, and regime-aware interpretation | [Macro Correlation Monitor](08_macro_correlation_monitor/README.md) |
 
-Five modules form the completed foundation of the **Analytics** pillar. The completed PayWave predictive module is now classified as a **Machine Learning seed case** and remains here temporarily so its links, tests, and reports continue to work until the dedicated Machine Learning repository is created.
+Seven completed Analytics case studies now form the **Analytics** pillar. The completed PayWave predictive module is classified as a **Machine Learning seed case** and remains here temporarily so its links, tests, and reports continue to work until the dedicated Machine Learning repository is created.
 
 The broader portfolio will use one repository per pillar. See the [portfolio roadmap](ROADMAP.md) for the five-repository architecture, agreed marketing and trading projects, shared evidence standards, and delivery sequence. Execution is tracked in the [Data & AI Portfolio Roadmap project](https://github.com/users/laura-rivera-sancho/projects/2).
 

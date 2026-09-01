@@ -11,7 +11,7 @@ The portfolio is organized around two complementary business domains:
 
 | Pillar | Planned repository | Primary portfolio outcome | Status |
 |---|---|---|---|
-| 1. Analytics | [`analytics-standard-framework`](https://github.com/laura-rivera-sancho/analytics-standard-framework) | Decision-ready analytics, experimentation, customer insight, and live market monitoring | **In progress** |
+| 1. Analytics | [`analytics-standard-framework`](https://github.com/laura-rivera-sancho/analytics-standard-framework) | Decision-ready analytics, experimentation, customer insight, and live market monitoring | **Complete** |
 | 2. Machine Learning | `machine-learning-standard-framework` | Supervised and unsupervised models tied to measurable business decisions | **Planned** |
 | 3. Large Language Models | `llm-systems-framework` | A cited, evaluated trading research copilot | **Planned** |
 | 4. AI Agentic Frameworks | `agentic-ai-framework` | A controlled research and paper-trading workflow with mandatory human approval | **Planned** |
@@ -83,13 +83,13 @@ The PayWave module remains in this repository temporarily to preserve working li
 |---|---|---|---|
 | **A6 — Customer Value & Lifecycle Analytics** | Which customers create the most value, and how should lifecycle treatment differ? | RFM scoring, segment profiles, migration analysis, recommended actions, and an executive dashboard | Complete |
 | **A7 — Marketing Experimentation Suite** | Which campaign, message, offer, or channel combination performs best? | Split testing and multivariate testing, power/MDE planning, interaction effects, multiplicity controls, guardrails, and rollout guidance | Complete |
-| **A8 — Macro Correlation & Market Context Monitor** | How do Gold, the US 10-year Treasury yield, and the US Dollar Index move across market regimes, and what context should trigger deeper research? | API-based data pipeline, returns/changes, 30/90/252-day rolling correlations, volatility, drawdowns, transparent rules-based context, a live Sites dashboard, and a governed interface for later cited LLM and Agentic AI layers | In review |
+| **A8 — Macro Correlation & Market Context Monitor** | How do Gold, the US 10-year Treasury yield, and the US Dollar Index move across market regimes, and what context should trigger deeper research? | API-based data pipeline, returns/changes, 30/90/252-day rolling correlations, volatility, drawdowns, transparent rules-based context, a live Sites dashboard, and a governed interface for later cited LLM and Agentic AI layers | Complete |
 
 The macro dashboard displays source and freshness metadata and clearly states that correlation does not establish causation. The implemented source contract uses COMEX gold futures (`GC=F`), the ICE U.S. Dollar Index (`DX-Y.NYB`), and the Cboe 10-year yield index (`^TNX`), with exact instrument limitations documented in the module.
 
 A8 is the shared market-context foundation for the trading-focused LLM and Agentic AI projects. The Analytics layer owns validated observations, calculations, and reproducible rule labels. The LLM layer will own cited news and macro synthesis; the Agentic layer will own controlled orchestration, risk review, and mandatory human approval. These responsibilities must remain separately identifiable in data contracts and traces.
 
-**Pillar completion gate:** existing Analytics cases remain portfolio-ready, A6–A8 meet the shared evidence standard, and the repository landing page presents the full Analytics review path.
+**Pillar completion gate — met:** the Analytics cases remain portfolio-ready, A6–A8 meet the shared evidence standard, and the repository landing page presents the full Analytics review path.
 
 ## Pillar 2 — Machine Learning
 
