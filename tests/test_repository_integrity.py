@@ -213,11 +213,22 @@ def test_a7_foundation_is_decision_ready():
     assert (module / "case_study/business_case.md").exists()
     assert (module / "methodology.md").exists()
     assert (module / "case_study/data_dictionary.md").exists()
+    assert (module / "case_study/expected_results.md").exists()
     assert (module / "requirements.txt").read_text(encoding="utf-8").startswith("-r ../")
     assert (module / "src/generate_synthetic_data.py").exists()
     assert (module / "src/validate_experiment_data.py").exists()
+    assert (module / "src/analyze_marketing_experiments.py").exists()
     assert (module / "data/raw/harbor_pine_experiment_assignments_sample.csv").exists()
+    assert list((module / "notebooks").glob("guided*.ipynb"))
     assert not list((module / "notebooks").glob("challenge*.ipynb"))
+    assert list((module / "templates").glob("*readout*.md"))
+
+    report = (module / "reports/stakeholder_readout.md").read_text(encoding="utf-8")
+    assert "synthetically generated" in report
+    assert "executive_summary.png" in report
+    assert "[Download the five-slide PowerPoint readout](stakeholder_readout.pptx)" in report
+    assert (module / "reports/executive_summary.png").read_bytes().startswith(b"\x89PNG\r\n\x1a\n")
+    assert (module / "reports/stakeholder_readout.pptx").read_bytes().startswith(b"PK")
 
     business_case = (module / "case_study/business_case.md").read_text(encoding="utf-8")
     assert "Experiment 1 — Lifecycle-message split test" in business_case

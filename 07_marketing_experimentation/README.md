@@ -1,6 +1,8 @@
 # Marketing Experimentation Suite
 
-> **Status: In progress.** This module extends the Harbor & Pine customer-value case into a governed retention experimentation program covering a simple split test and a full-factorial multivariate test.
+> **Status: In review.** This module extends the Harbor & Pine customer-value case into a governed retention experimentation program covering a simple split test and a full-factorial multivariate test.
+
+**Portfolio shortcut:** [Finished stakeholder readout](reports/stakeholder_readout.md)
 
 ## Business question
 
@@ -11,7 +13,7 @@ The suite separates two learning goals:
 1. a two-arm split test establishes the basic randomized-analysis workflow and tests whether lifecycle-informed messaging improves outcomes over the current reminder
 2. a `2 × 2 × 2` factorial experiment estimates message, offer, and channel-plan effects, prespecified interactions, and performance relative to a no-contact holdout
 
-## What this module will demonstrate
+## What this module demonstrates
 
 - a decision-first experiment charter with explicit estimands
 - eligibility, consent, exclusion, and randomization-unit governance
@@ -33,19 +35,25 @@ The suite separates two learning goals:
 | [Business case](case_study/business_case.md) | Decision, population, test designs, metrics, governance, and acceptance criteria |
 | [Methodology](methodology.md) | Reusable experiment workflow from charter through rollout monitoring |
 | [Data dictionary](case_study/data_dictionary.md) | Assignment grain, fields, factor catalog, outcomes, guardrails, and defect rules |
+| [Expected results](case_study/expected_results.md) | Deterministic validity, split-test, factorial, margin, and decision narrative |
+| [Guided notebook](notebooks/guided_marketing_experimentation.ipynb) | Worked validation, inference, multiplicity, economics, and recommendation |
 | [Synthetic generator](src/generate_synthetic_data.py) | Deterministic split and factorial assignments with deliberate defects |
 | [Validation gate](src/validate_experiment_data.py) | Executable consent, assignment, timestamp, maturity, and reconciliation controls |
+| [Analytical engine](src/analyze_marketing_experiments.py) | Power, SRM, split effects, factorial contrasts, multiplicity, margin, and guardrails |
+| [Stakeholder readout](reports/stakeholder_readout.md) | Executive recommendation, evidence, economics, guardrails, and controlled next stage |
+| [Readout template](templates/stakeholder_readout_template.md) | Reusable experiment decision communication structure |
 | [Portfolio roadmap](../ROADMAP.md) | A7 scope and relationship to the broader Data & AI portfolio |
 
-Effect estimation, power analysis, the guided notebook, expected results, and stakeholder readout will be added in the next A7 steps.
+The publication package includes the executive preview, Markdown stakeholder readout, and editable five-slide PowerPoint deck. The module remains in review until final portfolio approval.
 
-## Run the current data layer
+## Run the analysis
 
 From the repository root:
 
 ```bash
 python 07_marketing_experimentation/src/generate_synthetic_data.py
 python 07_marketing_experimentation/src/validate_experiment_data.py
+python 07_marketing_experimentation/src/analyze_marketing_experiments.py
 pytest tests/test_marketing_experimentation.py
 ```
 

@@ -106,6 +106,14 @@ def experimentation_generator():
 @pytest.fixture(scope="session")
 def experimentation_validation(experimentation_generator):
     return load_source_module(
-        "experimentation_validation",
+        "validate_experiment_data",
         "07_marketing_experimentation/src/validate_experiment_data.py",
+    )
+
+
+@pytest.fixture(scope="session")
+def experimentation_analysis(experimentation_validation):
+    return load_source_module(
+        "experimentation_analysis",
+        "07_marketing_experimentation/src/analyze_marketing_experiments.py",
     )

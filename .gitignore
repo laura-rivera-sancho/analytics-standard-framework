@@ -223,6 +223,7 @@ tempCodeRunnerFile.py
 06_customer_value_lifecycle/data/.matplotlib/
 07_marketing_experimentation/data/raw/harbor_pine_experiment_assignments_full.csv
 07_marketing_experimentation/data/processed/
+07_marketing_experimentation/data/.matplotlib/
 
 # Marimo
 marimo/_static/

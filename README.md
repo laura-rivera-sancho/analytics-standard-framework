@@ -21,6 +21,7 @@ the fastest route to the strongest evidence:
 | Predictive decision design | [PayWave modeling readout](04_predictive_analytics/reports/stakeholder_readout.md) | Temporal validation, capacity metrics, business value, and a controlled-pilot plan |
 | Diagnostic judgment | [OrbitMart ad hoc readout](05_ad_hoc_analysis/reports/stakeholder_readout.md) | KPI trees, rate-and-mix decomposition, exploratory controls, and evidence-calibrated action |
 | Customer value strategy | [Harbor & Pine lifecycle readout](06_customer_value_lifecycle/reports/stakeholder_readout.md) | RFM value concentration, lifecycle migration, consent-aware prioritization, and test design |
+| Marketing experimentation | [Harbor & Pine experimentation readout](07_marketing_experimentation/reports/stakeholder_readout.md) | Power planning, randomization checks, factorial effects, multiplicity control, economics, and rollout governance |
 | Reproducible implementation | [Source workflows](01_ab_testing/src) and [automated tests](tests) | Reusable Python, deterministic data, analytical tests, and repository checks |
 | Portfolio scope and milestones | [Roadmap](ROADMAP.md) | Five-repository architecture, planned case studies, completion criteria, and delivery sequence |
 
@@ -33,6 +34,7 @@ the fastest route to the strongest evidence:
 - **Target design** — auditable eligibility rules, denominator-consistent funnels, opportunity sizing, and capacity allocation.
 - **Diagnostic analysis** — KPI trees, bounded exploration, rate-and-mix decomposition, and time-boxed decision support.
 - **Customer value analytics** — RFM scoring, value concentration, lifecycle migration, and controlled activation design.
+- **Marketing experimentation** — split and factorial testing, power planning, multiplicity control, guardrails, and decision-stage governance.
 - **Data quality** — deliberate validation of duplicates, missingness, invalid values, inconsistent categories, and timing logic.
 - **Reproducible analytics** — deterministic synthetic-data generators, reusable analysis functions, and documented assumptions.
 - **Stakeholder communication** — concise recommendations that separate evidence, limitations, and next actions.
@@ -47,6 +49,7 @@ the fastest route to the strongest evidence:
 | **PayWave** | Which customers should receive capacity-constrained retention outreach? | Temporal binary-classification workflow | [Finished stakeholder readout](04_predictive_analytics/reports/stakeholder_readout.md): **3,853** captures at capacity—**552 more** than the recency rule—with **77.06% precision** and **2.58x lift**. |
 | **OrbitMart** | Why did checkout completion fall while traffic increased? | KPI-tree diagnosis, rate/mix decomposition, and controlled segment drill-down | [Finished stakeholder readout](05_ad_hoc_analysis/reports/stakeholder_readout.md): **−0.97 pp** completion decline localized to Android 8.4 wallet traffic, with an estimated **254-order** gap. |
 | **Harbor & Pine** | Which customer groups create the most value, and where should limited retention capacity focus? | Point-in-time RFM scoring, lifecycle migration, and consent-aware prioritization | [Finished stakeholder readout](06_customer_value_lifecycle/reports/stakeholder_readout.md): Champions are **23.1%** of customers but **55.5%** of value; a controlled **500-customer** first wave represents **$323.2K** in trailing-year value. |
+| **Harbor & Pine Experimentation** | Which retention treatment should advance without approving broad rollout? | Split test and `2 × 2 × 2` factorial experiment | [Finished stakeholder readout](07_marketing_experimentation/reports/stakeholder_readout.md): the leading cell improves conversion by **+2.67 pp** after Holm correction, while margin uncertainty requires a controlled validation stage. |
 
 ### NovaPay decision snapshot
 
@@ -76,7 +79,7 @@ The simple Pre/Post comparison is intentionally not treated as proof of causalit
 | `04_predictive_analytics` | Complete | Predictive modeling from framing through validation and operationalization | [Predictive Analytics](04_predictive_analytics/README.md) |
 | `05_ad_hoc_analysis` | Complete | Structured, time-bounded KPI diagnosis and decision handoff | [Ad Hoc Analysis](05_ad_hoc_analysis/README.md) |
 | `06_customer_value_lifecycle` | Complete | RFM segmentation, lifecycle migration, value concentration, and controlled retention activation | [Customer Value & Lifecycle](06_customer_value_lifecycle/README.md) |
-| `07_marketing_experimentation` | In progress | Split testing, factorial multivariate testing, interaction effects, multiplicity, and rollout governance | [Marketing Experimentation Suite](07_marketing_experimentation/README.md) |
+| `07_marketing_experimentation` | In review | Split testing, factorial multivariate testing, interaction effects, multiplicity, and rollout governance | [Marketing Experimentation Suite](07_marketing_experimentation/README.md) |
 
 Five modules form the completed foundation of the **Analytics** pillar. The completed PayWave predictive module is now classified as a **Machine Learning seed case** and remains here temporarily so its links, tests, and reports continue to work until the dedicated Machine Learning repository is created.
 
@@ -129,12 +132,12 @@ analytics-standard-framework/
 │   ├── src/             # Synthetic data, RFM, migration, prioritization, and visualization
 │   └── templates/       # Reusable lifecycle stakeholder readout
 ├── 07_marketing_experimentation/
-│   ├── case_study/      # Harbor & Pine experiment charter and acceptance criteria
+│   ├── case_study/      # Harbor & Pine charter, dictionary, and reference results
 │   ├── data/raw/        # Compact synthetic split-test and factorial-assignment sample
-│   ├── marketing_experimentation_fundamentals.md
-│   ├── methodology.md   # Reusable experiment design, validation, inference, and decision workflow
-│   ├── src/             # Deterministic generator and executable validation gate
-│   └── README.md        # A7 scope, navigation, and implementation status
+│   ├── notebooks/       # Guided experimentation analysis
+│   ├── reports/         # Finished Markdown readout, preview, and PowerPoint deck
+│   ├── src/             # Generator, validation, analysis, and visualization
+│   └── templates/       # Reusable experiment stakeholder readout
 ├── ROADMAP.md            # Five-repository portfolio plan and milestone definitions
 └── README.md             # Portfolio landing page
 ```
