@@ -31,9 +31,25 @@ The suite separates two learning goals:
 |---|---|
 | [Experimentation fundamentals](marketing_experimentation_fundamentals.md) | Core concepts, design tradeoffs, interview questions, and interpretation rules |
 | [Business case](case_study/business_case.md) | Decision, population, test designs, metrics, governance, and acceptance criteria |
+| [Methodology](methodology.md) | Reusable experiment workflow from charter through rollout monitoring |
+| [Data dictionary](case_study/data_dictionary.md) | Assignment grain, fields, factor catalog, outcomes, guardrails, and defect rules |
+| [Synthetic generator](src/generate_synthetic_data.py) | Deterministic split and factorial assignments with deliberate defects |
+| [Validation gate](src/validate_experiment_data.py) | Executable consent, assignment, timestamp, maturity, and reconciliation controls |
 | [Portfolio roadmap](../ROADMAP.md) | A7 scope and relationship to the broader Data & AI portfolio |
 
-Implementation assets—including the data dictionary, methodology, synthetic data, reusable analysis, guided notebook, tests, and stakeholder readout—will be added in the next A7 steps.
+Effect estimation, power analysis, the guided notebook, expected results, and stakeholder readout will be added in the next A7 steps.
+
+## Run the current data layer
+
+From the repository root:
+
+```bash
+python 07_marketing_experimentation/src/generate_synthetic_data.py
+python 07_marketing_experimentation/src/validate_experiment_data.py
+pytest tests/test_marketing_experimentation.py
+```
+
+The full raw and processed datasets are reproducible from seed `707` and remain untracked. A compact 4,000-row raw sample is versioned for inspection.
 
 ## Relationship to A6
 

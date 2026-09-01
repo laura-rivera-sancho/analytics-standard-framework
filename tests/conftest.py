@@ -93,3 +93,19 @@ def lifecycle_analysis():
     return load_source_module(
         "lifecycle_analysis", "06_customer_value_lifecycle/src/analyze_customer_value.py"
     )
+
+
+@pytest.fixture(scope="session")
+def experimentation_generator():
+    return load_source_module(
+        "generate_synthetic_data",
+        "07_marketing_experimentation/src/generate_synthetic_data.py",
+    )
+
+
+@pytest.fixture(scope="session")
+def experimentation_validation(experimentation_generator):
+    return load_source_module(
+        "experimentation_validation",
+        "07_marketing_experimentation/src/validate_experiment_data.py",
+    )

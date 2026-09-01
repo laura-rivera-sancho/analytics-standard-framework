@@ -221,6 +221,8 @@ tempCodeRunnerFile.py
 06_customer_value_lifecycle/data/raw/harbor_pine_orders_full.csv
 06_customer_value_lifecycle/data/processed/
 06_customer_value_lifecycle/data/.matplotlib/
+07_marketing_experimentation/data/raw/harbor_pine_experiment_assignments_full.csv
+07_marketing_experimentation/data/processed/
 
 # Marimo
 marimo/_static/

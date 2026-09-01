@@ -89,7 +89,7 @@ def test_module_requirements_delegate_to_root_environment():
         "04_predictive_analytics",
         "05_ad_hoc_analysis",
         "06_customer_value_lifecycle",
-        "06_customer_value_lifecycle",
+        "07_marketing_experimentation",
     ]:
         requirement = (ROOT / module / "requirements.txt").read_text(encoding="utf-8")
         assert "-r ../requirements.txt" in requirement
@@ -211,6 +211,12 @@ def test_a7_foundation_is_decision_ready():
     assert (module / "README.md").exists()
     assert (module / "marketing_experimentation_fundamentals.md").exists()
     assert (module / "case_study/business_case.md").exists()
+    assert (module / "methodology.md").exists()
+    assert (module / "case_study/data_dictionary.md").exists()
+    assert (module / "requirements.txt").read_text(encoding="utf-8").startswith("-r ../")
+    assert (module / "src/generate_synthetic_data.py").exists()
+    assert (module / "src/validate_experiment_data.py").exists()
+    assert (module / "data/raw/harbor_pine_experiment_assignments_sample.csv").exists()
     assert not list((module / "notebooks").glob("challenge*.ipynb"))
 
     business_case = (module / "case_study/business_case.md").read_text(encoding="utf-8")

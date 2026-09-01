@@ -130,7 +130,10 @@ analytics-standard-framework/
 │   └── templates/       # Reusable lifecycle stakeholder readout
 ├── 07_marketing_experimentation/
 │   ├── case_study/      # Harbor & Pine experiment charter and acceptance criteria
+│   ├── data/raw/        # Compact synthetic split-test and factorial-assignment sample
 │   ├── marketing_experimentation_fundamentals.md
+│   ├── methodology.md   # Reusable experiment design, validation, inference, and decision workflow
+│   ├── src/             # Deterministic generator and executable validation gate
 │   └── README.md        # A7 scope, navigation, and implementation status
 ├── ROADMAP.md            # Five-repository portfolio plan and milestone definitions
 └── README.md             # Portfolio landing page
