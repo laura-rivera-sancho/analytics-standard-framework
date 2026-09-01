@@ -12,12 +12,12 @@ The portfolio is organized around two complementary business domains:
 | Pillar | Planned repository | Primary portfolio outcome | Status |
 |---|---|---|---|
 | 1. Analytics | [`analytics-standard-framework`](https://github.com/laura-rivera-sancho/analytics-standard-framework) | Decision-ready analytics, experimentation, customer insight, and live market monitoring | **Complete** |
-| 2. Machine Learning | `machine-learning-standard-framework` | Supervised and unsupervised models tied to measurable business decisions | **Planned** |
+| 2. Machine Learning | [`machine-learning-standard-framework`](https://github.com/laura-rivera-sancho/machine-learning-standard-framework) | Supervised and unsupervised models tied to measurable business decisions | **In progress** |
 | 3. Large Language Models | `llm-systems-framework` | A cited, evaluated trading research copilot | **Planned** |
 | 4. AI Agentic Frameworks | `agentic-ai-framework` | A controlled research and paper-trading workflow with mandatory human approval | **Planned** |
 | 5. Data Warehousing & Modeling | [`data-architecture-standard-framework`](https://github.com/laura-rivera-sancho/data-architecture-standard-framework) | A governed omnichannel marketing warehouse, marts, and semantic layer | **Complete** |
 
-The three remaining repository names are working names and will become links after those repositories are created. A future GitHub profile README will act as the portfolio landing page, while the [Data & AI Portfolio Roadmap](https://github.com/users/laura-rivera-sancho/projects/2) GitHub Project coordinates work across all five repositories.
+The two remaining repository names are working names and will become links after those repositories are created. A future GitHub profile README will act as the portfolio landing page, while the [Data & AI Portfolio Roadmap](https://github.com/users/laura-rivera-sancho/projects/2) GitHub Project coordinates work across all five repositories.
 
 ## Repository strategy
 
@@ -75,7 +75,7 @@ Pillar-specific criteria extend this standard; they do not replace it.
 | [PayWave Predictive Analytics](04_predictive_analytics/README.md) | **Machine Learning seed case** | Complete | Capacity-constrained inactivity model with temporal validation |
 | [OrbitMart Ad Hoc Analysis](05_ad_hoc_analysis/README.md) | Analytics | Complete | KPI diagnosis and operational handoff |
 
-The PayWave module remains in this repository temporarily to preserve working links, tests, and reports. It is now classified as supervised Machine Learning evidence and will be migrated only after the Machine Learning repository foundation exists.
+The PayWave module remains in this repository temporarily to preserve working links, tests, and reports. It is classified as supervised Machine Learning evidence and can be adapted into the dedicated Machine Learning repository as a later transfer case.
 
 ### Planned Analytics milestones
 
@@ -93,15 +93,15 @@ A8 is the shared market-context foundation for the trading-focused LLM and Agent
 
 ## Pillar 2 — Machine Learning
 
-**Planned repository:** `machine-learning-standard-framework`
+**Repository:** [`machine-learning-standard-framework`](https://github.com/laura-rivera-sancho/machine-learning-standard-framework)
 
 **Objective:** Demonstrate supervised and unsupervised modeling from business framing through reliable evaluation, operational decision design, explainability, and monitoring.
 
-### Planned Machine Learning milestones
+### Machine Learning milestones
 
 | Milestone | Use case | Core evidence | Status |
 |---|---|---|---|
-| **ML1 — Supervised Predictive Modeling** | Predict campaign response and allocate limited marketing capacity | Logistic-regression baseline, simple decision tree, tree-based champion, leakage controls, temporal/cross-validation design, calibration, lift/gains, threshold economics, explainability, and monitoring | Planned |
+| **ML1 — Supervised Predictive Modeling** | Predict campaign response and allocate limited marketing capacity | Logistic-regression baseline, simple decision tree, tree-based champion, leakage controls, temporal validation, calibration, lift/gains, threshold economics, explainability, and monitoring | **Complete** |
 | **ML1 transfer case — PayWave Inactivity** | Prioritize retention outreach under capacity constraints | Migrate or adapt the completed PayWave case to prove the supervised framework transfers across domains | Planned |
 | **ML2 — Unsupervised Customer Segmentation** | Discover stable, actionable customer groups beyond fixed RFM rules | RFM/behavioral features, K-means baseline, Gaussian-mixture comparison, density-based challenger, stability checks, interpretable personas, and activation guidance | Planned |
 | **ML3 — Production Readiness** | How would the selected models be operated responsibly? | Reproducible training/inference, model registry approach, drift and performance monitoring, retraining triggers, rollback, and model card | Planned |

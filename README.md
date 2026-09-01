@@ -85,7 +85,7 @@ The simple Pre/Post comparison is intentionally not treated as proof of causalit
 | `07_marketing_experimentation` | Complete | Split testing, factorial multivariate testing, interaction effects, multiplicity, and rollout governance | [Marketing Experimentation Suite](07_marketing_experimentation/README.md) |
 | `08_macro_correlation_monitor` | Complete | Live gold–US10Y–DXY monitoring, rolling correlations, source governance, and regime-aware interpretation | [Macro Correlation Monitor](08_macro_correlation_monitor/README.md) |
 
-Seven completed Analytics case studies now form the **Analytics** pillar. The completed PayWave predictive module is classified as a **Machine Learning seed case** and remains here temporarily so its links, tests, and reports continue to work until the dedicated Machine Learning repository is created.
+Seven completed Analytics case studies now form the **Analytics** pillar. The completed PayWave predictive module is classified as a **Machine Learning seed case** and remains here so its links, tests, and reports continue to work; it can later be adapted as a transfer case in the dedicated [`machine-learning-standard-framework`](https://github.com/laura-rivera-sancho/machine-learning-standard-framework) repository.
 
 The broader portfolio will use one repository per pillar. See the [portfolio roadmap](ROADMAP.md) for the five-repository architecture, agreed marketing and trading projects, shared evidence standards, and delivery sequence. Execution is tracked in the [Data & AI Portfolio Roadmap project](https://github.com/users/laura-rivera-sancho/projects/2).
 
