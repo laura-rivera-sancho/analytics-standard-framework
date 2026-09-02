@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/repository-banner.png" alt="Analytics Standard Framework banner" width="100%">
+</p>
+
 # Analytics Standard Framework
 
 [![Repository quality](https://github.com/laura-rivera-sancho/analytics-standard-framework/actions/workflows/ci.yml/badge.svg)](https://github.com/laura-rivera-sancho/analytics-standard-framework/actions/workflows/ci.yml)
