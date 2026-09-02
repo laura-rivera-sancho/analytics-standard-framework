@@ -103,10 +103,10 @@ A8 is the shared market-context foundation for the trading-focused LLM and Agent
 |---|---|---|---|
 | **ML1 — Supervised Predictive Modeling** | Predict campaign response and allocate limited marketing capacity | Logistic-regression baseline, simple decision tree, tree-based champion, leakage controls, temporal validation, calibration, lift/gains, threshold economics, explainability, and monitoring | **Complete** |
 | **ML1 transfer case — PayWave Inactivity** | Prioritize retention outreach under capacity constraints | Migrate or adapt the completed PayWave case to prove the supervised framework transfers across domains | Planned |
-| **ML2 — Unsupervised Customer Segmentation** | Discover stable, actionable customer groups beyond fixed RFM rules | RFM/behavioral features, K-means baseline, Gaussian-mixture comparison, density-based challenger, stability checks, interpretable personas, and activation guidance | Planned |
+| [**ML2 — Unsupervised Customer Segmentation**](https://github.com/laura-rivera-sancho/machine-learning-standard-framework/tree/main/unsupervised_learning/customer_segmentation) | Discover stable, actionable customer groups beyond fixed RFM rules | RFM/behavioral features, K-means baseline, Gaussian-mixture comparison, density-based challenger, bootstrap and temporal stability, interpretable personas, and activation guidance | **Complete** |
 | **ML3 — Production Readiness** | How would the selected models be operated responsibly? | Reproducible training/inference, model registry approach, drift and performance monitoring, retraining triggers, rollback, and model card | Planned |
 
-The campaign-response case is the primary supervised marketing project. PayWave is retained as a transfer case, not discarded. The unsupervised project extends the RFM work from descriptive customer rules into data-driven segmentation.
+The campaign-response case is the primary supervised marketing project. PayWave is retained as an optional transfer case, not discarded. The completed ML2 case extends the RFM work from descriptive customer rules into stable, data-driven segmentation.
 
 **Pillar completion gate:** both modeling paradigms have defensible baselines, reproducible evaluation, decision-aware metrics, error/stability analysis, documented risks, and credible monitoring plans.
 
