@@ -51,24 +51,6 @@ evidence across the portfolio:
 | **Harbor & Pine Experimentation** | Which retention treatment should advance without approving broad rollout? | Split test and `2 × 2 × 2` factorial experiment | [Finished stakeholder readout](06_marketing_experimentation/reports/stakeholder_readout.md): the leading cell improves conversion by **+2.67 pp** after Holm correction, while margin uncertainty requires a controlled validation stage. |
 | **Macro Correlation Monitor** | When have gold's relationships with DXY and US10Y shifted enough to warrant deeper research? | Live API pipeline, rolling cross-asset correlation, and rules-based market context | [Interactive module](07_macro_correlation_monitor/README.md): selectable **30/90/252-day** views, exact source/freshness metadata, deterministic fallback behavior, and a governed handoff to later cited LLM and Agentic AI layers. |
 
-### NovaPay decision snapshot
-
-| KPI | Control | Treatment | Decision signal |
-|---|---:|---:|---|
-| Checkout completion | 72.64% | 75.95% | +3.31 pp; statistically credible and above the assumed business threshold |
-| Mean checkout time | ~89.35 sec | ~64.16 sec | Material reduction in customer friction |
-| Support contact rate | 5.655% | 4.570% | Favorable guardrail movement |
-| Payment decline rate | 5.495% | 5.180% | Small reduction; not statistically conclusive |
-| Fraud rate | 0.355% | 0.350% | No meaningful difference detected |
-
-**Recommendation:** proceed toward rollout with continued monitoring of fraud, payment declines, and segment stability. See the [finished stakeholder readout](01_ab_testing/reports/stakeholder_readout.md), [full reference results](01_ab_testing/case_study/expected_results.md), and [guided analysis](01_ab_testing/notebooks/guided_ab_test_analysis.ipynb).
-
-### FinFlow decision snapshot
-
-The simple Pre/Post comparison is intentionally not treated as proof of causality. The workflow re-derives launch timing, separates the seven-day stabilization ramp, examines traffic-mix changes, and estimates an adjusted interrupted time-series model with baseline trend, weekday, campaign, ramp, and customer-mix controls.
-
-**Recommendation:** continue the automated workflow with defined guardrail monitoring and moderate—not high—causal confidence. See the [finished stakeholder readout](02_pre_post_analysis/reports/stakeholder_readout.md), [expected analytical narrative](02_pre_post_analysis/templates/challenge_answer_key.md), and [guided analysis](02_pre_post_analysis/notebooks/guided_pre_post_analysis.ipynb).
-
 ## Modules and roadmap
 
 | Module | Status | Focus | Start here |
@@ -80,10 +62,6 @@ The simple Pre/Post comparison is intentionally not treated as proof of causalit
 | `05_customer_value_lifecycle` | Complete | RFM segmentation, lifecycle migration, value concentration, and controlled retention activation | [Customer Value & Lifecycle](05_customer_value_lifecycle/README.md) |
 | `06_marketing_experimentation` | Complete | Split testing, factorial multivariate testing, interaction effects, multiplicity, and rollout governance | [Marketing Experimentation Suite](06_marketing_experimentation/README.md) |
 | `07_macro_correlation_monitor` | Complete | Live gold–US10Y–DXY monitoring, rolling correlations, source governance, and regime-aware interpretation | [Macro Correlation Monitor](07_macro_correlation_monitor/README.md) |
-
-Seven completed case studies now form the **Analytics** pillar, spanning experimentation, impact evaluation, target design, diagnostic analysis, customer strategy, and market intelligence.
-
-The broader portfolio will use one repository per pillar. See the [portfolio roadmap](ROADMAP.md) for the five-repository architecture, agreed marketing and trading projects, shared evidence standards, and delivery sequence. Execution is tracked in the [Data & AI Portfolio Roadmap project](https://github.com/users/laura-rivera-sancho/projects/2).
 
 ## Repository map
 
