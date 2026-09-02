@@ -52,7 +52,6 @@ def test_completed_modules_exist():
         "01_ab_testing",
         "02_pre_post_analysis",
         "03_target_analysis",
-        "04_predictive_analytics",
         "05_ad_hoc_analysis",
         "06_customer_value_lifecycle",
     ]
@@ -87,7 +86,6 @@ def test_module_requirements_delegate_to_root_environment():
         "01_ab_testing",
         "02_pre_post_analysis",
         "03_target_analysis",
-        "04_predictive_analytics",
         "05_ad_hoc_analysis",
         "06_customer_value_lifecycle",
         "07_marketing_experimentation",
@@ -127,7 +125,6 @@ def test_completed_modules_publish_stakeholder_artifacts():
         "01_ab_testing",
         "02_pre_post_analysis",
         "03_target_analysis",
-        "04_predictive_analytics",
         "05_ad_hoc_analysis",
         "06_customer_value_lifecycle",
     ]:
@@ -187,7 +184,6 @@ def test_recruiter_shortcuts_link_to_finished_reports():
         "01_ab_testing",
         "02_pre_post_analysis",
         "03_target_analysis",
-        "04_predictive_analytics",
         "05_ad_hoc_analysis",
     ]:
         module_readme = (ROOT / module / "README.md").read_text(encoding="utf-8")

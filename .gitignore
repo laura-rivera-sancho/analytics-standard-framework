@@ -212,8 +212,6 @@ tempCodeRunnerFile.py
 # Generated full-size analytics datasets (compact portfolio samples remain tracked)
 02_pre_post_analysis/data/raw/finflow_verification_pre_post_full.csv
 02_pre_post_analysis/data/processed/
-04_predictive_analytics/data/raw/paywave_inactivity_full.csv
-04_predictive_analytics/data/processed/
 03_target_analysis/data/raw/lumina_settlement_target_full.csv
 03_target_analysis/data/processed/
 05_ad_hoc_analysis/data/raw/orbitmart_checkout_diagnostic_full.csv

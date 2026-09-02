@@ -1,2 +1,0 @@
-# Install the repository-wide, tested environment.
--r ../requirements.txt

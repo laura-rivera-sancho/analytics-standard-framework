@@ -72,10 +72,10 @@ Pillar-specific criteria extend this standard; they do not replace it.
 | [NovaPay A/B Testing](01_ab_testing/README.md) | Analytics | Complete | Randomized checkout experiment and rollout recommendation |
 | [FinFlow Pre/Post Analysis](02_pre_post_analysis/README.md) | Analytics | Complete | Adjusted observational impact evaluation |
 | [LuminaPay Target Analysis](03_target_analysis/README.md) | Analytics | Complete | Governed merchant eligibility and prioritization |
-| [PayWave Predictive Analytics](04_predictive_analytics/README.md) | **Machine Learning seed case** | Complete | Capacity-constrained inactivity model with temporal validation |
+| [PayWave Predictive Analytics](https://github.com/laura-rivera-sancho/machine-learning-standard-framework/tree/main/supervised_learning/paywave_inactivity) | **Machine Learning transfer case** | Complete | Capacity-constrained inactivity model with temporal validation and executive readout |
 | [OrbitMart Ad Hoc Analysis](05_ad_hoc_analysis/README.md) | Analytics | Complete | KPI diagnosis and operational handoff |
 
-The PayWave module remains in this repository temporarily to preserve working links, tests, and reports. It is classified as supervised Machine Learning evidence and can be adapted into the dedicated Machine Learning repository as a later transfer case.
+PayWave has moved to the Machine Learning repository as the canonical supervised transfer case. A lightweight Analytics redirect preserves prior navigation without duplicating implementation or evidence.
 
 ### Planned Analytics milestones
 
@@ -102,11 +102,11 @@ A8 is the shared market-context foundation for the trading-focused LLM and Agent
 | Milestone | Use case | Core evidence | Status |
 |---|---|---|---|
 | **ML1 — Supervised Predictive Modeling** | Predict campaign response and allocate limited marketing capacity | Logistic-regression baseline, simple decision tree, tree-based champion, leakage controls, temporal validation, calibration, lift/gains, threshold economics, explainability, and monitoring | **Complete** |
-| **ML1 transfer case — PayWave Inactivity** | Prioritize retention outreach under capacity constraints | Migrate or adapt the completed PayWave case to prove the supervised framework transfers across domains | Planned |
+| [**ML1 transfer case — PayWave Inactivity**](https://github.com/laura-rivera-sancho/machine-learning-standard-framework/tree/main/supervised_learning/paywave_inactivity) | Prioritize retention outreach under capacity constraints | Migrated temporal evaluation, capacity-aware evidence, executive PowerPoint, model card, and monitoring plan | **Complete** |
 | [**ML2 — Unsupervised Customer Segmentation**](https://github.com/laura-rivera-sancho/machine-learning-standard-framework/tree/main/unsupervised_learning/customer_segmentation) | Discover stable, actionable customer groups beyond fixed RFM rules | RFM/behavioral features, K-means baseline, Gaussian-mixture comparison, density-based challenger, bootstrap and temporal stability, interpretable personas, and activation guidance | **Complete** |
 | **ML3 — Production Readiness** | How would the selected models be operated responsibly? | Reproducible training/inference, model registry approach, drift and performance monitoring, retraining triggers, rollback, and model card | Planned |
 
-The campaign-response case is the primary supervised marketing project. PayWave is retained as an optional transfer case, not discarded. The completed ML2 case extends the RFM work from descriptive customer rules into stable, data-driven segmentation.
+The campaign-response case is the primary supervised marketing project. PayWave now demonstrates transfer to retention-risk prioritization, and ML2 extends the RFM work from descriptive customer rules into stable, data-driven segmentation.
 
 **Pillar completion gate:** both modeling paradigms have defensible baselines, reproducible evaluation, decision-aware metrics, error/stability analysis, documented risks, and credible monitoring plans.
 
