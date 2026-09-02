@@ -8,17 +8,16 @@ This repository demonstrates how I approach common analytics engagements from en
 
 Each module combines a reusable methodology with a fictional business case, inspectable data, reproducible implementation, practical learning material where relevant, and an executive communication standard. No employer, client, or confidential data are used.
 
-## Recommended portfolio review path
+## Explore the Analytics portfolio
 
-If you are reviewing this repository for a role or project, these links provide
-the fastest route to the strongest evidence:
+Use these shortcuts to explore the decisions, methods, and stakeholder-ready
+evidence across the portfolio:
 
 | What to assess | Start here | What it demonstrates |
 |---|---|---|
 | Decision communication | [NovaPay A/B testing readout](01_ab_testing/reports/stakeholder_readout.md) | Experiment validity, effect size, guardrails, and a rollout recommendation |
 | Causal judgment | [FinFlow Pre/Post readout](02_pre_post_analysis/reports/stakeholder_readout.md) | Interrupted time series, confounder review, limitations, and risk monitoring |
 | Target-population design | [LuminaPay targeting readout](03_target_analysis/reports/stakeholder_readout.md) | Eligibility governance, opportunity sizing, transparent prioritization, and activation controls |
-| Predictive decision design | [PayWave modeling readout](https://github.com/laura-rivera-sancho/machine-learning-standard-framework/tree/main/supervised_learning/paywave_inactivity) | Temporal validation, capacity metrics, business value, and a controlled-pilot plan in the Machine Learning pillar |
 | Diagnostic judgment | [OrbitMart ad hoc readout](05_ad_hoc_analysis/reports/stakeholder_readout.md) | KPI trees, rate-and-mix decomposition, exploratory controls, and evidence-calibrated action |
 | Customer value strategy | [Harbor & Pine lifecycle readout](06_customer_value_lifecycle/reports/stakeholder_readout.md) | RFM value concentration, lifecycle migration, consent-aware prioritization, and test design |
 | Marketing experimentation | [Harbor & Pine experimentation readout](07_marketing_experimentation/reports/stakeholder_readout.md) | Power planning, randomization checks, factorial effects, multiplicity control, economics, and rollout governance |
@@ -31,7 +30,6 @@ the fastest route to the strongest evidence:
 - **Business problem framing** — translating broad requests into decision-ready analytical questions.
 - **Experimentation and causal reasoning** — distinguishing randomized evidence from observational comparisons.
 - **Statistical analysis** — effect sizes, confidence intervals, hypothesis tests, guardrails, and practical significance.
-- **Predictive modeling** — leakage-safe features, temporal validation, calibration, capacity-aware evaluation, and business value.
 - **Target design** — auditable eligibility rules, denominator-consistent funnels, opportunity sizing, and capacity allocation.
 - **Diagnostic analysis** — KPI trees, bounded exploration, rate-and-mix decomposition, and time-boxed decision support.
 - **Customer value analytics** — RFM scoring, value concentration, lifecycle migration, and controlled activation design.
@@ -48,7 +46,6 @@ the fastest route to the strongest evidence:
 | **NovaPay** | Should a simplified checkout experience be rolled out? | Randomized A/B test | [Finished stakeholder readout](01_ab_testing/reports/stakeholder_readout.md): **+3.31 pp** completion lift, 95% CI **+2.45 to +4.17 pp**, with materially lower checkout time. |
 | **FinFlow** | Should an automated verification workflow continue scaling? | Pre/Post analysis and adjusted interrupted time series | [Finished stakeholder readout](02_pre_post_analysis/reports/stakeholder_readout.md): **+5.65 pp** observed completion change and **+3.20 pp** adjusted launch-level estimate, with moderate causal confidence. |
 | **LuminaPay** | Which eligible merchants should receive limited Instant Settlement outreach? | Rule-based target analysis and capacity sensitivity | [Finished stakeholder readout](03_target_analysis/reports/stakeholder_readout.md): **25,805** eligible merchants and a controlled **6,000-contact** first wave with explicit activation safeguards. |
-| **PayWave** | Which customers should receive capacity-constrained retention outreach? | Temporal binary-classification workflow | [Canonical Machine Learning case](https://github.com/laura-rivera-sancho/machine-learning-standard-framework/tree/main/supervised_learning/paywave_inactivity): **3,853** captures at capacity—**552 more** than the recency rule—with **77.06% precision** and **2.58x lift**. |
 | **OrbitMart** | Why did checkout completion fall while traffic increased? | KPI-tree diagnosis, rate/mix decomposition, and controlled segment drill-down | [Finished stakeholder readout](05_ad_hoc_analysis/reports/stakeholder_readout.md): **−0.97 pp** completion decline localized to Android 8.4 wallet traffic, with an estimated **254-order** gap. |
 | **Harbor & Pine** | Which customer groups create the most value, and where should limited retention capacity focus? | Point-in-time RFM scoring, lifecycle migration, and consent-aware prioritization | [Finished stakeholder readout](06_customer_value_lifecycle/reports/stakeholder_readout.md): Champions are **23.1%** of customers but **55.5%** of value; a controlled **500-customer** first wave represents **$323.2K** in trailing-year value. |
 | **Harbor & Pine Experimentation** | Which retention treatment should advance without approving broad rollout? | Split test and `2 × 2 × 2` factorial experiment | [Finished stakeholder readout](07_marketing_experimentation/reports/stakeholder_readout.md): the leading cell improves conversion by **+2.67 pp** after Holm correction, while margin uncertainty requires a controlled validation stage. |
@@ -84,7 +81,7 @@ The simple Pre/Post comparison is intentionally not treated as proof of causalit
 | `07_marketing_experimentation` | Complete | Split testing, factorial multivariate testing, interaction effects, multiplicity, and rollout governance | [Marketing Experimentation Suite](07_marketing_experimentation/README.md) |
 | `08_macro_correlation_monitor` | Complete | Live gold–US10Y–DXY monitoring, rolling correlations, source governance, and regime-aware interpretation | [Macro Correlation Monitor](08_macro_correlation_monitor/README.md) |
 
-Seven completed Analytics case studies now form the **Analytics** pillar. PayWave has moved to its canonical home in the [`machine-learning-standard-framework`](https://github.com/laura-rivera-sancho/machine-learning-standard-framework) repository; a lightweight redirect remains at `04_predictive_analytics` for prior links.
+Seven completed case studies now form the **Analytics** pillar, spanning experimentation, impact evaluation, target design, diagnostic analysis, customer strategy, and market intelligence.
 
 The broader portfolio will use one repository per pillar. See the [portfolio roadmap](ROADMAP.md) for the five-repository architecture, agreed marketing and trading projects, shared evidence standards, and delivery sequence. Execution is tracked in the [Data & AI Portfolio Roadmap project](https://github.com/users/laura-rivera-sancho/projects/2).
 
@@ -113,7 +110,6 @@ analytics-standard-framework/
 │   ├── reports/         # Finished Markdown readout, preview, and PowerPoint deck
 │   ├── src/             # Synthetic data, eligibility, sizing, and prioritization
 │   └── templates/       # Answer key, rubric, and activation readout
-├── 04_predictive_analytics/  # Redirect to the canonical PayWave ML case
 ├── 05_ad_hoc_analysis/
 │   ├── case_study/      # OrbitMart diagnostic case, dictionary, and results
 │   ├── data/raw/        # Compact synthetic checkout sample

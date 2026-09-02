@@ -178,7 +178,7 @@ def test_markdown_accessibility_basics():
 
 def test_recruiter_shortcuts_link_to_finished_reports():
     root_readme = (ROOT / "README.md").read_text(encoding="utf-8")
-    assert "## Recommended portfolio review path" in root_readme
+    assert "## Explore the Analytics portfolio" in root_readme
 
     for module in [
         "01_ab_testing",

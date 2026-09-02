@@ -72,6 +72,6 @@ The generator writes a full local dataset and a compact tracked sample. The full
 
 The analysis shows where the decline is concentrated and which funnel rate moved. It does not prove whether the Android release, wallet processor, or their interaction caused the issue. Operational logs, incident records, and a controlled rollback or routing change are required for causal confirmation.
 
-## Repository sequence complete
+## Portfolio connection
 
-This module completes the five-part Analytics Standard Framework. Return to the [repository overview](../README.md) to compare experimental, observational, targeting, predictive, and diagnostic decision workflows.
+Return to the [repository overview](../README.md) to compare experimentation, observational impact evaluation, target design, diagnostic analysis, customer strategy, and market intelligence workflows.

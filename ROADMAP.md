@@ -25,7 +25,7 @@ Use **one repository per pillar**, with multiple related case studies inside it.
 
 Every repository should include:
 
-- a recruiter-friendly landing page and recommended review path
+- a recruiter-friendly landing page and clear portfolio exploration path
 - case-study folders with business context, data, implementation, tests, and results
 - shared utilities only when they are genuinely reused within that pillar
 - architecture or workflow documentation
@@ -72,10 +72,7 @@ Pillar-specific criteria extend this standard; they do not replace it.
 | [NovaPay A/B Testing](01_ab_testing/README.md) | Analytics | Complete | Randomized checkout experiment and rollout recommendation |
 | [FinFlow Pre/Post Analysis](02_pre_post_analysis/README.md) | Analytics | Complete | Adjusted observational impact evaluation |
 | [LuminaPay Target Analysis](03_target_analysis/README.md) | Analytics | Complete | Governed merchant eligibility and prioritization |
-| [PayWave Predictive Analytics](https://github.com/laura-rivera-sancho/machine-learning-standard-framework/tree/main/supervised_learning/paywave_inactivity) | **Machine Learning transfer case** | Complete | Capacity-constrained inactivity model with temporal validation and executive readout |
 | [OrbitMart Ad Hoc Analysis](05_ad_hoc_analysis/README.md) | Analytics | Complete | KPI diagnosis and operational handoff |
-
-PayWave has moved to the Machine Learning repository as the canonical supervised transfer case. A lightweight Analytics redirect preserves prior navigation without duplicating implementation or evidence.
 
 ### Planned Analytics milestones
 
@@ -89,7 +86,7 @@ The macro dashboard displays source and freshness metadata and clearly states th
 
 A8 is the shared market-context foundation for the trading-focused LLM and Agentic AI projects. The Analytics layer owns validated observations, calculations, and reproducible rule labels. The LLM layer will own cited news and macro synthesis; the Agentic layer will own controlled orchestration, risk review, and mandatory human approval. These responsibilities must remain separately identifiable in data contracts and traces.
 
-**Pillar completion gate — met:** the Analytics cases remain portfolio-ready, A6–A8 meet the shared evidence standard, and the repository landing page presents the full Analytics review path.
+**Pillar completion gate — met:** the Analytics cases remain portfolio-ready, A6–A8 meet the shared evidence standard, and the repository landing page presents a clear Analytics portfolio exploration path.
 
 ## Pillar 2 — Machine Learning
 
@@ -101,12 +98,11 @@ A8 is the shared market-context foundation for the trading-focused LLM and Agent
 
 | Milestone | Use case | Core evidence | Status |
 |---|---|---|---|
-| **ML1 — Supervised Predictive Modeling** | Predict campaign response and allocate limited marketing capacity | Logistic-regression baseline, simple decision tree, tree-based champion, leakage controls, temporal validation, calibration, lift/gains, threshold economics, explainability, and monitoring | **Complete** |
-| [**ML1 transfer case — PayWave Inactivity**](https://github.com/laura-rivera-sancho/machine-learning-standard-framework/tree/main/supervised_learning/paywave_inactivity) | Prioritize retention outreach under capacity constraints | Migrated temporal evaluation, capacity-aware evidence, executive PowerPoint, model card, and monitoring plan | **Complete** |
+| **ML1 — Campaign Response Propensity** | Predict campaign response and allocate limited marketing capacity | Logistic-regression baseline, simple decision tree, tree-based champion, leakage controls, temporal validation, calibration, lift/gains, threshold economics, explainability, and monitoring | **Complete** |
 | [**ML2 — Unsupervised Customer Segmentation**](https://github.com/laura-rivera-sancho/machine-learning-standard-framework/tree/main/unsupervised_learning/customer_segmentation) | Discover stable, actionable customer groups beyond fixed RFM rules | RFM/behavioral features, K-means baseline, Gaussian-mixture comparison, density-based challenger, bootstrap and temporal stability, interpretable personas, and activation guidance | **Complete** |
 | **ML3 — Production Readiness** | How would the selected models be operated responsibly? | Reproducible training/inference, model registry approach, drift and performance monitoring, retraining triggers, rollback, and model card | Planned |
 
-The campaign-response case is the primary supervised marketing project. PayWave now demonstrates transfer to retention-risk prioritization, and ML2 extends the RFM work from descriptive customer rules into stable, data-driven segmentation.
+The campaign-response case is the primary supervised marketing project, and ML2 extends the RFM work from descriptive customer rules into stable, data-driven segmentation.
 
 **Pillar completion gate:** both modeling paradigms have defensible baselines, reproducible evaluation, decision-aware metrics, error/stability analysis, documented risks, and credible monitoring plans.
 
@@ -115,8 +111,7 @@ The campaign-response case is the primary supervised marketing project. PayWave 
 ```text
 machine-learning-standard-framework/
 ├── supervised_learning/
-│   ├── campaign_response_propensity/
-│   └── paywave_inactivity/
+│   └── campaign_response_propensity/
 ├── unsupervised_learning/
 │   └── customer_segmentation/
 ├── shared/
@@ -186,7 +181,7 @@ The build order follows data and capability dependencies while delivering indepe
 2. **Marketing data foundation:** build the warehouse core and the customer/campaign/experiment marts needed by downstream work.
 3. **RFM analytics:** deliver Customer Value & Lifecycle Analytics on the trusted customer mart.
 4. **Marketing experimentation:** deliver the split and multivariate testing suite.
-5. **Supervised Machine Learning:** deliver campaign response propensity, then migrate/adapt PayWave as a transfer case.
+5. **Supervised Machine Learning:** deliver campaign response propensity with decision-aware evaluation and monitoring.
 6. **Unsupervised Machine Learning:** extend RFM into stable, actionable customer segmentation.
 7. **Macro market dashboard:** deliver the Gold–US10Y–DXY correlation monitor and live site.
 8. **Cited LLM research copilot:** build and evaluate the trading research workflow.

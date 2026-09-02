@@ -97,7 +97,7 @@ A deterministic ranking improves auditability, but it does not estimate the incr
 
 RFM is descriptive: it summarizes observed behavior. It does not predict response, estimate customer lifetime value, or prove that a retention treatment will cause a desired outcome.
 
-Use predictive modeling when the decision requires an estimated future probability or value. Use an experiment or credible causal design when the decision requires evidence of incremental impact. A strong lifecycle program often uses descriptive segmentation to define strategy, predictive scoring to allocate capacity, and randomized testing to measure treatment effects.
+Use the [Machine Learning framework](https://github.com/laura-rivera-sancho/machine-learning-standard-framework) when the decision requires an estimated future probability or value. Use an experiment or credible causal design when the decision requires evidence of incremental impact. A strong lifecycle program often uses descriptive segmentation to define strategy, model-based scoring to allocate capacity, and randomized testing to measure treatment effects.
 
 ## Data quality and governance
 

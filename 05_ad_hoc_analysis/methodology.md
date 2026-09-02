@@ -4,7 +4,7 @@ This methodology supports urgent KPI diagnostics without turning the work into a
 
 ## 1. Intake and triage
 
-Capture the stakeholder's wording, decision, deadline, business consequence, available actions, and required confidence. Clarify whether the request is diagnostic, causal, predictive, or merely descriptive.
+Capture the stakeholder's wording, decision, deadline, business consequence, available actions, and required confidence. Clarify whether the request is diagnostic, causal, forward-looking, or merely descriptive.
 
 Quality gate: the decision owner confirms what will change based on the answer.
 

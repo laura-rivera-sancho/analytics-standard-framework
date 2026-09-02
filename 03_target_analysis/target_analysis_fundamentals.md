@@ -69,5 +69,5 @@ The score is intentionally simple. It can be inspected, challenged, and reproduc
 
 - Use [A/B Testing](../01_ab_testing/README.md) to estimate the causal effect of an intervention.
 - Use [Pre/Post Analysis](../02_pre_post_analysis/README.md) to evaluate a change when randomization is unavailable.
-- Use [Predictive Analytics](../04_predictive_analytics/README.md) to estimate a future individual-level outcome from historical data.
+- Use the [Machine Learning framework](https://github.com/laura-rivera-sancho/machine-learning-standard-framework) when the decision requires estimating a future individual-level outcome from historical data.
 - Use Target Analysis when the immediate decision is population definition, sizing, description, and capacity allocation.
