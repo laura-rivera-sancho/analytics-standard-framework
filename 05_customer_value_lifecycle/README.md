@@ -40,8 +40,8 @@ The reference analysis finds that **Champions represent 23.1% of customers but 5
 From the repository root:
 
 ```bash
-python 06_customer_value_lifecycle/src/generate_synthetic_data.py
-python 06_customer_value_lifecycle/src/analyze_customer_value.py
+python 05_customer_value_lifecycle/src/generate_synthetic_data.py
+python 05_customer_value_lifecycle/src/analyze_customer_value.py
 pytest tests/test_customer_value_lifecycle.py
 ```
 

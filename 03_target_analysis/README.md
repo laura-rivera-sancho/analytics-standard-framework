@@ -71,4 +71,4 @@ The priority score is an auditable policy device, not a predicted probability, c
 
 ## Next module
 
-Use [Ad Hoc Analysis](../05_ad_hoc_analysis/README.md) when the question is exploratory, time-bounded, and does not yet warrant a standardized recurring workflow.
+Use [Ad Hoc Analysis](../04_ad_hoc_analysis/README.md) when the question is exploratory, time-bounded, and does not yet warrant a standardized recurring workflow.

@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
-SAMPLE = ROOT / "05_ad_hoc_analysis/data/raw/orbitmart_checkout_diagnostic_sample.csv"
+SAMPLE = ROOT / "04_ad_hoc_analysis/data/raw/orbitmart_checkout_diagnostic_sample.csv"
 
 
 def test_sample_quality_and_cleaning(adhoc_analysis):

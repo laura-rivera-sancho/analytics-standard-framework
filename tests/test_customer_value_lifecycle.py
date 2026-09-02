@@ -3,7 +3,7 @@ from pathlib import Path
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
-SAMPLE = ROOT / "06_customer_value_lifecycle/data/raw/harbor_pine_orders_sample.csv"
+SAMPLE = ROOT / "05_customer_value_lifecycle/data/raw/harbor_pine_orders_sample.csv"
 
 
 def test_quality_controls_find_and_remove_deliberate_defects(

@@ -72,7 +72,7 @@ Pillar-specific criteria extend this standard; they do not replace it.
 | [NovaPay A/B Testing](01_ab_testing/README.md) | Analytics | Complete | Randomized checkout experiment and rollout recommendation |
 | [FinFlow Pre/Post Analysis](02_pre_post_analysis/README.md) | Analytics | Complete | Adjusted observational impact evaluation |
 | [LuminaPay Target Analysis](03_target_analysis/README.md) | Analytics | Complete | Governed merchant eligibility and prioritization |
-| [OrbitMart Ad Hoc Analysis](05_ad_hoc_analysis/README.md) | Analytics | Complete | KPI diagnosis and operational handoff |
+| [OrbitMart Ad Hoc Analysis](04_ad_hoc_analysis/README.md) | Analytics | Complete | KPI diagnosis and operational handoff |
 
 ### Planned Analytics milestones
 

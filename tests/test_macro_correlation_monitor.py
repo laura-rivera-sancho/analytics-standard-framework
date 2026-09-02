@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-MODULE = Path(__file__).parents[1] / "08_macro_correlation_monitor" / "src" / "market_analysis.py"
+MODULE = Path(__file__).parents[1] / "07_macro_correlation_monitor" / "src" / "market_analysis.py"
 SPEC = importlib.util.spec_from_file_location("market_analysis", MODULE)
 market = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(market)

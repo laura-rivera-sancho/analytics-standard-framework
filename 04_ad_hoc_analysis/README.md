@@ -59,8 +59,8 @@ From the repository root:
 python -m venv .venv
 .venv/Scripts/activate
 pip install -r requirements-dev.txt
-python 05_ad_hoc_analysis/src/generate_synthetic_data.py
-python 05_ad_hoc_analysis/src/diagnose_kpi_change.py
+python 04_ad_hoc_analysis/src/generate_synthetic_data.py
+python 04_ad_hoc_analysis/src/diagnose_kpi_change.py
 pytest tests/test_ad_hoc_analysis.py
 ```
 

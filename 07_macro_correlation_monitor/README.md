@@ -47,7 +47,7 @@ pytest tests/test_macro_correlation_monitor.py
 ## Run the live site locally
 
 ```bash
-cd 08_macro_correlation_monitor/site
+cd 07_macro_correlation_monitor/site
 pnpm install
 pnpm dev
 ```

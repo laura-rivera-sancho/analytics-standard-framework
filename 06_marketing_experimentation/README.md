@@ -51,9 +51,9 @@ The publication package includes the executive preview, Markdown stakeholder rea
 From the repository root:
 
 ```bash
-python 07_marketing_experimentation/src/generate_synthetic_data.py
-python 07_marketing_experimentation/src/validate_experiment_data.py
-python 07_marketing_experimentation/src/analyze_marketing_experiments.py
+python 06_marketing_experimentation/src/generate_synthetic_data.py
+python 06_marketing_experimentation/src/validate_experiment_data.py
+python 06_marketing_experimentation/src/analyze_marketing_experiments.py
 pytest tests/test_marketing_experimentation.py
 ```
 
@@ -61,7 +61,7 @@ The full raw and processed datasets are reproducible from seed `707` and remain 
 
 ## Relationship to A6
 
-The candidate audience begins with the At Risk and Needs Attention lifecycle groups defined in [A6 — Customer Value & Lifecycle Analytics](../06_customer_value_lifecycle/README.md). A6 describes observed customer behavior and prioritizes a controlled audience; A7 tests whether specific treatments cause incremental outcomes. The experiment does not treat RFM labels as response predictions.
+The candidate audience begins with the At Risk and Needs Attention lifecycle groups defined in [A6 — Customer Value & Lifecycle Analytics](../05_customer_value_lifecycle/README.md). A6 describes observed customer behavior and prioritizes a controlled audience; A7 tests whether specific treatments cause incremental outcomes. The experiment does not treat RFM labels as response predictions.
 
 ## Decision boundary
 

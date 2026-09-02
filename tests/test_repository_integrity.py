@@ -52,8 +52,8 @@ def test_completed_modules_exist():
         "01_ab_testing",
         "02_pre_post_analysis",
         "03_target_analysis",
-        "05_ad_hoc_analysis",
-        "06_customer_value_lifecycle",
+        "04_ad_hoc_analysis",
+        "05_customer_value_lifecycle",
     ]
     for module in completed:
         root = ROOT / module
@@ -63,7 +63,7 @@ def test_completed_modules_exist():
         assert (root / "case_study/data_dictionary.md").exists()
         assert list(root.glob("*fundamentals*.md"))
         assert list((root / "notebooks").glob("guided*.ipynb"))
-        if module != "06_customer_value_lifecycle":
+        if module != "05_customer_value_lifecycle":
             assert list((root / "notebooks").glob("challenge*.ipynb"))
         assert list((root / "src").glob("*.py"))
         assert list((root / "templates").glob("*readout*.md"))
@@ -86,9 +86,9 @@ def test_module_requirements_delegate_to_root_environment():
         "01_ab_testing",
         "02_pre_post_analysis",
         "03_target_analysis",
-        "05_ad_hoc_analysis",
-        "06_customer_value_lifecycle",
-        "07_marketing_experimentation",
+        "04_ad_hoc_analysis",
+        "05_customer_value_lifecycle",
+        "06_marketing_experimentation",
     ]:
         requirement = (ROOT / module / "requirements.txt").read_text(encoding="utf-8")
         assert "-r ../requirements.txt" in requirement
@@ -125,8 +125,8 @@ def test_completed_modules_publish_stakeholder_artifacts():
         "01_ab_testing",
         "02_pre_post_analysis",
         "03_target_analysis",
-        "05_ad_hoc_analysis",
-        "06_customer_value_lifecycle",
+        "04_ad_hoc_analysis",
+        "05_customer_value_lifecycle",
     ]:
         report_root = ROOT / module / "reports"
         markdown = report_root / "stakeholder_readout.md"
@@ -184,7 +184,7 @@ def test_recruiter_shortcuts_link_to_finished_reports():
         "01_ab_testing",
         "02_pre_post_analysis",
         "03_target_analysis",
-        "05_ad_hoc_analysis",
+        "04_ad_hoc_analysis",
     ]:
         module_readme = (ROOT / module / "README.md").read_text(encoding="utf-8")
         assert "**Portfolio shortcut:**" in module_readme
@@ -192,7 +192,7 @@ def test_recruiter_shortcuts_link_to_finished_reports():
 
 
 def test_a6_completed_module_uses_guided_notebook_standard():
-    module = ROOT / "06_customer_value_lifecycle"
+    module = ROOT / "05_customer_value_lifecycle"
     assert (module / "README.md").exists()
     assert (module / "customer_value_lifecycle_fundamentals.md").exists()
     assert (module / "methodology.md").exists()
@@ -204,7 +204,7 @@ def test_a6_completed_module_uses_guided_notebook_standard():
 
 
 def test_a7_foundation_is_decision_ready():
-    module = ROOT / "07_marketing_experimentation"
+    module = ROOT / "06_marketing_experimentation"
     assert (module / "README.md").exists()
     assert (module / "marketing_experimentation_fundamentals.md").exists()
     assert (module / "case_study/business_case.md").exists()

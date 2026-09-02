@@ -58,26 +58,26 @@ def target_analysis():
 @pytest.fixture(scope="session")
 def adhoc_generator():
     return load_source_module(
-        "adhoc_generator", "05_ad_hoc_analysis/src/generate_synthetic_data.py"
+        "adhoc_generator", "04_ad_hoc_analysis/src/generate_synthetic_data.py"
     )
 
 
 @pytest.fixture(scope="session")
 def adhoc_analysis():
-    return load_source_module("adhoc_analysis", "05_ad_hoc_analysis/src/diagnose_kpi_change.py")
+    return load_source_module("adhoc_analysis", "04_ad_hoc_analysis/src/diagnose_kpi_change.py")
 
 
 @pytest.fixture(scope="session")
 def lifecycle_generator():
     return load_source_module(
-        "lifecycle_generator", "06_customer_value_lifecycle/src/generate_synthetic_data.py"
+        "lifecycle_generator", "05_customer_value_lifecycle/src/generate_synthetic_data.py"
     )
 
 
 @pytest.fixture(scope="session")
 def lifecycle_analysis():
     return load_source_module(
-        "lifecycle_analysis", "06_customer_value_lifecycle/src/analyze_customer_value.py"
+        "lifecycle_analysis", "05_customer_value_lifecycle/src/analyze_customer_value.py"
     )
 
 
@@ -85,7 +85,7 @@ def lifecycle_analysis():
 def experimentation_generator():
     return load_source_module(
         "generate_synthetic_data",
-        "07_marketing_experimentation/src/generate_synthetic_data.py",
+        "06_marketing_experimentation/src/generate_synthetic_data.py",
     )
 
 
@@ -93,7 +93,7 @@ def experimentation_generator():
 def experimentation_validation(experimentation_generator):
     return load_source_module(
         "validate_experiment_data",
-        "07_marketing_experimentation/src/validate_experiment_data.py",
+        "06_marketing_experimentation/src/validate_experiment_data.py",
     )
 
 
@@ -101,5 +101,5 @@ def experimentation_validation(experimentation_generator):
 def experimentation_analysis(experimentation_validation):
     return load_source_module(
         "experimentation_analysis",
-        "07_marketing_experimentation/src/analyze_marketing_experiments.py",
+        "06_marketing_experimentation/src/analyze_marketing_experiments.py",
     )

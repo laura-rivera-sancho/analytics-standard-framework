@@ -4,7 +4,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 SAMPLE = (
-    ROOT / "07_marketing_experimentation/data/raw/harbor_pine_experiment_assignments_sample.csv"
+    ROOT / "06_marketing_experimentation/data/raw/harbor_pine_experiment_assignments_sample.csv"
 )
 
 

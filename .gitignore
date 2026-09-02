@@ -214,14 +214,14 @@ tempCodeRunnerFile.py
 02_pre_post_analysis/data/processed/
 03_target_analysis/data/raw/lumina_settlement_target_full.csv
 03_target_analysis/data/processed/
-05_ad_hoc_analysis/data/raw/orbitmart_checkout_diagnostic_full.csv
-05_ad_hoc_analysis/data/processed/
-06_customer_value_lifecycle/data/raw/harbor_pine_orders_full.csv
-06_customer_value_lifecycle/data/processed/
-06_customer_value_lifecycle/data/.matplotlib/
-07_marketing_experimentation/data/raw/harbor_pine_experiment_assignments_full.csv
-07_marketing_experimentation/data/processed/
-07_marketing_experimentation/data/.matplotlib/
+04_ad_hoc_analysis/data/raw/orbitmart_checkout_diagnostic_full.csv
+04_ad_hoc_analysis/data/processed/
+05_customer_value_lifecycle/data/raw/harbor_pine_orders_full.csv
+05_customer_value_lifecycle/data/processed/
+05_customer_value_lifecycle/data/.matplotlib/
+06_marketing_experimentation/data/raw/harbor_pine_experiment_assignments_full.csv
+06_marketing_experimentation/data/processed/
+06_marketing_experimentation/data/.matplotlib/
 
 # Marimo
 marimo/_static/

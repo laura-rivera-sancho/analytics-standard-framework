@@ -283,7 +283,7 @@ export function MacroDashboard() {
             <a href="#context">Context</a>
             <a href="#method">Method</a>
             <a
-              href="https://github.com/laura-rivera-sancho/analytics-standard-framework/tree/main/08_macro_correlation_monitor"
+              href="https://github.com/laura-rivera-sancho/analytics-standard-framework/tree/main/07_macro_correlation_monitor"
               target="_blank"
               rel="noreferrer"
             >
@@ -452,7 +452,7 @@ export function MacroDashboard() {
               monitor reports only observed metrics and deterministic context.
             </p>
             <a
-              href="https://github.com/laura-rivera-sancho/analytics-standard-framework/blob/main/08_macro_correlation_monitor/case_study/intelligence_layer_contract.md"
+              href="https://github.com/laura-rivera-sancho/analytics-standard-framework/blob/main/07_macro_correlation_monitor/case_study/intelligence_layer_contract.md"
               target="_blank"
               rel="noreferrer"
               className="self-center text-sm font-semibold text-[#8a651c]"
