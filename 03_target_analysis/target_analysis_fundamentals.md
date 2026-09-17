@@ -32,15 +32,15 @@ Show the assumptions alongside the estimate and vary the assumptions. Do not pre
 
 ## Transparent prioritization
 
-The LuminaPay case assigns points across three dimensions:
+An interpretable priority score might combine three dimensions:
 
 | Dimension | Evidence | Maximum points |
 |---|---|---:|
-| Need | Long settlement delay, payout failures, support friction | 4 |
-| Value | Monthly payment volume | 2 |
-| Fit | Active mobile use, sustainable economics, low operational risk | 3 |
+| Need | Evidence of the problem the action addresses | Set before scoring |
+| Value | Expected benefit under stated assumptions | Set before scoring |
+| Fit | Operational readiness and risk among already eligible entities | Set before scoring |
 
-The score is intentionally simple. It can be inspected, challenged, and reproduced by business and operations partners. Ties are resolved by payment volume and merchant ID so the output is deterministic.
+Keep the score simple enough to inspect, challenge, and reproduce. Document weights, missing-value handling, tie breakers, and the as-of date. The [LuminaPay business case](case_study/business_case.md) shows one specific point system.
 
 ## Common failure modes
 
@@ -57,7 +57,7 @@ The score is intentionally simple. It can be inspected, challenged, and reproduc
 
 ## Review questions
 
-- Can each included and excluded merchant be explained from source fields?
+- Can each included and excluded entity be explained from source fields?
 - Does the funnel reconcile to one valid starting population?
 - Are policy rules separated from capacity choices?
 - Are segments used descriptively and checked for surprising disparities?

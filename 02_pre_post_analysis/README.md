@@ -51,7 +51,7 @@ Because the workflow was launched to all eligible traffic at once, there is no r
 
 The generated dataset intentionally includes a mild baseline trend, day-of-week seasonality, a seven-day launch ramp, post-period mix shifts, a short marketing campaign, right-skewed verification time, rare fraud events, and a small number of raw data-quality defects.
 
-All data and results in this module are synthetic and created solely for training and portfolio purposes.
+All data and results in this module are synthetic and illustrate the method rather than a production outcome.
 
 ## Running the reference workflow
 

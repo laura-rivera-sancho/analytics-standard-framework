@@ -6,7 +6,7 @@ This reference explains the key concepts, transformations, interpretation choice
 
 **Correlation** measures linear co-movement between two variables and ranges from `-1` to `+1`. A value near `+1` indicates strong positive linear association; a value near `-1` indicates strong inverse association; a value near zero indicates little linear association. It does not establish direction, mechanism, or causality.
 
-**Returns versus levels.** Correlating non-stationary price levels can create misleading relationships driven by shared trends. The monitor uses daily log returns for gold and DXY. For the 10-year yield it uses daily percentage-point changes because a yield is already a rate, not an investable price.
+**Returns versus levels.** Correlating non-stationary price levels can create misleading relationships driven by shared trends. For asset prices, daily returns are often more suitable. For a yield, use changes in percentage points or basis points rather than treating the quoted rate as an investable price.
 
 **Rolling correlation** recomputes correlation over a trailing window. A 30-day window reacts quickly but is noisy; 90 days balances responsiveness and stability; 252 trading days approximates one year and is slower to reveal regime changes.
 
@@ -68,6 +68,8 @@ Add real yields, inflation expectations, volatility, liquidity proxies, and even
 **How do you communicate uncertainty to a stakeholder?**  
 State the current association, show how it changes by window and regime, explain plausible mechanisms and alternatives, and recommend the next research step rather than a causal conclusion.
 
-## Applied analysis summary
+## Quick reference
 
-“I built the monitor to make unstable relationships visible. The strongest analytical choice was not the chart—it was defining comparable transformations, labeling the exact instruments and freshness, and keeping the output inside a research boundary.”
+Validate the series and timestamps, choose transformations that match each instrument, compare prespecified windows, and interpret changes alongside independently observed context. Report uncertainty and data freshness. A correlation can guide research; it cannot establish a trade or a causal mechanism by itself.
+
+See the [Macro Correlation Monitor](README.md) for a specific implementation.

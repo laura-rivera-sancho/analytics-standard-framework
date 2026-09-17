@@ -154,7 +154,7 @@ Critical defects will be quarantined or block analysis according to a declared r
 
 A7 is complete only when it publishes:
 
-- an interview-ready fundamentals guide and reusable methodology
+- a reusable fundamentals guide and analytical methodology
 - a versioned data dictionary and deterministic synthetic generator
 - validated split-test and factorial datasets with compact tracked samples
 - reusable power, integrity, effect-estimation, multiplicity, interaction, and business-value functions

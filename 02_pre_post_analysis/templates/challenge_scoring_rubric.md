@@ -116,7 +116,7 @@ Strong answer: Ends with a decision-ready recommendation, not a list of statisti
 
 | Score | Interpretation |
 |---|---|
-| 90–100 | Strong portfolio-level analysis; ready for stakeholder or interview discussion |
+| 90–100 | Strong portfolio-level analysis; ready for stakeholder review |
 | 75–89 | Good analysis with minor gaps in interpretation or communication |
 | 60–74 | Technically developing; needs stronger causal reasoning and/or communication |
 | Below 60 | Incomplete Pre/Post framework; likely over-relies on simple before/after movement |

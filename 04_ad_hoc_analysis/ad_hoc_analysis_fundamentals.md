@@ -19,7 +19,7 @@ A question such as “Why is conversion down?” becomes: “By 15:00, determine
 
 ## Use a KPI tree before slicing
 
-OrbitMart checkout completion can be expressed as:
+For example, checkout completion can be expressed as:
 
 `orders / checkout starts = attempt rate × approval rate × post-approval completion rate`
 
@@ -33,19 +33,19 @@ An overall KPI can change because:
 - the population mix shifted toward historically different segments
 - both occurred
 
-The reference workflow reports both within-segment and mix effects. A segment with a large rate drop but tiny current share may not explain much of the overall movement; a high-volume segment with a modest decline may matter more.
+Report both within-segment and mix effects. A segment with a large rate drop but tiny current share may not explain much of the overall movement; a high-volume segment with a modest decline may matter more.
 
 ## Control exploratory risk
 
 Every additional slice increases the chance of finding noise. Use pre-specified dimensions tied to the KPI tree, require minimum denominators, report all tested segments, adjust p-values across each family of comparisons, and combine statistical evidence with a practical threshold.
 
-The reference marks a decline only when it is at least two percentage points, has at least 300 checkout starts in each period, and has a Benjamini–Hochberg q-value below 0.05.
+Set minimum denominator, materiality, and multiple-testing rules before inspecting segments. The thresholds should reflect the decision and data volume, rather than being copied from another case.
 
 ## Use an evidence ladder
 
-1. **Fact:** directly observed and definition-stable, such as the 0.97 pp completion decline.
-2. **Diagnostic evidence:** localization or decomposition, such as payment approval driving the KPI-tree movement.
-3. **Supported hypothesis:** consistent with multiple signals, such as Android 8.4 wallet traffic being the affected interaction.
+1. **Fact:** directly observed and definition-stable, such as a measured completion-rate decline.
+2. **Diagnostic evidence:** localization or decomposition, such as a payment-approval change accounting for most of the KPI movement.
+3. **Supported hypothesis:** consistent with multiple signals, such as an affected app-version and payment-method combination.
 4. **Causal conclusion:** requires an incident mechanism, experiment, rollback response, or other credible design.
 5. **Speculation:** plausible but unsupported; document it without presenting it as a finding.
 
@@ -75,3 +75,5 @@ Stop when the decision can be made, the agreed timebox expires, data quality inv
 - Can the headline change be reconciled to segment contributions?
 - Are facts, hypotheses, causal claims, and unknowns labeled correctly?
 - Does the output name an action, owner, deadline, and measurement plan?
+
+See the [OrbitMart case study](case_study/business_case.md) for a worked diagnostic application.

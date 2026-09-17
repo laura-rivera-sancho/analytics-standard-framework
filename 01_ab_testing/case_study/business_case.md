@@ -1,6 +1,6 @@
 # Case Study: NovaPay Simplified Checkout Experiment
 
-> **Synthetic case study.** NovaPay is fictional and all data in this repository are generated for training and portfolio purposes.
+> **Synthetic case study.** NovaPay is fictional and the data are generated to demonstrate the analysis. The results are not production outcomes.
 
 ## Business context
 

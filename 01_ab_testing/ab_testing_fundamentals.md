@@ -326,7 +326,7 @@ The important point is that alpha should be chosen **before** we look at the res
 
 ## 14. What is a p-value?
 
-A p-value helps us judge whether the difference we observed could reasonably happen if there were actually no Treatment effect.
+A p-value is the chance, under the assumed model and a null hypothesis of no treatment effect, of seeing a result at least as extreme as the one observed. It does not give the chance that the null hypothesis is true.
 
 A common rule is:
 
@@ -346,7 +346,7 @@ Think of the p-value as one piece of evidence, not the whole decision.
 
 ## 15. What is a confidence interval?
 
-A confidence interval gives us a reasonable range for the size of the Treatment effect.
+A confidence interval gives a range of effect sizes compatible with the data under the chosen method and its assumptions.
 
 Example:
 
@@ -354,9 +354,7 @@ Estimated lift = **+3.2 percentage points**
 
 95% confidence interval = **+1.8 to +4.6 percentage points**
 
-This tells us the result is not just one exact number.
-
-There is uncertainty around the estimate.
+The interval shows uncertainty around the estimate. A 95% confidence level describes the method's long-run coverage across repeated experiments; it does not assign a 95% probability to this one fixed interval containing the true effect.
 
 Confidence intervals are useful because they help us ask:
 
@@ -374,7 +372,7 @@ These are different.
 
 Asks:
 
-> Is the observed difference likely to be more than random variation?
+> Is the observed difference inconsistent with the no-effect hypothesis under the chosen test?
 
 ### Business significance
 
@@ -813,8 +811,8 @@ At the end of an A/B test, answer these questions in order:
 | **MDE** | Smallest effect the experiment is designed to detect |
 | **Power** | Ability to detect a real effect |
 | **Alpha** | Pre-defined false-positive risk threshold |
-| **P-value** | Evidence used to judge whether a difference may be due to random variation |
-| **Confidence interval** | Range showing uncertainty around the estimated effect |
+| **P-value** | Probability, assuming the null model, of a result at least as extreme as the observed one |
+| **Confidence interval** | Range of effect values compatible with the data under a method and its assumptions |
 | **SRM** | Warning that the observed group split differs unexpectedly from the planned split |
 | **Segmentation** | Checking results for different customer or business groups |
 | **Contamination** | A user is exposed to the wrong experiment experience |

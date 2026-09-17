@@ -44,7 +44,7 @@ Start here:
 
 ## Case study
 
-The example in this module uses **NovaPay**, a fictional payments company testing a simplified digital checkout experience. All data are synthetic and generated solely for training and portfolio purposes.
+The example in this module uses **NovaPay**, a fictional payments company testing a simplified digital checkout experience. All data are synthetic; the results illustrate the method rather than a production outcome.
 
 ## Running the notebooks
 

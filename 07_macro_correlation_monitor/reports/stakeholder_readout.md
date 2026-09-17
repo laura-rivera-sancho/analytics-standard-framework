@@ -26,6 +26,6 @@ When the 90-day relationship changes sign or moves beyond approximately `±0.5`,
 
 ## Next analytical extension
 
-Treat A8 as the structured market-context input to the later cited LLM and human-governed Agentic AI projects. Add approved macro releases, licensed news headlines, a precisely defined sentiment taxonomy, citations, contradictory-evidence handling, and evaluation before presenting generated analysis as portfolio-ready. Keep LLM narrative separate from observed metrics, and never allow either layer to authorize execution.
+Treat A8 as a structured market-context input for proposed LLM and human-governed agentic AI work. That future work would need approved macro releases, licensed news headlines, a defined sentiment taxonomy, citations, contradictory-evidence handling, and evaluation before generated analysis could be presented as a reliable reference. Keep LLM narrative separate from observed metrics, and never allow either layer to authorize execution.
 
 Add real yields, inflation expectations, volatility, and event annotations only after defining prespecified research questions. Evaluate any lead–lag or forecasting hypothesis out of sample before operational use.

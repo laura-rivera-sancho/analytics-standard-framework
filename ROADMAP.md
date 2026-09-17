@@ -21,11 +21,11 @@ The two remaining repository names are working names and will become links after
 
 ## Repository strategy
 
-Use **one repository per pillar**, with multiple related case studies inside it. This keeps each repository substantial enough to show depth while giving recruiters a clear path to the capability they want to assess.
+Use **one repository per pillar**, with multiple related case studies inside it. This gives readers a clear path from general methods to worked examples and implementation details.
 
 Every repository should include:
 
-- a recruiter-friendly landing page and clear portfolio exploration path
+- a clear repository landing page and portfolio navigation path
 - case-study folders with business context, data, implementation, tests, and results
 - shared utilities only when they are genuinely reused within that pillar
 - architecture or workflow documentation
@@ -39,7 +39,7 @@ Every repository should include:
 | **Backlog** | The opportunity is recorded but has not been scoped. |
 | **Planned** | The business case, evidence, and acceptance criteria are defined. |
 | **In progress** | Implementation has started but does not yet meet the evidence standard. |
-| **In review** | The work is undergoing technical, narrative, and recruiter-experience review. |
+| **In review** | The work is undergoing technical, narrative, and reader-experience review. |
 | **Complete** | The work meets its evidence standard and is ready to share publicly. |
 
 ## Shared portfolio evidence standard
@@ -55,7 +55,7 @@ A case study is **Complete** only when it includes, where applicable:
 7. operational considerations such as cost, latency, monitoring, failure modes, and rollback
 8. architecture, data-flow, or lifecycle documentation
 9. a concise stakeholder readout with findings, limitations, and recommended action
-10. a recruiter-friendly README, navigation path, and representative output preview
+10. a clear README, navigation path, and representative output preview
 
 Pillar-specific criteria extend this standard; they do not replace it.
 
@@ -86,7 +86,7 @@ The macro dashboard displays source and freshness metadata and clearly states th
 
 A8 is the shared market-context foundation for the trading-focused LLM and Agentic AI projects. The Analytics layer owns validated observations, calculations, and reproducible rule labels. The LLM layer will own cited news and macro synthesis; the Agentic layer will own controlled orchestration, risk review, and mandatory human approval. These responsibilities must remain separately identifiable in data contracts and traces.
 
-**Pillar completion gate — met:** the Analytics cases remain portfolio-ready, A6–A8 meet the shared evidence standard, and the repository landing page presents a clear Analytics portfolio exploration path.
+**Pillar completion gate — met:** the Analytics cases meet the shared evidence standard, and the repository landing page presents a clear exploration path.
 
 ## Pillar 2 — Machine Learning
 
@@ -186,7 +186,7 @@ The build order follows data and capability dependencies while delivering indepe
 7. **Macro market dashboard:** deliver the Gold–US10Y–DXY correlation monitor and live site.
 8. **Cited LLM research copilot:** build and evaluate the trading research workflow.
 9. **Human-governed agentic workflow:** add risk review, mandatory approval, and paper execution only after the LLM research foundation is reliable.
-10. **Portfolio consolidation:** complete cross-repository navigation, consistent visual identity, final recruiter review, and public-launch readiness.
+10. **Portfolio consolidation:** complete cross-repository navigation, consistent visual identity, final content review, and public-launch readiness.
 
 This sequence is directional, not date-bound. Dates will be added only after delivery cadence and project scope are agreed.
 

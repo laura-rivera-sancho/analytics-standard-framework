@@ -248,49 +248,7 @@ Post-hoc segments are hypothesis-generating. Report all tested segments, apply a
 - generalizing beyond the randomized eligible population
 - recommending broad rollout without a staged monitor and stop rule
 
-## How to explain the A7 design in an interview
-
-Use a concise structure:
-
-1. **Problem:** A lifecycle analysis identified a governed retention audience, but historical campaign performance could not identify incremental impact.
-2. **Design:** Start with a two-arm message test, then use a full `2 × 2 × 2` factorial design for message, offer, and channel plan plus a no-contact holdout.
-3. **Integrity:** Randomize at customer grain, freeze assignment before exposure, use intention to treat, check sample ratio and timestamps, and preserve complete 14-day windows.
-4. **Inference:** Report absolute effects and confidence intervals, prespecify interactions, and control multiplicity according to decision families.
-5. **Decision:** Require practical lift, positive contribution margin, and acceptable consent, opt-out, complaint, and refund guardrails before staged rollout.
-
-## Practice interview questions
-
-### When would you use a factorial test instead of an A/B/n test?
-
-Use a factorial test when the business needs to learn the contribution of individual components and plausible interactions. Use A/B/n when the bundled experiences are the decision units or when operational constraints prevent independent factor variation.
-
-### Why include a no-contact holdout?
-
-Comparisons among active treatments identify which treatment performs better, but not whether campaigning creates incremental value relative to no campaign. A holdout provides that baseline when it is ethical and operationally acceptable.
-
-### What is sample-ratio mismatch?
-
-It is an implausible difference between planned and observed assignment counts. It can indicate broken randomization, logging loss, or post-assignment filtering, so I investigate it before interpreting outcomes.
-
-### Why use intention to treat?
-
-It preserves the randomized comparison and estimates the effect of the assignment policy under real delivery and engagement behavior. Conditioning on opens or clicks selects on post-treatment behavior and can bias the result.
-
-### How do you handle many variants and metrics?
-
-I define confirmatory hypothesis families before the test, keep one primary decision metric, use Holm or another family-wise procedure for rollout claims, and use false-discovery control for clearly labeled exploratory analysis.
-
-### What if conversion improves but margin declines?
-
-The treatment fails the business-value gate. A discount can buy conversions that destroy contribution margin. I would retain or redesign the treatment rather than recommend it from conversion alone.
-
-### How do you compare segment effects?
-
-I test the treatment-by-segment interaction. A significant result in one segment and a nonsignificant result in another does not itself prove the effects differ.
-
-### How would you monitor a rollout?
-
-Use a staged allocation with fixed owners, data-quality checks, the same outcome and guardrail definitions, predefined rollback thresholds, and a scheduled decision review. I would not continuously reinterpret ordinary fixed-horizon p-values.
+For a worked application, see the [marketing experimentation case study](case_study/business_case.md) and [stakeholder readout](reports/stakeholder_readout.md).
 
 ## Review checklist
 

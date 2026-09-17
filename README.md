@@ -6,7 +6,7 @@
 
 [![Repository quality](https://github.com/laura-rivera-sancho/analytics-standard-framework/actions/workflows/ci.yml/badge.svg)](https://github.com/laura-rivera-sancho/analytics-standard-framework/actions/workflows/ci.yml)
 
-**A portfolio-ready analytics operating model for turning business questions into reproducible analysis, defensible decisions, and stakeholder communication.**
+**An analytics framework for turning business questions into reproducible analysis, defensible decisions, and clear stakeholder communication.**
 
 This repository demonstrates how I approach common analytics engagements from end to end: framing the decision, defining metrics and assumptions, validating data, selecting an appropriate method, interpreting uncertainty, estimating business impact, and communicating a recommendation.
 

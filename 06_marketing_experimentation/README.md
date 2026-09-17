@@ -31,7 +31,7 @@ The suite separates two learning goals:
 
 | Resource | Purpose |
 |---|---|
-| [Experimentation fundamentals](marketing_experimentation_fundamentals.md) | Core concepts, design tradeoffs, interview questions, and interpretation rules |
+| [Experimentation fundamentals](marketing_experimentation_fundamentals.md) | Core concepts, design tradeoffs, interpretation rules, and a review checklist |
 | [Business case](case_study/business_case.md) | Decision, population, test designs, metrics, governance, and acceptance criteria |
 | [Methodology](methodology.md) | Reusable experiment workflow from charter through rollout monitoring |
 | [Data dictionary](case_study/data_dictionary.md) | Assignment grain, fields, factor catalog, outcomes, guardrails, and defect rules |
