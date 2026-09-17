@@ -19,8 +19,7 @@ Start here:
 - [Finished stakeholder readout](reports/stakeholder_readout.md) for the NovaPay decision memo, executive preview, and PowerPoint deck.
 - [Guided analysis notebook](notebooks/guided_ab_test_analysis.ipynb) for the step-by-step worked analysis.
 - [Challenge notebook](notebooks/challenge_ab_test_analysis.ipynb) for independent practice with TODO cells and no solutions.
-- [Beginner-friendly fundamentals](ab_testing_fundamentals.md) for simple vocabulary and examples.
-- [Detailed fundamentals](ab_testing_fundamentals_detailed.md) for the more technical reference.
+- [A/B testing fundamentals](ab_testing_fundamentals.md) for concepts, design choices, interpretation, and common pitfalls.
 - [Analytical methodology](methodology.md) for the execution standard.
 - [NovaPay business case](case_study/business_case.md) and [data dictionary](case_study/data_dictionary.md) for scenario and field definitions.
 - [Stakeholder presentation guide](templates/stakeholder_readout_deck.md) for slide-by-slide communication guidance.

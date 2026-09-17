@@ -1,837 +1,499 @@
-# A/B Testing Fundamentals — Beginner-Friendly Guide
+# A/B Testing Fundamentals
 
-This page explains A/B testing in simple language. It is written for people who may be new to experimentation, statistics, or analytics.
+## What A/B testing is
 
-The goal is not to memorize formulas. The goal is to understand the logic well enough to make better business decisions.
+A/B testing is a controlled experimentation method used to estimate the causal impact of a change by comparing outcomes between groups exposed to different experiences.
 
----
+A typical A/B test has:
 
-## 1. What is A/B testing?
+- **Control:** the current or baseline experience.
+- **Treatment:** the new experience being tested.
+- **Random assignment:** eligible units are assigned to groups so they are comparable in expectation.
+- **Pre-defined metrics:** success and guardrail metrics are chosen before reviewing results.
+- **Statistical inference:** observed differences are evaluated to determine whether they are likely to reflect a real treatment effect rather than random variation.
 
-A/B testing is a way to compare **two versions of something** to see which one performs better.
+The objective is not simply to prove that one version is better. The objective is to reduce uncertainty around a business decision.
 
-For example, imagine a company wants to simplify its checkout process.
+## When to use A/B testing
 
-- **Version A — Control:** the current checkout experience
-- **Version B — Treatment:** the new simplified checkout experience
+A/B testing is appropriate when:
 
-Customers are randomly assigned to one of the two versions.
+- the business can expose comparable populations to different experiences;
+- the treatment can be clearly defined;
+- the outcome can be measured reliably;
+- the experiment can run long enough to obtain adequate sample size;
+- the groups can remain sufficiently isolated from one another;
+- there is a real decision that will be made from the result.
 
-Then we compare the results.
+Typical use cases include:
 
-Example:
+- checkout or conversion-flow changes;
+- onboarding changes;
+- pricing or offer presentation;
+- messaging and communications;
+- product-feature launches;
+- customer-support process changes;
+- fraud or risk interventions;
+- recommendation algorithms;
+- retention or engagement initiatives.
 
-- Control checkout completion: **72%**
-- Treatment checkout completion: **75%**
+## When not to use A/B testing
 
-The main question becomes:
+A randomized A/B test may not be practical or appropriate when:
 
-> Did the new checkout actually improve completion, or could this difference have happened by chance?
+- there is insufficient traffic or sample size;
+- the treatment cannot be isolated between groups;
+- the change affects an entire system at once;
+- strong network effects cause users in one group to influence another;
+- legal, ethical, operational, or risk constraints prevent random assignment;
+- the expected effect takes too long to observe;
+- the experiment could expose customers or the business to unacceptable harm.
 
-That is what A/B testing helps us answer.
+Alternatives may include pre/post analysis, matched-control designs, difference-in-differences, interrupted time series, geo experiments, switchback designs, or observational modeling.
 
----
+## Core experiment structure
 
-## 2. Why do companies use A/B tests?
+### Business question
 
-A/B testing helps businesses test ideas before making a large change for everyone.
-
-Instead of saying:
-
-> “We think this new feature is better.”
-
-we can say:
-
-> “We tested it with comparable groups and measured the result.”
-
-Typical uses include:
-
-- website or app changes
-- checkout improvements
-- onboarding flows
-- email or message changes
-- pricing or offer presentation
-- product features
-- customer-support changes
-- fraud or risk rules
-- recommendation systems
-- retention or engagement initiatives
-
-The main goal is to **reduce uncertainty before making a decision**.
-
----
-
-## 3. The basic structure of an A/B test
-
-A simple A/B test usually has four parts.
-
-### Control
-
-The current experience.
+Start with the decision the experiment is intended to support.
 
 Example:
 
-> Existing checkout flow
+> Should we roll out a simplified checkout experience?
 
-### Treatment
+### Hypothesis
 
-The new experience being tested.
+A hypothesis states what effect is expected and on which outcome.
 
-Example:
+- **Null hypothesis (H0):** there is no true treatment effect on the primary KPI.
+- **Alternative hypothesis (H1):** the treatment changes the primary KPI.
 
-> Simplified checkout flow
+For a directional business hypothesis, the expected direction should be documented before the test.
 
-### Random assignment
+### Unit of randomization
 
-Eligible users are randomly placed into Control or Treatment.
+The unit assigned to Control or Treatment may be:
 
-This is important because it helps make the groups similar before the test starts.
+- customer;
+- account;
+- session;
+- transaction;
+- merchant;
+- store;
+- geographic market;
+- time block.
 
-### Metrics
+The correct unit depends on how the treatment is delivered and where contamination could occur.
 
-We decide in advance what success means.
+## Why randomization matters
 
-Example:
+Randomization helps distribute both observed and unobserved characteristics across groups so that, in expectation, the treatment is the main systematic difference between them.
 
-- Primary KPI: checkout completion
-- Secondary KPI: checkout time
-- Guardrail KPI: fraud rate
+This strengthens causal interpretation.
 
----
+Randomization does not eliminate the need for quality checks. Analysts should still verify:
 
-## 4. Why does randomization matter?
+- allocation counts;
+- sample-ratio mismatch;
+- exposure integrity;
+- duplicate experimental units;
+- important pre-treatment balance;
+- tracking quality.
 
-Imagine we gave the new checkout only to younger customers and the old checkout only to older customers.
+## Common types of controlled experiments
 
-If the new checkout performs better, we would not know whether the improvement came from:
+| Type | Description | Typical use |
+|---|---|---|
+| **A/B test** | One Control and one Treatment | Compare a new experience with the current one |
+| **A/B/n test** | One Control and multiple Treatments | Compare several variants at once |
+| **Multivariate test** | Multiple components are varied jointly | Understand combinations of page or product elements |
+| **Holdout test** | A persistent Control group is intentionally not exposed to a change | Measure longer-term incremental impact |
+| **Switchback experiment** | Treatment alternates over time for the same market/system | Marketplace, operations, delivery, or system-level interventions |
+| **Geo experiment** | Geographic regions receive different treatments | Marketing, pricing, media, or policy changes where user-level randomization is difficult |
+| **Cluster-randomized experiment** | Groups such as stores, teams, or merchants are randomized | Reduce contamination when treatment occurs at group level |
 
-- the checkout change, or
-- the difference between the customer groups.
+## A/B versus multivariate testing
 
-Randomization helps avoid this problem.
+An A/B test compares complete experiences or treatments.
 
-It spreads different types of customers across both groups so the main planned difference is the experience they receive.
+A multivariate test evaluates combinations of several components simultaneously, such as headline, image, and call-to-action.
 
-Randomization does not guarantee a perfect experiment, so we still check:
+Multivariate tests generally require more traffic because the sample is distributed across more combinations.
 
-- group sizes
-- duplicate users
-- missing assignments
-- whether users accidentally saw both versions
-- whether important customer characteristics look reasonably balanced
-- whether tracking worked correctly
+## One-tailed versus two-tailed tests
 
----
+### Two-tailed
 
-## 5. What is a hypothesis?
+Tests whether Treatment is different from Control in either direction.
 
-A hypothesis is simply a statement we want to test.
+Use when both improvement and deterioration are important and no valid directional restriction should be imposed.
 
-Example:
+### One-tailed
 
-> The simplified checkout will increase checkout completion.
+Tests for an effect in one pre-specified direction.
 
-In statistics, we usually write two versions.
+A one-tailed test should not be chosen after seeing the result. In many business settings, two-tailed tests are safer because an unexpected negative effect also matters.
 
-### Null hypothesis — H0
-
-Assume there is **no real difference** between Control and Treatment.
-
-### Alternative hypothesis — H1
-
-Assume there **is a real difference**.
-
-You do not need to think of these as complicated statistical ideas.
-
-A simple way to remember them is:
-
-- **H0:** nothing really changed
-- **H1:** the Treatment changed the result
-
----
-
-## 6. What should we measure?
-
-A good experiment normally uses three types of metrics.
+## Primary, secondary, and guardrail metrics
 
 ### Primary KPI
 
-The most important metric.
-
-It answers the main business question.
+The main outcome used to evaluate the hypothesis.
 
 Examples:
 
-- conversion rate
-- activation rate
-- retention rate
-- completion rate
-- average handling time
+- conversion rate;
+- activation rate;
+- retention rate;
+- average order value;
+- processing time.
 
 ### Secondary KPIs
 
-These help explain what else happened.
-
-Example:
-
-If checkout completion improves, we may also check whether checkout time decreased.
+Help explain mechanism or downstream impact.
 
 ### Guardrail KPIs
 
-These help make sure the Treatment does not create a new problem.
+Protect against unintended harm.
 
 Examples:
 
-- fraud rate
-- complaints
-- payment declines
-- cancellations
-- support contacts
-- system latency
-- operational cost
+- fraud rate;
+- complaint rate;
+- support contacts;
+- latency;
+- cancellation;
+- payment declines;
+- operational cost.
 
-A Treatment should not be considered successful just because the primary KPI improves if an important guardrail becomes much worse.
+A successful experiment should not be defined only by improvement in the primary KPI if important guardrails deteriorate materially.
 
----
+## Baseline
 
-## 7. What is a baseline?
+The baseline is the expected performance of the current experience before treatment effects are considered.
 
-The baseline is the current level of performance before we expect any Treatment effect.
+Baseline values are used in:
 
-Example:
+- sample-size planning;
+- MDE definition;
+- business-impact estimation;
+- interpretation of relative lift.
 
-Current checkout completion = **72%**
+## Minimum Detectable Effect (MDE)
 
-That 72% is our baseline.
+The MDE is the smallest treatment effect the experiment is designed to detect with the chosen significance level and statistical power.
 
-The baseline helps us estimate:
+It should be connected to business value.
 
-- how much improvement would matter
-- how many users we need in the test
-- what business impact a lift could create
+A test designed to detect an extremely small effect may require a very large sample even if that effect would not matter commercially.
 
----
+## Statistical power
 
-## 8. What is lift?
+Statistical power is the probability of detecting a true effect of the planned size when that effect actually exists.
 
-Lift means the difference between Treatment and Control.
+A common planning target is 80% or higher.
 
-Example:
+Low-powered experiments have a higher risk of missing real effects.
 
-- Control = 60%
-- Treatment = 63%
+## Significance level (alpha)
 
-### Absolute lift
+Alpha represents the acceptable probability of a Type I error under the testing framework.
 
-63% - 60% = **+3 percentage points**
-
-### Relative lift
-
-3 / 60 = **+5% relative improvement**
-
-These are not the same thing.
-
-A move from 60% to 63% is:
-
-- **+3 percentage points** absolute
-- **+5%** relative
-
----
-
-## 9. What is business significance?
-
-A result may be statistically real but still too small to matter.
-
-Example:
-
-Suppose a Treatment increases conversion from:
-
-- 60.00% to 60.05%
-
-With a very large sample, that tiny difference could be statistically significant.
-
-But the business may decide the gain is not worth the cost of implementing the change.
-
-So we always ask two questions:
-
-1. Is the effect statistically credible?
-2. Is the effect large enough to matter to the business?
-
----
-
-## 10. What is the Minimum Detectable Effect — MDE?
-
-The **Minimum Detectable Effect**, or MDE, is the smallest improvement we want the experiment to be able to detect.
-
-Example:
-
-The business may say:
-
-> We only care about the new checkout if it improves completion by at least 2 percentage points.
-
-Then **+2 percentage points** is the business-relevant target.
-
-The smaller the effect we want to detect, the more data we usually need.
-
----
-
-## 11. What is sample size?
-
-Sample size means how many users or observations are included in the experiment.
-
-Too little data can make it hard to tell whether a difference is real.
-
-Sample-size planning normally depends on:
-
-- the current baseline
-- the MDE
-- the amount of variation in the metric
-- the significance level
-- the desired statistical power
-- the Control/Treatment split
-
-The important idea is simple:
-
-> Do not stop the test just because we already have “a lot of data.” We need enough data for the question we are trying to answer.
-
----
-
-## 12. What is statistical power?
-
-Statistical power tells us how likely the experiment is to detect a real effect of the size we planned for.
-
-A common target is **80% power**.
-
-In simple terms:
-
-> If a meaningful effect really exists, do we have enough data to have a good chance of finding it?
-
-Low power increases the chance that we miss a real improvement.
-
----
-
-## 13. What is alpha?
-
-Alpha is the threshold we choose for deciding how much false-positive risk we are willing to accept.
-
-A common value is:
+A common threshold is:
 
 `alpha = 0.05`
 
-This is connected to the p-value we see later.
+The threshold should be chosen before reviewing experiment outcomes.
 
-The important point is that alpha should be chosen **before** we look at the results.
+## P-value
 
----
+A p-value measures how compatible the observed result is with the null hypothesis under the statistical model.
 
-## 14. What is a p-value?
+A p-value below the pre-defined alpha provides evidence against the null hypothesis.
 
-A p-value is the chance, under the assumed model and a null hypothesis of no treatment effect, of seeing a result at least as extreme as the one observed. It does not give the chance that the null hypothesis is true.
+It does **not** mean:
 
-A common rule is:
+- there is a 95% probability that the Treatment works;
+- there is only a 5% probability that the null hypothesis is true;
+- the result is automatically important for the business.
 
-- p-value < 0.05 → evidence against “no difference”
-- p-value >= 0.05 → not enough evidence to reject “no difference”
+## Confidence interval
 
-But a p-value does **not** tell us whether the result is important to the business.
+A confidence interval provides a range of plausible treatment-effect values under repeated-sampling interpretation.
 
-It also does **not** mean:
+It helps answer two questions:
 
-- there is a 95% chance the Treatment works
-- there is only a 5% chance the null hypothesis is true
+1. How uncertain is the estimated effect?
+2. Is the range large enough to be meaningful for the business?
 
-Think of the p-value as one piece of evidence, not the whole decision.
+Confidence intervals are often more informative than a p-value alone.
 
----
+## Effect size
 
-## 15. What is a confidence interval?
+Effect size measures the magnitude of the treatment difference.
 
-A confidence interval gives a range of effect sizes compatible with the data under the chosen method and its assumptions.
+Common business forms include:
+
+- absolute percentage-point lift;
+- relative percentage lift;
+- mean difference;
+- standardized effect size;
+- incremental revenue or cost savings.
 
 Example:
 
-Estimated lift = **+3.2 percentage points**
+- Control conversion = 60%
+- Treatment conversion = 63%
 
-95% confidence interval = **+1.8 to +4.6 percentage points**
+- absolute lift = **+3 percentage points**;
+- relative lift = **+5%**.
 
-The interval shows uncertainty around the estimate. A 95% confidence level describes the method's long-run coverage across repeated experiments; it does not assign a 95% probability to this one fixed interval containing the true effect.
+## Statistical significance versus business significance
 
-Confidence intervals are useful because they help us ask:
+A result can be statistically significant but commercially irrelevant.
 
-- Could the true effect be close to zero?
-- Could the true effect be large enough to matter?
-- How precise is our estimate?
+With a very large sample, even a tiny difference may produce a small p-value.
 
----
+A good decision considers:
 
-## 16. Statistical significance vs business significance
+- effect size;
+- confidence interval;
+- implementation cost;
+- risk;
+- operational impact;
+- customer impact;
+- strategic relevance.
 
-These are different.
-
-### Statistical significance
-
-Asks:
-
-> Is the observed difference inconsistent with the no-effect hypothesis under the chosen test?
-
-### Business significance
-
-Asks:
-
-> Is the difference large enough to matter?
-
-A good recommendation should consider both.
-
----
-
-## 17. Type I and Type II errors
-
-These sound technical, but the ideas are simple.
+## Type I and Type II errors
 
 ### Type I error — false positive
 
-We conclude the Treatment works when it actually does not.
+Conclude that Treatment has an effect when no real effect exists.
 
-Business example:
-
-> We roll out a feature that does not really improve performance.
+Business consequence: roll out an ineffective or harmful change.
 
 ### Type II error — false negative
 
-We fail to detect a real improvement.
+Fail to detect an effect that actually exists.
 
-Business example:
+Business consequence: reject or abandon a valuable improvement.
 
-> We reject a good feature because the test did not have enough data.
+## Sample Ratio Mismatch (SRM)
 
----
-
-## 18. What is Sample Ratio Mismatch — SRM?
-
-Suppose we planned a 50/50 experiment.
-
-Expected:
-
-- 50% Control
-- 50% Treatment
-
-But we observe:
-
-- 38% Control
-- 62% Treatment
-
-That may be a warning sign.
-
-This is called **Sample Ratio Mismatch**, or SRM.
-
-Possible causes include:
-
-- broken assignment logic
-- tracking problems
-- filtering mistakes
-- eligibility errors
-- Treatment-specific dropouts
-- data-extraction issues
-
-SRM does not automatically mean the experiment is unusable, but it should be investigated before we trust the results.
-
----
-
-## 19. How long should an experiment run?
-
-A test should run long enough to:
-
-- reach the planned sample size
-- cover normal business patterns
-- include relevant weekdays/weekends if needed
-- capture delayed outcomes
-
-A test should not stop simply because the p-value looks good on one day.
-
----
-
-## 20. What is peeking?
-
-Peeking means checking the result repeatedly and stopping as soon as it becomes statistically significant.
+SRM occurs when the observed experiment allocation differs materially from the intended allocation beyond what random variation would reasonably explain.
 
 Example:
 
-Day 3: p = 0.12  
-Day 4: p = 0.08  
-Day 5: p = 0.04 → stop the test immediately
+- Expected: 50% Control / 50% Treatment
+- Observed: 38% Control / 62% Treatment
 
-With normal fixed-horizon testing, this can increase the risk of false positives.
+Possible causes:
 
-Better practice:
+- broken randomization;
+- tracking failures;
+- filtering differences;
+- eligibility logic errors;
+- treatment-specific dropouts;
+- extraction problems.
 
-- define the sample size and stopping rule in advance, or
-- use a statistical method designed for continuous monitoring
+SRM is an experiment-health issue and should be investigated before treatment effects are trusted.
 
----
+## Sample size
 
-## 21. What is multiple testing?
+Sample size depends on:
 
-Imagine we test:
+- baseline metric;
+- MDE;
+- alpha;
+- desired power;
+- allocation ratio;
+- metric variance;
+- expected traffic.
 
-- 20 metrics
-- 10 countries
-- 5 customer types
-- 4 devices
+Do not choose sample size based only on how many observations happen to be available.
 
-Eventually, something may look significant just by chance.
+## Experiment duration
 
-This is the multiple-testing problem.
+Run the experiment long enough to:
 
-Ways to reduce the risk include:
+- achieve the planned sample;
+- cover representative business cycles;
+- avoid unusual calendar periods dominating the result;
+- observe delayed outcomes where relevant.
 
-- define the main hypothesis before the experiment
-- keep one clear primary KPI
-- limit unnecessary comparisons
-- treat unexpected segment findings as exploratory
-- validate interesting findings in a future experiment
+Longer is not always better. Excessively long tests can increase exposure cost and the chance of contamination or concurrent changes.
 
----
+## Peeking and early stopping
 
-## 22. What is segmentation?
+Repeatedly checking the p-value and stopping the experiment as soon as it crosses 0.05 can inflate false-positive risk under standard fixed-horizon testing.
 
-Segmentation means checking whether different groups reacted differently to the Treatment.
+Use a pre-defined stopping rule or a sequential-testing method if continuous monitoring is required.
+
+## Multiple testing
+
+Testing many metrics, variants, or segments increases the probability of observing at least one apparently significant result by chance.
+
+Options include:
+
+- pre-specifying a limited set of hypotheses;
+- defining a single primary KPI;
+- adjusting for multiple comparisons when appropriate;
+- treating post-hoc segment findings as exploratory;
+- validating promising findings in a follow-up experiment.
+
+## Segmentation and heterogeneous treatment effects
+
+The average experiment result may hide important differences across groups.
+
+Common segments:
+
+- country;
+- device;
+- customer tenure;
+- acquisition channel;
+- merchant type;
+- customer risk level;
+- product type.
+
+Segment analysis should distinguish between:
+
+- **pre-specified segments:** defined before the test;
+- **post-hoc segments:** discovered after seeing results.
+
+Post-hoc findings should generally be treated as new hypotheses rather than final causal conclusions.
+
+## Contamination and interference
+
+### Contamination
+
+A unit assigned to Control is exposed to the Treatment, or vice versa.
+
+### Interference
+
+One experimental unit's treatment affects another unit's outcome.
 
 Examples:
 
-- Mobile vs Desktop
-- New vs Existing customers
-- Country
-- Product type
-- Acquisition channel
+- customers sharing referral codes;
+- marketplace participants influencing each other;
+- store-level operational changes affecting nearby stores;
+- team-level treatments where employees interact across groups.
 
-Example:
+If interference is expected, individual-level randomization may not be appropriate.
 
-Overall Treatment lift = **+3 pp**
+## Novelty effect
 
-But:
+Users may respond differently simply because an experience is new.
 
-- Mobile = **+5 pp**
-- Desktop = **+1 pp**
+A short-lived improvement may disappear once users adapt.
 
-That may be useful for the business.
+Longer observation windows or post-rollout monitoring may be needed for durable behavior changes.
 
-However, there is an important difference.
+## Carryover effect
 
-### Pre-specified segment
+Past treatment exposure can affect later outcomes.
 
-We planned to analyze it before seeing results.
+This is especially important in crossover or switchback experiments.
 
-### Post-hoc segment
+A washout period may be needed between conditions.
 
-We discovered it after seeing results.
+## Common statistical methods by metric type
 
-Post-hoc findings can be useful, but they should usually be treated as a new hypothesis to test rather than a final conclusion.
-
----
-
-## 23. What is contamination?
-
-Contamination happens when users do not stay in the group they were assigned to.
-
-Example:
-
-A customer assigned to Control somehow sees the Treatment experience.
-
-If this happens often, the groups become less different and the result becomes harder to interpret.
-
----
-
-## 24. What is interference?
-
-Interference happens when one person's Treatment affects another person's outcome.
-
-Example:
-
-In a marketplace, changing the experience for sellers may also affect buyers.
-
-Or employees in a Treatment team may share a new process with employees in a Control team.
-
-In those cases, randomizing individual people may not be the best design.
-
----
-
-## 25. What is a novelty effect?
-
-Sometimes people react strongly to something simply because it is new.
-
-Example:
-
-A redesigned app screen gets high engagement during the first week, but the effect disappears after users get used to it.
-
-This is called a novelty effect.
-
-For important behavior changes, longer observation or post-launch monitoring may be useful.
-
----
-
-## 26. What is a carryover effect?
-
-A carryover effect happens when a previous Treatment continues to affect behavior later.
-
-This matters in experiments where the same users or systems switch between Control and Treatment over time.
-
-Example:
-
-A delivery team uses a new routing method in the morning and returns to the old method in the afternoon, but the morning changes continue to influence afternoon operations.
-
-Sometimes a **washout period** is needed before switching conditions.
-
----
-
-## 27. Common types of experiments
-
-| Experiment type | Simple explanation | Example |
+| Metric type | Example | Common approach |
 |---|---|---|
-| **A/B test** | Compare one current version with one new version | Old checkout vs new checkout |
-| **A/B/n test** | Compare Control with several new versions | Current page vs three new designs |
-| **Multivariate test** | Test several elements and combinations at the same time | Headline + image + button combinations |
-| **Holdout test** | Keep one group unchanged for a longer period | Measure the long-term impact of a loyalty program |
-| **Switchback test** | Alternate Control and Treatment over time | New delivery policy on/off by time block |
-| **Geo experiment** | Use different geographic areas as groups | Marketing campaign in selected cities |
-| **Cluster-randomized test** | Randomize groups instead of individuals | Randomize stores, teams, or merchants |
+| **Binary / proportion** | conversion, activation, fraud flag | two-proportion z-test, logistic regression |
+| **Continuous** | AHT, checkout time, spend | Welch/two-sample t-test when appropriate, regression, robust or non-parametric methods |
+| **Count** | purchases, contacts, claims | Poisson/negative-binomial models or suitable count methods |
+| **Categorical** | reason category, channel distribution | chi-square or multinomial methods |
+| **Time-to-event** | time to churn, time to activation | survival-analysis methods |
 
----
+The test should match the metric, randomization structure, assumptions, and decision context.
 
-## 28. A/B test vs multivariate test
+## Continuous metrics and normality
 
-### A/B test
+A common misconception is that every raw observation must be perfectly normally distributed before a t-test can be used.
 
-Compares complete versions.
+In practice, analysts should inspect:
 
-Example:
+- skewness;
+- outliers;
+- sample size;
+- variance;
+- whether the mean is the business quantity of interest.
 
-- Version A: current landing page
-- Version B: redesigned landing page
+For strongly skewed metrics such as transaction value or handling time, consider reporting both mean and median and validating conclusions with robust, transformed, bootstrap, or non-parametric approaches when appropriate.
 
-### Multivariate test
+## Confounding variables
 
-Tests combinations of several page elements.
+Randomization is designed to reduce confounding, but analysts should still look for operational or implementation problems.
 
-Example:
+Potential confounders include:
 
-- headline A or B
-- image A or B
-- button A or B
+- simultaneous campaigns;
+- system outages;
+- pricing changes;
+- seasonality;
+- channel mix changes;
+- geographic events;
+- policy changes;
+- changes in staffing or operations.
 
-Because there are more combinations, multivariate tests usually need more traffic.
+For a properly randomized and implemented experiment, these factors should not systematically affect one group more than another. If they do, investigate before making a causal claim.
 
----
+## Causal interpretation
 
-## 29. One-tailed vs two-tailed tests
+A valid randomized experiment provides stronger causal evidence than a simple before/after comparison because exposure is assigned rather than merely observed.
 
-### Two-tailed test
+Causal confidence weakens when there is:
 
-Checks whether Treatment is different from Control in either direction.
+- broken randomization;
+- non-compliance;
+- contamination;
+- severe attrition;
+- missing tracking;
+- post-treatment filtering;
+- major implementation differences between groups.
 
-Treatment could be better or worse.
+## Common experiment failure modes
 
-### One-tailed test
+1. No clear business decision.
+2. Primary KPI selected after seeing results.
+3. Inadequate sample size.
+4. Broken randomization or SRM.
+5. Missing or inconsistent tracking.
+6. Treatment contamination.
+7. Stopping too early because p < 0.05.
+8. Ignoring guardrails.
+9. Over-interpreting post-hoc segments.
+10. Reporting only p-values without effect size or confidence intervals.
+11. Confusing statistical significance with business value.
+12. Ignoring implementation cost or operational risk.
 
-Checks only one pre-defined direction.
+## Recommended interpretation framework
 
-Example:
+A strong experiment readout answers:
 
-> We are only testing whether Treatment increases conversion.
-
-The direction must be chosen before seeing the results.
-
-In many business situations, a two-tailed test is safer because unexpected harm also matters.
-
----
-
-## 30. Which statistical test should we use?
-
-The correct test depends on the type of metric.
-
-| Metric type | Example | Common method |
-|---|---|---|
-| **Binary / rate** | conversion, activation, fraud flag | two-proportion z-test, logistic regression |
-| **Continuous** | checkout time, AHT, transaction value | Welch/two-sample t-test, regression, robust methods |
-| **Count** | number of purchases or contacts | Poisson or negative-binomial models |
-| **Categorical** | channel or reason category | chi-square or categorical models |
-| **Time-to-event** | time to churn or time to activation | survival analysis |
-
-You do not need to memorize all of these at first.
-
-The key idea is:
-
-> Match the statistical method to the kind of metric you are analyzing.
-
----
-
-## 31. Do the data need to be perfectly normal?
-
-No.
-
-This is a common misunderstanding.
-
-For continuous metrics such as checkout time or transaction value, analysts should look at:
-
-- skewness
-- outliers
-- sample size
-- variance
-- mean and median
-
-With large samples, some statistical tests are fairly robust even when raw data are not perfectly normal.
-
-For very skewed data, it may also be useful to use:
-
-- median
-- transformations
-- bootstrap methods
-- robust methods
-- non-parametric tests
-
-The goal is not to force every dataset to look normal. The goal is to choose a method that fits the metric and the business question.
-
----
-
-## 32. What are confounding variables?
-
-A confounding variable is something else that could affect the result.
-
-Examples:
-
-- a marketing campaign starts during the experiment
-- a system outage affects one group more than the other
-- pricing changes
-- holiday traffic
-- staffing changes
-- a new policy launches at the same time
-
-Randomization helps reduce confounding, but operational problems can still happen.
-
-Always ask:
-
-> Was anything else happening that could explain the result?
-
----
-
-## 33. Why is A/B testing stronger than a simple before/after comparison?
-
-Suppose conversion improves after a new feature launches.
-
-A before/after comparison might show:
-
-Before = 70%  
-After = 74%
-
-But many other things could have changed at the same time:
-
-- seasonality
-- customer mix
-- marketing activity
-- pricing
-- traffic volume
-
-In a well-run randomized A/B test, Control and Treatment run at the same time.
-
-That makes it easier to isolate the effect of the Treatment itself.
-
-This is why randomized experiments can provide stronger causal evidence.
-
----
-
-## 34. When should we NOT use an A/B test?
-
-A standard A/B test may not be practical when:
-
-- there are too few users
-- everyone must receive the change at the same time
-- users strongly influence each other
-- random assignment would create legal or ethical problems
-- the change could create unacceptable risk
-- the result takes too long to observe
-- the Treatment cannot be isolated
-
-Other methods may work better, such as:
-
-- pre/post analysis
-- matched Control groups
-- difference-in-differences
-- interrupted time series
-- geo experiments
-- switchback experiments
-
----
-
-## 35. Common A/B testing mistakes
-
-Watch for these problems:
-
-1. No clear business question
-2. Choosing the primary KPI after seeing the results
-3. Too little data
-4. Broken randomization
-5. Sample Ratio Mismatch
-6. Missing or inconsistent tracking
-7. Customers appearing in both groups
-8. Stopping the test too early
-9. Looking at too many metrics or segments
-10. Ignoring guardrails
-11. Reporting only the p-value
-12. Confusing statistical significance with business value
-13. Ignoring implementation cost or risk
-
----
-
-## 36. A simple decision framework
-
-At the end of an A/B test, answer these questions in order:
-
-1. **What business decision were we testing?**
-2. **Was the experiment set up correctly?**
+1. **What decision were we testing?**
+2. **Was the experiment valid?**
 3. **What happened to the primary KPI?**
-4. **How large was the difference?**
-5. **How confident are we in that difference?**
-6. **Did any guardrail metric get worse?**
-7. **Did important customer groups react differently?**
-8. **What does the result mean for the business?**
-9. **What should we do next?**
+4. **How large was the effect?**
+5. **How uncertain is the estimate?**
+6. **What happened to guardrails?**
+7. **Were there important segment differences?**
+8. **What is the business impact?**
+9. **What should the business do next?**
 
----
+## Relationship to the rest of this module
 
-## 37. Quick glossary
+Use this document for conceptual understanding.
 
-| Term | Simple meaning |
-|---|---|
-| **Control** | Current experience |
-| **Treatment** | New experience being tested |
-| **Randomization** | Randomly assigning users to groups |
-| **Primary KPI** | Main success metric |
-| **Guardrail** | Metric that protects against unintended harm |
-| **Baseline** | Current level of performance |
-| **Lift** | Difference between Treatment and Control |
-| **MDE** | Smallest effect the experiment is designed to detect |
-| **Power** | Ability to detect a real effect |
-| **Alpha** | Pre-defined false-positive risk threshold |
-| **P-value** | Probability, assuming the null model, of a result at least as extreme as the observed one |
-| **Confidence interval** | Range of effect values compatible with the data under a method and its assumptions |
-| **SRM** | Warning that the observed group split differs unexpectedly from the planned split |
-| **Segmentation** | Checking results for different customer or business groups |
-| **Contamination** | A user is exposed to the wrong experiment experience |
-| **Confounder** | Another factor that may influence the result |
+Then use:
 
----
+- `methodology.md` for the standard execution process;
+- `case_study/business_case.md` for the NovaPay scenario;
+- `notebooks/guided_ab_test_analysis.ipynb` for a worked example;
+- `notebooks/challenge_ab_test_analysis.ipynb` for independent practice.
 
-## 38. How this page connects to the rest of the module
+The guiding principle remains:
 
-Use this page when you want to understand the concepts in plain language.
-
-Then move to:
-
-- `methodology.md` — the step-by-step analytical process
-- `case_study/business_case.md` — the NovaPay business scenario
-- `notebooks/guided_ab_test_analysis.ipynb` — a worked example
-- `notebooks/challenge_ab_test_analysis.ipynb` — independent practice
-- `templates/stakeholder_readout_deck.md` — how to present results to stakeholders
-
-The main principle to remember is:
-
-> **Start with the business question, make sure the experiment is trustworthy, measure the impact, check for harm, and end with a clear recommendation.**
+> **Start with the business decision, validate the experiment, quantify both statistical and business impact, and end with a clear recommendation.**
