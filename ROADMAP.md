@@ -12,7 +12,7 @@ The portfolio is organized around two complementary business domains:
 | Pillar | Planned repository | Primary portfolio outcome | Status |
 |---|---|---|---|
 | 1. Analytics | [`analytics-standard-framework`](https://github.com/laura-rivera-sancho/analytics-standard-framework) | Decision-ready analytics, experimentation, customer insight, and live market monitoring | **Complete** |
-| 2. Machine Learning | [`machine-learning-standard-framework`](https://github.com/laura-rivera-sancho/machine-learning-standard-framework) | Supervised and unsupervised models tied to measurable business decisions | **In progress** |
+| 2. Machine Learning | [`machine-learning-standard-framework`](https://github.com/laura-rivera-sancho/machine-learning-standard-framework) | Supervised and unsupervised models tied to measurable business decisions | **Complete** |
 | 3. Large Language Models | `llm-systems-framework` | A cited, evaluated trading research copilot | **Planned** |
 | 4. AI Agentic Frameworks | `agentic-ai-framework` | A controlled research and paper-trading workflow with mandatory human approval | **Planned** |
 | 5. Data Warehousing & Modeling | [`data-architecture-standard-framework`](https://github.com/laura-rivera-sancho/data-architecture-standard-framework) | A governed omnichannel marketing warehouse, marts, and semantic layer | **Complete** |
@@ -100,11 +100,11 @@ A8 is the shared market-context foundation for the trading-focused LLM and Agent
 |---|---|---|---|
 | **ML1 — Campaign Response Propensity** | Predict campaign response and allocate limited marketing capacity | Logistic-regression baseline, simple decision tree, tree-based champion, leakage controls, temporal validation, calibration, lift/gains, threshold economics, explainability, and monitoring | **Complete** |
 | [**ML2 — Unsupervised Customer Segmentation**](https://github.com/laura-rivera-sancho/machine-learning-standard-framework/tree/main/unsupervised_learning/customer_segmentation) | Discover stable, actionable customer groups beyond fixed RFM rules | RFM/behavioral features, K-means baseline, Gaussian-mixture comparison, density-based challenger, bootstrap and temporal stability, interpretable personas, and activation guidance | **Complete** |
-| **ML3 — Production Readiness** | How would the selected models be operated responsibly? | Reproducible training/inference, model registry approach, drift and performance monitoring, retraining triggers, rollback, and model card | Planned |
+| **ML3 — Production Readiness** | How should the selected models be operated responsibly? | Training/inference contracts, registry approach, monitoring, retraining, rollback, operating runbooks, executable release validation, and executive readout | **Complete** |
 
 The campaign-response case is the primary supervised marketing project, and ML2 extends the RFM work from descriptive customer rules into stable, data-driven segmentation.
 
-**Pillar completion gate:** both modeling paradigms have defensible baselines, reproducible evaluation, decision-aware metrics, error/stability analysis, documented risks, and credible monitoring plans.
+**Pillar completion gate — met:** both modeling paradigms have defensible baselines, reproducible evaluation, decision-aware metrics, error/stability analysis, documented risks, and credible monitoring plans. The additional PayWave transfer case and ML3 production-readiness controls are also complete.
 
 ### Proposed repository structure
 
@@ -213,4 +213,4 @@ Before a case study or pillar is marked complete, it must pass four reviews:
 3. **Communication:** clear narrative, visuals, stakeholder readout, and concise outcomes
 4. **Portfolio:** intuitive navigation, representative previews, consistent styling, and no confidential data
 
-The portfolio and GitHub Project will remain private until these review gates are complete and the work is ready for a coordinated public launch.
+The completed Analytics, Machine Learning, and Data Architecture repositories are public. Planned LLM and Agentic AI repositories should be published only after their applicable review gates are complete.
