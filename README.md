@@ -1,49 +1,79 @@
 <p align="center">
-  <img src="assets/repository-banner.png" alt="Analytics Standard Framework banner" width="100%">
+  <img src="assets/repository-banner.png" alt="Decision Analytics Case Studies banner" width="100%">
 </p>
 
-# Analytics Standard Framework
+# Decision Analytics Case Studies
 
 [![Repository quality](https://github.com/laura-rivera-sancho/analytics-standard-framework/actions/workflows/ci.yml/badge.svg)](https://github.com/laura-rivera-sancho/analytics-standard-framework/actions/workflows/ci.yml)
 
-**An analytics framework for turning business questions into reproducible analysis, defensible decisions, and clear stakeholder communication.**
+**Reproducible decision work for experiments, launches, targeting, KPI diagnosis, customer value, and marketing measurement.**
 
-This repository demonstrates how I approach common analytics engagements from end to end: framing the decision, defining metrics and assumptions, validating data, selecting an appropriate method, interpreting uncertainty, estimating business impact, and communicating a recommendation.
+[Review the case studies](#demonstration-evidence-by-decision) · [Inspect the source workflows](01_ab_testing/src) · [Contact Laura](mailto:laura.riverasancho33@gmail.com)
 
-Each module combines a reusable methodology with a fictional business case, inspectable data, reproducible implementation, practical learning material where relevant, and an executive communication standard. No employer, client, or confidential data are used.
+This repository shows how I turn a high-value business question into a validated analysis, an evidence-calibrated recommendation, and an executive readout. It is designed for product, growth, operations, customer, and analytics leaders who need a defensible answer—not another dashboard without a decision.
 
-## Explore the Analytics portfolio
+## The decisions this work supports
 
-Use these shortcuts to explore the decisions, methods, and stakeholder-ready
-evidence across the portfolio:
+| Situation | Decision |
+|---|---|
+| Product or process experiment | Roll out, iterate, stop, or gather more evidence |
+| AI or automation launch | Continue scaling, pause, roll back, or change monitoring |
+| Limited outreach capacity | Define eligibility and decide who should be prioritized |
+| Unexpected KPI movement | Identify the most credible driver and the next controlled action |
+| Customer-value concentration | Decide where retention attention and measurement should focus |
+| Marketing treatment test | Advance a treatment, redesign the test, or contain rollout |
+| Market relationship shift | Decide whether a change warrants deeper cited research |
 
-| What to assess | Start here | What it demonstrates |
-|---|---|---|
-| Decision communication | [NovaPay A/B testing readout](01_ab_testing/reports/stakeholder_readout.md) | Experiment validity, effect size, guardrails, and a rollout recommendation |
-| Causal judgment | [FinFlow Pre/Post readout](02_pre_post_analysis/reports/stakeholder_readout.md) | Interrupted time series, confounder review, limitations, and risk monitoring |
-| Target-population design | [LuminaPay targeting readout](03_target_analysis/reports/stakeholder_readout.md) | Eligibility governance, opportunity sizing, transparent prioritization, and activation controls |
-| Diagnostic judgment | [OrbitMart ad hoc readout](04_ad_hoc_analysis/reports/stakeholder_readout.md) | KPI trees, rate-and-mix decomposition, exploratory controls, and evidence-calibrated action |
-| Customer value strategy | [Harbor & Pine lifecycle readout](05_customer_value_lifecycle/reports/stakeholder_readout.md) | RFM value concentration, lifecycle migration, consent-aware prioritization, and test design |
-| Marketing experimentation | [Harbor & Pine experimentation readout](06_marketing_experimentation/reports/stakeholder_readout.md) | Power planning, randomization checks, factorial effects, multiplicity control, economics, and rollout governance |
-| Live macro intelligence | [Private live Macro Correlation Monitor](https://macro-correlation-monitor.nachilu10.chatgpt.site) | Live API integration, rolling relationships, transparent market context, and a governed foundation for cited LLM and Agentic AI research |
-| Reproducible implementation | [Source workflows](01_ab_testing/src) and [automated tests](tests) | Reusable Python, deterministic data, analytical tests, and repository checks |
-| Portfolio scope and milestones | [Roadmap](ROADMAP.md) | Five-repository architecture, planned case studies, completion criteria, and delivery sequence |
+## Analytics engagement at a glance
 
-## What this project demonstrates
+| Item | Typical scope |
+|---|---|
+| **Best for** | Teams facing a consequential KPI, experiment, launch, targeting, or customer decision |
+| **Duration** | 2–3 weeks for a focused analysis or experiment-design sprint |
+| **Inputs** | Decision and available options; data extracts and metric definitions; assignment or intervention timing; known operational changes; decision owner and subject-matter reviewers |
+| **Phase 1** | Define the decision, analytical population, timing, metrics, exclusions, comparison design, and causal limits |
+| **Phase 2** | Validate data, execute the analysis, test assumptions, quantify uncertainty, and review important segments |
+| **Phase 3** | Translate findings into business impact, deliver the executive readout, and define monitoring or next evidence |
+| **Buyer receives** | Decision and metric contract, validation findings, reproducible analysis, effect and uncertainty assessment, executive memo or presentation, and follow-up measurement plan |
+| **Not included** | Unsupported causal claims, new data collection, production dashboard engineering, long-term data-platform work, or ongoing reporting after handoff |
 
-- **Business problem framing** — translating broad requests into decision-ready analytical questions.
-- **Experimentation and causal reasoning** — distinguishing randomized evidence from observational comparisons.
-- **Statistical analysis** — effect sizes, confidence intervals, hypothesis tests, guardrails, and practical significance.
-- **Target design** — auditable eligibility rules, denominator-consistent funnels, opportunity sizing, and capacity allocation.
-- **Diagnostic analysis** — KPI trees, bounded exploration, rate-and-mix decomposition, and time-boxed decision support.
-- **Customer value analytics** — RFM scoring, value concentration, lifecycle migration, and controlled activation design.
-- **Marketing experimentation** — split and factorial testing, power planning, multiplicity control, guardrails, and decision-stage governance.
-- **Macro correlation analysis** — live market data, returns and yield-change transformations, rolling-window comparisons, and regime-aware interpretation.
-- **Data quality** — deliberate validation of duplicates, missingness, invalid values, inconsistent categories, and timing logic.
-- **Reproducible analytics** — deterministic synthetic-data generators, reusable analysis functions, and documented assumptions.
-- **Stakeholder communication** — concise recommendations that separate evidence, limitations, and next actions.
+## Acceptance criteria
 
-## Featured case studies
+A focused engagement should end with:
+
+- documented population, timing, metrics, assumptions, and exclusions;
+- reconciliation between source records and reported results;
+- effect size, uncertainty, practical significance, and limitations reported together;
+- exploratory findings clearly separated from confirmatory evidence;
+- a recommendation tied to an owner and decision date; and
+- a monitoring or next-evidence plan that makes the following decision explicit.
+
+## Start with the executive evidence
+
+| Decision capability | Finished artifact |
+|---|---|
+| Randomized product decision | [NovaPay A/B testing readout](01_ab_testing/reports/stakeholder_readout.md) |
+| Observational launch assessment | [FinFlow launch-impact readout](02_pre_post_analysis/reports/stakeholder_readout.md) |
+| Eligibility and capacity allocation | [LuminaPay targeting readout](03_target_analysis/reports/stakeholder_readout.md) |
+| Time-bounded KPI diagnosis | [OrbitMart diagnostic readout](04_ad_hoc_analysis/reports/stakeholder_readout.md) |
+| Customer value and lifecycle | [Harbor & Pine lifecycle readout](05_customer_value_lifecycle/reports/stakeholder_readout.md) |
+| Marketing experiment selection | [Harbor & Pine experimentation readout](06_marketing_experimentation/reports/stakeholder_readout.md) |
+| Live market-context monitoring | [Macro Correlation Monitor](07_macro_correlation_monitor/README.md) |
+
+## Demonstration boundary
+
+The companies, datasets, and results in this repository are fictional or synthetic unless a source is explicitly identified as live. They demonstrate analytical judgment, reproducibility, validation, and stakeholder communication; they are not client results or guarantees of business impact.
+
+## How an engagement would start
+
+1. Identify the decision, options, audience, deadline, and decision owner.
+2. Review the available data, metric definitions, timing, and known operational changes.
+3. Confirm the written scope, comparison design, deliverables, acceptance criteria, exclusions, and causal limits.
+4. Begin once access, ownership, and review expectations are agreed.
+
+For an initial scope discussion, [email Laura](mailto:laura.riverasancho33@gmail.com) with the decision you need to make, the available data, and the target timeline.
+
+## Demonstration evidence by decision
 
 | Case study | Business decision | Analytical approach | Portfolio evidence |
 |---|---|---|---|
@@ -55,7 +85,7 @@ evidence across the portfolio:
 | **Harbor & Pine Experimentation** | Which retention treatment should advance without approving broad rollout? | Split test and `2 × 2 × 2` factorial experiment | [Finished stakeholder readout](06_marketing_experimentation/reports/stakeholder_readout.md): the leading cell improves conversion by **+2.67 pp** after Holm correction, while margin uncertainty requires a controlled validation stage. |
 | **Macro Correlation Monitor** | When have gold's relationships with DXY and US10Y shifted enough to warrant deeper research? | Live API pipeline, rolling cross-asset correlation, and rules-based market context | [Interactive module](07_macro_correlation_monitor/README.md): selectable **30/90/252-day** views, exact source/freshness metadata, deterministic fallback behavior, and a governed handoff to later cited LLM and Agentic AI layers. |
 
-## Modules and roadmap
+## Technical reference modules
 
 | Module | Status | Focus | Start here |
 |---|---|---|---|
@@ -169,7 +199,7 @@ jupyter notebook notebooks/guided_ab_test_analysis.ipynb
 
 Equivalent instructions and module-specific assumptions are documented in each module README.
 
-## Core analytics lifecycle
+## Delivery methodology
 
 1. Frame the business problem and decision.
 2. Define the analytical question and hypothesis.
@@ -195,7 +225,7 @@ Equivalent instructions and module-specific assumptions are documented in each m
 
 ## Data and privacy
 
-All companies, scenarios, customer identifiers, datasets, and results in this repository are fictional or synthetically generated for education and portfolio demonstration. They do not represent confidential information from any employer or client.
+All companies, scenarios, customer identifiers, datasets, and results in this repository are fictional or synthetically generated to make the analytical workflows reproducible. They do not represent confidential information from any employer or client, and demonstration results are not claims about real business outcomes.
 
 ## Contributing and reuse
 
