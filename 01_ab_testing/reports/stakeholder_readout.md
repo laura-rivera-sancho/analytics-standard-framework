@@ -66,5 +66,5 @@ differ from the experiment if population, implementation, or measurement changes
 
 The values come from deterministic generation with `SEED = 42` and
 `N_CUSTOMERS = 40_000`. See the [reference results](../case_study/expected_results.md),
-[guided notebook](../notebooks/guided_ab_test_analysis.ipynb), and
+[reproducible analysis notebook](../notebooks/reproducible_analysis.ipynb), and
 [analysis code](../src/analyze_experiment.py).

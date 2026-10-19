@@ -1,4 +1,4 @@
-# Ad Hoc Analysis Challenge Answer Key
+# KPI Diagnostic Reference Findings
 
 One defensible response follows. Alternative paths are acceptable if metric definitions, exploratory controls, and evidence strength remain explicit.
 

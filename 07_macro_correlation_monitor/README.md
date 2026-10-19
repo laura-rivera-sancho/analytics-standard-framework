@@ -1,6 +1,6 @@
 # Macro Correlation Monitor
 
-> **Status: Complete.** A live, decision-oriented research dashboard for exploring how gold, the U.S. 10-year Treasury yield, and the U.S. Dollar Index move across market regimes.
+**Evidence status:** Live research dashboard with governed source metadata, tested analytical utilities, deterministic fallback behavior, and an executive readout.
 
 **Portfolio shortcut:** [Open the private live dashboard](https://macro-correlation-monitor.nachilu10.chatgpt.site)
 
@@ -28,7 +28,7 @@ This monitor is designed for analysts, research leads, and downstream research s
 | Resource | Purpose |
 |---|---|
 | [Live dashboard source](site) | Interactive dashboard, live API route, design system, and deployment configuration |
-| [Macro fundamentals](macro_correlation_fundamentals.md) | Key concepts, transformations, interpretation guidance, limitations, and practical analytical questions |
+| [Method notes](method_notes.md) | Key concepts, transformations, interpretation guidance, limitations, and practical analytical questions |
 | [Methodology](methodology.md) | Reusable source-to-decision analytical workflow |
 | [Source contract](case_study/data_source_contract.md) | Instruments, fields, transformations, freshness, limitations, and fallback behavior |
 | [Intelligence-layer contract](case_study/intelligence_layer_contract.md) | Boundary between observed metrics, rules-based context, cited LLM analysis, and agent actions |
@@ -66,4 +66,4 @@ News sentiment and narrative generation are intentionally not presented as compl
 
 ## Decision boundary
 
-Correlation is symmetric association, not causation. Results depend on measurement choice, sampling frequency, rolling-window length, overlapping observations, outliers, and market regime. This case is educational research and not investment advice.
+Correlation is symmetric association, not causation. Results depend on measurement choice, sampling frequency, rolling-window length, overlapping observations, outliers, and market regime. This demonstration is a research-monitoring workflow, not investment advice or a trading recommendation.

@@ -1,4 +1,4 @@
-# Ad Hoc Analysis Fundamentals
+# Ad Hoc Analysis Method Notes
 
 Ad hoc analysis is not unstructured analysis. It is a disciplined response to an urgent, ambiguous question whose decision, scope, and evidence needs are not yet standardized. The analyst's job is to make the problem smaller, protect the metric definition, test the highest-value explanations, and stop with a clear decision handoff.
 

@@ -194,7 +194,7 @@ def test_recruiter_shortcuts_link_to_finished_reports():
 def test_a6_completed_module_uses_guided_notebook_standard():
     module = ROOT / "05_customer_value_lifecycle"
     assert (module / "README.md").exists()
-    assert (module / "customer_value_lifecycle_fundamentals.md").exists()
+    assert (module / "method_notes.md").exists()
     assert (module / "methodology.md").exists()
     assert (module / "case_study/expected_results.md").exists()
     assert list((module / "notebooks").glob("guided*.ipynb"))
@@ -206,7 +206,7 @@ def test_a6_completed_module_uses_guided_notebook_standard():
 def test_a7_foundation_is_decision_ready():
     module = ROOT / "06_marketing_experimentation"
     assert (module / "README.md").exists()
-    assert (module / "marketing_experimentation_fundamentals.md").exists()
+    assert (module / "method_notes.md").exists()
     assert (module / "case_study/business_case.md").exists()
     assert (module / "methodology.md").exists()
     assert (module / "case_study/data_dictionary.md").exists()

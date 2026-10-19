@@ -1,6 +1,6 @@
-# Target Analysis Standard Framework
+# Outreach Eligibility & Prioritization
 
-> **Status: Complete.** This module defines, sizes, profiles, and prioritizes an activation-ready population using transparent business rules and explicit assumptions.
+**Evidence status:** Reproducible case study with an auditable eligibility funnel, capacity-constrained prioritization, tested code, and a finished executive readout.
 
 **Portfolio shortcut:** Review the [Finished stakeholder readout](reports/stakeholder_readout.md) for the recommendation, population funnel, capacity tradeoff, safeguards, and activation plan.
 
@@ -20,17 +20,18 @@ The reference result identifies **25,805 eligible merchants** from a clean popul
 - activation controls, suppression rules, monitoring, and measurement handoff
 - reproducible synthetic data, analysis code, tests, and executive communication
 
-## Navigate the module
+## Review path
 
 | Resource | Purpose |
 |---|---|
-| [Target-analysis fundamentals](target_analysis_fundamentals.md) | Core concepts, boundaries, failure modes, and review questions |
+| [Method notes](method_notes.md) | Core concepts, boundaries, failure modes, and review questions |
 | [Methodology](methodology.md) | Reusable end-to-end workflow and quality gates |
 | [Business case](case_study/business_case.md) | LuminaPay decision, constraints, assumptions, and stakeholders |
 | [Data dictionary](case_study/data_dictionary.md) | Field definitions, lineage, timing, and allowed uses |
 | [Expected results](case_study/expected_results.md) | Deterministic reference outputs and interpretation |
-| [Guided notebook](notebooks/guided_target_analysis.ipynb) | Worked analysis from validation through activation handoff |
-| [Challenge notebook](notebooks/challenge_target_analysis.ipynb) | Independent practice with decision prompts and safeguards |
+| [Reproducible analysis notebook](notebooks/reproducible_analysis.ipynb) | Inspectable workflow from validation through activation handoff |
+| [Reference findings](templates/reference_findings.md) | Expected outputs, recommendation, and essential caveats |
+| [Quality and acceptance checklist](templates/quality_acceptance_checklist.md) | Review criteria for a decision-ready targeting analysis |
 | [Reference analysis](src/analyze_targets.py) | Reusable eligibility, scoring, sizing, and sensitivity functions |
 | [Synthetic generator](src/generate_synthetic_data.py) | Deterministic population with deliberate quality defects |
 | [Stakeholder readout](reports/stakeholder_readout.md) | Finished recommendation and executive artifacts |
@@ -68,6 +69,10 @@ The generator writes a full local population and a compact tracked sample. The f
 ## Interpretation boundary
 
 The priority score is an auditable policy device, not a predicted probability, causal effect, or entitlement. Expected adoption and contribution are planning scenarios, not observed results. Country and industry are used to monitor operational coverage, not to infer protected characteristics or award points. A controlled activation test is still required to estimate incremental impact.
+
+## Secondary reference material
+
+An optional [analysis workbench](reference/learning_lab/analysis_workbench.ipynb) is retained for independent exploration. It is intentionally outside the primary buyer review path.
 
 ## Next module
 

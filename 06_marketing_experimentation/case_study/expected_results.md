@@ -94,4 +94,4 @@ Rationale:
 
 ## Evidence boundary
 
-All organizations, customers, assignments, outcomes, effects, and costs are synthetically generated. The reference result demonstrates analytical practice; it does not predict real campaign performance. Contribution-margin assumptions require Finance approval in a production setting, and channel consent must be revalidated at activation time.
+All organizations, customers, assignments, outcomes, effects, and costs are synthetically generated. The reference result demonstrates analytical controls and decision logic; it does not predict real campaign performance. Contribution-margin assumptions require Finance approval in a production setting, and channel consent must be revalidated at activation time.

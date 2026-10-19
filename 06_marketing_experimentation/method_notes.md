@@ -1,4 +1,4 @@
-# Marketing Experimentation Fundamentals
+# Marketing Experimentation Method Notes
 
 Marketing experimentation uses controlled assignment to estimate what changes because of a message, offer, channel, or experience. The objective is not to find the smallest p-value. It is to make a better decision under uncertainty while protecting customers, economics, and measurement integrity.
 

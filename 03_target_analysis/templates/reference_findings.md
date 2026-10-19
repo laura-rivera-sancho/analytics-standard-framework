@@ -1,6 +1,6 @@
-# Target Analysis Challenge Answer Key
+# Target Analysis Reference Findings
 
-This key provides one defensible solution. Alternative recommendations are acceptable when assumptions, safeguards, and tradeoffs are explicit.
+This document records one defensible analytical path. Alternative recommendations are credible when assumptions, safeguards, and tradeoffs are explicit.
 
 ## Reference workflow
 

@@ -1,6 +1,6 @@
 # Customer Value & Lifecycle Analytics
 
-> **Status: Complete.** This module turns governed customer and order data into reproducible RFM segments, lifecycle movement, and a controlled retention action plan.
+**Evidence status:** Reproducible case study with governed RFM segments, lifecycle movement, a capacity-constrained activation plan, and a finished executive readout.
 
 **Portfolio shortcut:** Review the [Finished stakeholder readout](reports/stakeholder_readout.md) for the value concentration, migration risks, and recommended 500-customer activation.
 
@@ -21,16 +21,16 @@ The reference analysis finds that **Champions represent 23.1% of customers but 5
 - activation guidance with a randomized holdout and outcome measurement plan
 - a direct analytical consumer of the portfolio's governed customer data architecture
 
-## Navigate the module
+## Review path
 
 | Resource | Purpose |
 |---|---|
-| [Fundamentals](customer_value_lifecycle_fundamentals.md) | Core RFM, lifecycle, prioritization, governance, and interpretation concepts |
+| [Method notes](method_notes.md) | Core RFM, lifecycle, prioritization, governance, and interpretation concepts |
 | [Methodology](methodology.md) | Reusable customer-value workflow and analytical quality gates |
 | [Business case](case_study/business_case.md) | Decision, audience, constraints, and success criteria |
 | [Data dictionary](case_study/data_dictionary.md) | Transaction grain, fields, derived measures, and exclusions |
 | [Expected results](case_study/expected_results.md) | Deterministic findings and interpretation boundary |
-| [Guided notebook](notebooks/guided_customer_value_lifecycle.ipynb) | Worked RFM, profile, migration, and activation analysis |
+| [Reproducible analysis notebook](notebooks/reproducible_analysis.ipynb) | Inspectable RFM, profile, migration, and activation analysis |
 | [Reference analysis](src/analyze_customer_value.py) | Reusable quality, RFM, migration, and prioritization functions |
 | [Synthetic generator](src/generate_synthetic_data.py) | Deterministic customer-order history with deliberate defects |
 | [Stakeholder readout](reports/stakeholder_readout.md) | Executive recommendation and portfolio artifacts |
@@ -53,4 +53,4 @@ RFM describes observed purchase behavior; it does not estimate incremental respo
 
 ## Data-platform relationship
 
-The analytical contracts mirror the governed `customer_360` and `rfm_segments` products in the [Data Architecture Standard Framework](https://github.com/laura-rivera-sancho/data-architecture-standard-framework). This repository remains independently reproducible through synthetic inputs while demonstrating how the two portfolio pillars connect.
+The analytical contracts mirror the governed `customer_360` and `rfm_segments` products in [Governed Analytics Data Products](https://github.com/laura-rivera-sancho/data-architecture-standard-framework). This repository remains independently reproducible through synthetic inputs while demonstrating how the two portfolio pillars connect.

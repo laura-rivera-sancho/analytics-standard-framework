@@ -1,6 +1,6 @@
-# FinFlow Challenge Answer Key — Expected Analytical Narrative
+# FinFlow Reference Findings
 
-This answer key summarizes the expected interpretation for the FinFlow Pre/Post challenge. Exact numeric values may vary slightly if the synthetic generator is modified, but the analytical storyline should remain consistent.
+This document records the expected interpretation for the reproducible FinFlow impact assessment. Exact numeric values may vary slightly if the synthetic generator is modified, but the analytical storyline and decision boundary should remain consistent.
 
 ## 1. Business framing
 

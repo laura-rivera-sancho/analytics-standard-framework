@@ -1,4 +1,4 @@
-# Macro Correlation Fundamentals
+# Macro Correlation Method Notes
 
 This reference explains the key concepts, transformations, interpretation choices, limitations, and practical knowledge required to perform macro correlation analysis responsibly.
 

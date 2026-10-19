@@ -68,7 +68,7 @@ def test_invalid_series_contract_fails_loudly():
 
 def test_fundamentals_and_intelligence_contract_preserve_analysis_scope():
     module_root = MODULE.parents[1]
-    fundamentals = (module_root / "macro_correlation_fundamentals.md").read_text(encoding="utf-8")
+    fundamentals = (module_root / "method_notes.md").read_text(encoding="utf-8")
     contract = (module_root / "case_study" / "intelligence_layer_contract.md").read_text(
         encoding="utf-8"
     )

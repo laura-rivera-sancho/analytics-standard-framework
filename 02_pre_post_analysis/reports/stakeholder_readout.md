@@ -74,5 +74,5 @@ observational evidence, not randomized causal proof.
 
 The results come from the deterministic synthetic generator and reference
 workflow. See the [business case](../case_study/business_case.md),
-[guided notebook](../notebooks/guided_pre_post_analysis.ipynb), and
+[reproducible analysis notebook](../notebooks/reproducible_analysis.ipynb), and
 [analysis code](../src/analyze_pre_post.py).

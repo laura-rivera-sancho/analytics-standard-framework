@@ -1,14 +1,14 @@
 # Contributing
 
-Thank you for helping improve the Analytics Standard Framework. Contributions
-should strengthen its value as a reusable, decision-focused analytics resource.
+Thank you for helping improve the Decision Analytics Case Studies. Contributions
+should strengthen their value as reusable, decision-focused analytical evidence.
 
 ## Ways to contribute
 
 - correct unclear guidance, broken links, or reproducibility issues
 - improve tests, documentation, accessibility, or developer experience
 - propose a new case study, analytical method, or reusable template
-- complete or extend a planned module using the repository standard
+- complete or extend a decision case using the repository evidence standard
 
 For substantial changes, open a module proposal before implementation so the
 business decision, method, and intended deliverables can be discussed first.
@@ -27,23 +27,23 @@ pip install -r requirements-dev.txt
 Create a focused branch, keep commits small and descriptive, and avoid mixing
 unrelated changes in the same pull request.
 
-## Module standard
+## Case-study evidence standard
 
-A module described as complete should include:
+A published case study should include:
 
 1. a module README with audience, decisions supported, navigation, and run steps
-2. fundamentals and methodology documentation
+2. method notes and methodology documentation
 3. a fictional business case and data dictionary
 4. deterministic synthetic-data generation with a small reviewable sample
 5. reusable analysis code with explicit validation and assumptions
-6. a guided notebook only when it materially improves the review experience; do not add challenge notebooks
-7. deterministic expected results or an answer key
+6. a reproducible notebook only when it materially improves the review experience; place optional exercises in a secondary reference area
+7. deterministic expected results or reference findings
 8. a stakeholder communication template
 9. limitations, privacy disclosure, and a monitoring or follow-up plan
 10. passing repository-quality checks
 
-See the [roadmap](ROADMAP.md) for the canonical completion standard and planned
-module scope.
+See the [roadmap](ROADMAP.md) for the shared evidence standard and cross-portfolio
+readiness map.
 
 ## Data and privacy
 
@@ -64,7 +64,7 @@ pytest --cov
 ```
 
 Also run any changed analysis workflow end to end and confirm that documented
-results still match its expected-results file or answer key.
+results still match its expected-results file or reference findings.
 
 ## Accessibility and inclusive communication
 
@@ -77,7 +77,7 @@ results still match its expected-results file or answer key.
 
 ## Pull requests
 
-Use the pull request template and explain the decision or learner need addressed,
+Use the pull request template and explain the decision or reviewer need addressed,
 the analytical impact, and the validation performed. Include screenshots or
 generated artifacts when a visible output changes. Small, focused pull requests
 are easier to review and maintain.

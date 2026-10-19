@@ -1,4 +1,4 @@
-# Target Analysis Fundamentals
+# Target Analysis Method Notes
 
 Target analysis converts a business action into a governed population: who can be considered, who must be excluded, how large the opportunity is, and how limited capacity should be allocated. Its credibility depends less on algorithmic complexity than on definitions, denominators, traceability, and a safe activation handoff.
 

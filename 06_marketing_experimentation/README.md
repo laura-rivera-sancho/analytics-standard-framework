@@ -1,6 +1,6 @@
 # Marketing Experimentation Suite
 
-> **Status: Complete.** This module extends the Harbor & Pine customer-value case into a governed retention experimentation program covering a simple split test and a full-factorial multivariate test.
+**Evidence status:** Reproducible case study with governed split-test and factorial analysis, executable validation controls, and a finished executive readout.
 
 **Portfolio shortcut:** [Finished stakeholder readout](reports/stakeholder_readout.md)
 
@@ -27,16 +27,16 @@ The suite separates two learning goals:
 - segment analysis that distinguishes prespecified heterogeneity from post-hoc exploration
 - staged rollout guidance with monitoring and stop rules
 
-## Navigate the current foundation
+## Review path
 
 | Resource | Purpose |
 |---|---|
-| [Experimentation fundamentals](marketing_experimentation_fundamentals.md) | Core concepts, design tradeoffs, interpretation rules, and a review checklist |
+| [Method notes](method_notes.md) | Core concepts, design tradeoffs, interpretation rules, and a review checklist |
 | [Business case](case_study/business_case.md) | Decision, population, test designs, metrics, governance, and acceptance criteria |
 | [Methodology](methodology.md) | Reusable experiment workflow from charter through rollout monitoring |
 | [Data dictionary](case_study/data_dictionary.md) | Assignment grain, fields, factor catalog, outcomes, guardrails, and defect rules |
 | [Expected results](case_study/expected_results.md) | Deterministic validity, split-test, factorial, margin, and decision narrative |
-| [Guided notebook](notebooks/guided_marketing_experimentation.ipynb) | Worked validation, inference, multiplicity, economics, and recommendation |
+| [Reproducible analysis notebook](notebooks/reproducible_analysis.ipynb) | Inspectable validation, inference, multiplicity, economics, and recommendation |
 | [Synthetic generator](src/generate_synthetic_data.py) | Deterministic split and factorial assignments with deliberate defects |
 | [Validation gate](src/validate_experiment_data.py) | Executable consent, assignment, timestamp, maturity, and reconciliation controls |
 | [Analytical engine](src/analyze_marketing_experiments.py) | Power, SRM, split effects, factorial contrasts, multiplicity, margin, and guardrails |
@@ -44,7 +44,7 @@ The suite separates two learning goals:
 | [Readout template](templates/stakeholder_readout_template.md) | Reusable experiment decision communication structure |
 | [Portfolio roadmap](../ROADMAP.md) | A7 scope and relationship to the broader Data & AI portfolio |
 
-The publication package includes the executive preview, Markdown stakeholder readout, and editable five-slide PowerPoint deck. The module passed its technical, analytical, communication, and portfolio review gates.
+The publication package includes the executive preview, Markdown stakeholder readout, and editable five-slide PowerPoint deck. The repository contains the technical, analytical, communication, and validation evidence needed to assess the case.
 
 ## Run the analysis
 

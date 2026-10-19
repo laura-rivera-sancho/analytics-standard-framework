@@ -1,4 +1,4 @@
-# Pre/Post Analysis Fundamentals
+# Pre/Post Analysis Method Notes
 
 ## What is pre/post analysis?
 

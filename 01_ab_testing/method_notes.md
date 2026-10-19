@@ -1,4 +1,4 @@
-# A/B Testing Fundamentals
+# A/B Testing Method Notes
 
 ## What A/B testing is
 
@@ -491,8 +491,8 @@ Then use:
 
 - `methodology.md` for the standard execution process;
 - `case_study/business_case.md` for the NovaPay scenario;
-- `notebooks/guided_ab_test_analysis.ipynb` for a worked example;
-- `notebooks/challenge_ab_test_analysis.ipynb` for independent practice.
+- `notebooks/reproducible_analysis.ipynb` for the reproducible analysis; and
+- `reference/learning_lab/analysis_workbench.ipynb` for an optional secondary workbench.
 
 The guiding principle remains:
 

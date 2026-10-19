@@ -136,7 +136,7 @@ A treatment can be recommended for staged rollout only when:
 
 If no treatment meets all gates, the valid decision is to retain the current policy, redesign the treatment, or collect more evidence—not to select the lowest p-value.
 
-## Planned data-quality challenges
+## Planned data-quality conditions
 
 The synthetic generator will deliberately introduce a small, documented set of defects so validation behavior is inspectable:
 
@@ -154,11 +154,11 @@ Critical defects will be quarantined or block analysis according to a declared r
 
 A7 is complete only when it publishes:
 
-- a reusable fundamentals guide and analytical methodology
+- reusable method notes and analytical methodology
 - a versioned data dictionary and deterministic synthetic generator
 - validated split-test and factorial datasets with compact tracked samples
 - reusable power, integrity, effect-estimation, multiplicity, interaction, and business-value functions
-- one guided notebook and no challenge notebook
+- one reproducible analysis notebook
 - automated tests for critical statistical and governance logic
 - deterministic expected results
 - an executive preview, Markdown readout, and five-slide PowerPoint deck

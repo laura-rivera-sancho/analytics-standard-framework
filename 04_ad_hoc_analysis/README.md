@@ -1,6 +1,6 @@
-# Ad Hoc Analysis Standard Framework
+# KPI Diagnostic & Decision Response
 
-> **Status: Complete.** This module turns an ambiguous, time-sensitive KPI question into a bounded, reproducible diagnostic and decision-ready response.
+**Evidence status:** Reproducible case study with a bounded KPI diagnosis, tested analytical utilities, and a finished executive readout.
 
 **Portfolio shortcut:** Review the [Finished stakeholder readout](reports/stakeholder_readout.md) for the diagnostic conclusion, evidence hierarchy, immediate action, and follow-up measurement plan.
 
@@ -21,17 +21,18 @@ The reference analysis finds a **0.97 percentage-point decline**, localized prim
 - concise recommendations, operational escalation, and follow-up measurement
 - reproducible synthetic data, code, tests, notebooks, and executive communication
 
-## Navigate the module
+## Review path
 
 | Resource | Purpose |
 |---|---|
-| [Ad hoc analysis fundamentals](ad_hoc_analysis_fundamentals.md) | Core concepts, guardrails, failure modes, and stopping rules |
+| [Method notes](method_notes.md) | Core concepts, guardrails, failure modes, and stopping rules |
 | [Methodology](methodology.md) | Reusable intake-to-handoff workflow and quality gates |
 | [Business case](case_study/business_case.md) | OrbitMart decision, timeline, hypotheses, and constraints |
 | [Data dictionary](case_study/data_dictionary.md) | Grain, metric fields, dimensions, and timing |
 | [Expected results](case_study/expected_results.md) | Deterministic outputs and evidence interpretation |
-| [Guided notebook](notebooks/guided_ad_hoc_analysis.ipynb) | Worked diagnostic from validation through recommendation |
-| [Challenge notebook](notebooks/challenge_ad_hoc_analysis.ipynb) | Independent time-bounded diagnostic practice |
+| [Reproducible analysis notebook](notebooks/reproducible_analysis.ipynb) | Inspectable diagnostic from validation through recommendation |
+| [Reference findings](templates/reference_findings.md) | Expected diagnostic path, conclusion, and interpretation guardrails |
+| [Quality and acceptance checklist](templates/quality_acceptance_checklist.md) | Review criteria for a decision-ready diagnostic |
 | [Reference diagnostic](src/diagnose_kpi_change.py) | Reusable KPI tree, decomposition, inference, and impact functions |
 | [Synthetic generator](src/generate_synthetic_data.py) | Deterministic checkout data with deliberate quality defects |
 | [Stakeholder readout](reports/stakeholder_readout.md) | Finished analytical memo and executive artifacts |
@@ -71,6 +72,10 @@ The generator writes a full local dataset and a compact tracked sample. The full
 ## Interpretation boundary
 
 The analysis shows where the decline is concentrated and which funnel rate moved. It does not prove whether the Android release, wallet processor, or their interaction caused the issue. Operational logs, incident records, and a controlled rollback or routing change are required for causal confirmation.
+
+## Secondary reference material
+
+An optional [analysis workbench](reference/learning_lab/analysis_workbench.ipynb) is retained for independent exploration. It is intentionally outside the primary buyer review path.
 
 ## Portfolio connection
 

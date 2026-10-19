@@ -104,42 +104,42 @@ analytics-standard-framework/
 ├── 01_ab_testing/
 │   ├── case_study/      # NovaPay business case, data dictionary, and reference results
 │   ├── data/raw/        # Compact synthetic sample
-│   ├── notebooks/       # Guided and challenge analyses
+│   ├── notebooks/       # Reproducible analysis notebook
 │   ├── reports/         # Finished Markdown readout, preview, and PowerPoint deck
 │   ├── src/             # Data generator and reference analysis
 │   └── templates/       # Experiment planning, validation, and stakeholder readout
 ├── 02_pre_post_analysis/
 │   ├── case_study/      # FinFlow business case and data dictionary
 │   ├── data/raw/        # Compact synthetic sample
-│   ├── notebooks/       # Guided and challenge analyses
+│   ├── notebooks/       # Reproducible analysis notebook
 │   ├── reports/         # Finished Markdown readout, preview, and PowerPoint deck
 │   ├── src/             # Data generator and Pre/Post/ITS analysis
-│   └── templates/       # Authoring guide, answer key, rubric, and reusable template
+│   └── templates/       # Reference findings, acceptance checklist, and reusable template
 ├── 03_target_analysis/
 │   ├── case_study/      # LuminaPay decision, dictionary, and expected results
 │   ├── data/raw/        # Compact synthetic merchant sample
-│   ├── notebooks/       # Guided and challenge targeting workflows
+│   ├── notebooks/       # Reproducible targeting analysis
 │   ├── reports/         # Finished Markdown readout, preview, and PowerPoint deck
 │   ├── src/             # Synthetic data, eligibility, sizing, and prioritization
-│   └── templates/       # Answer key, rubric, and activation readout
+│   └── templates/       # Reference findings, acceptance checklist, and activation readout
 ├── 04_ad_hoc_analysis/
 │   ├── case_study/      # OrbitMart diagnostic case, dictionary, and results
 │   ├── data/raw/        # Compact synthetic checkout sample
-│   ├── notebooks/       # Guided and challenge diagnostic workflows
+│   ├── notebooks/       # Reproducible diagnostic analysis
 │   ├── reports/         # Finished Markdown readout, preview, and PowerPoint deck
 │   ├── src/             # Synthetic data, KPI tree, decomposition, and inference
-│   └── templates/       # Intake brief, answer key, rubric, and readout
+│   └── templates/       # Intake brief, reference findings, acceptance checklist, and readout
 ├── 05_customer_value_lifecycle/
 │   ├── case_study/      # Harbor & Pine decision, dictionary, and reference results
 │   ├── data/raw/        # Compact synthetic customer-order sample
-│   ├── notebooks/       # Guided lifecycle analysis
+│   ├── notebooks/       # Reproducible lifecycle analysis
 │   ├── reports/         # Finished Markdown readout, preview, and PowerPoint deck
 │   ├── src/             # Synthetic data, RFM, migration, prioritization, and visualization
 │   └── templates/       # Reusable lifecycle stakeholder readout
 ├── 06_marketing_experimentation/
 │   ├── case_study/      # Harbor & Pine charter, dictionary, and reference results
 │   ├── data/raw/        # Compact synthetic split-test and factorial-assignment sample
-│   ├── notebooks/       # Guided experimentation analysis
+│   ├── notebooks/       # Reproducible experimentation analysis
 │   ├── reports/         # Finished Markdown readout, preview, and PowerPoint deck
 │   ├── src/             # Generator, validation, analysis, and visualization
 │   └── templates/       # Reusable experiment stakeholder readout
@@ -148,7 +148,7 @@ analytics-standard-framework/
 │   ├── reports/         # Research-oriented stakeholder readout
 │   ├── site/            # Live Sites dashboard and market-data API route
 │   └── src/             # Tested alignment, transformation, and risk utilities
-├── ROADMAP.md            # Five-repository portfolio plan and milestone definitions
+├── ROADMAP.md            # Cross-portfolio evidence and readiness map
 └── README.md             # Portfolio landing page
 ```
 
@@ -158,7 +158,7 @@ analytics-standard-framework/
 
 - Python 3.11 or 3.12
 - `pip`
-- Jupyter for the guided notebooks
+- Jupyter for the reproducible analysis notebooks
 - Node.js only for the optional reusable PowerPoint template generators
 
 ### Run an analysis
@@ -191,10 +191,10 @@ ruff check .
 pytest
 ```
 
-Open the guided notebook:
+Open the reproducible analysis notebook:
 
 ```bash
-jupyter notebook notebooks/guided_ab_test_analysis.ipynb
+jupyter notebook notebooks/reproducible_analysis.ipynb
 ```
 
 Equivalent instructions and module-specific assumptions are documented in each module README.

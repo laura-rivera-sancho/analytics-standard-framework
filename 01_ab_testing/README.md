@@ -1,67 +1,67 @@
-# A/B Testing Standard Framework
+# Checkout Experiment Decision Analysis
 
-This module defines a repeatable process for understanding, designing, validating, analyzing, and communicating controlled experiments.
+**Evidence status:** Reproducible case study with tested analysis code, inspectable synthetic data, and a finished executive readout.
 
-**Portfolio shortcut:** Review the [finished NovaPay stakeholder readout](reports/stakeholder_readout.md)
-or [download the five-slide PowerPoint deck](reports/stakeholder_readout.pptx).
+[Read the NovaPay stakeholder readout](reports/stakeholder_readout.md) · [Download the five-slide deck](reports/stakeholder_readout.pptx) · [Inspect the analysis](src/analyze_experiment.py)
 
-## How to use this module
+## Business decision
 
-The module is organized in four layers:
+Should NovaPay roll out a simplified digital checkout experience, iterate on it, or stop the change?
 
-1. **Fundamentals** — understand the concepts behind experimentation.
-2. **Methodology** — follow the standard execution process.
-3. **Practice** — apply the framework using the synthetic NovaPay case.
-4. **Stakeholder communication** — convert analytical findings into a concise decision-focused readout.
+The case demonstrates how a randomized experiment is translated into an evidence-calibrated recommendation using implementation checks, prespecified metrics, uncertainty, practical significance, segment review, and business impact.
 
-Start here:
+## What this case demonstrates
 
-- [Finished stakeholder readout](reports/stakeholder_readout.md) for the NovaPay decision memo, executive preview, and PowerPoint deck.
-- [Guided analysis notebook](notebooks/guided_ab_test_analysis.ipynb) for the step-by-step worked analysis.
-- [Challenge notebook](notebooks/challenge_ab_test_analysis.ipynb) for independent practice with TODO cells and no solutions.
-- [A/B testing fundamentals](ab_testing_fundamentals.md) for concepts, design choices, interpretation, and common pitfalls.
-- [Analytical methodology](methodology.md) for the execution standard.
-- [NovaPay business case](case_study/business_case.md) and [data dictionary](case_study/data_dictionary.md) for scenario and field definitions.
-- [Stakeholder presentation guide](templates/stakeholder_readout_deck.md) for slide-by-slide communication guidance.
-- [Synthetic-data generator](src/generate_synthetic_data.py) and [reference analysis](src/analyze_experiment.py) for the reproducible workflow.
+- decision framing, hypotheses, and success measures defined before outcome review;
+- eligible population, randomization unit, Control, and Treatment design;
+- sample-size, power, minimum-detectable-effect, and duration planning;
+- experiment-integrity and data-quality validation;
+- effect size, confidence interval, and practical-significance reporting;
+- segment and guardrail review without causal overclaiming; and
+- an executive recommendation with rollout and monitoring conditions.
 
-## Standard lifecycle
+## Review path
 
-1. Frame the business decision.
-2. Define the hypothesis.
-3. Define the eligible population and unit of randomization.
-4. Design Control and Treatment groups.
-5. Define primary, secondary, and guardrail KPIs before reading outcomes.
-6. Plan sample size, power, minimum detectable effect (MDE), and test duration.
-7. Validate experiment implementation and data quality.
-8. Select statistical methods based on metric type and design.
-9. Quantify statistical significance, confidence intervals, and effect size.
-10. Investigate segments, confounders, and experiment integrity.
-11. Translate the result into business impact.
-12. Recommend rollout, iteration, retest, or stop.
-13. Communicate the decision using the standard stakeholder readout.
+| Evidence | Purpose |
+|---|---|
+| [Stakeholder readout](reports/stakeholder_readout.md) | Finished decision memo, result interpretation, limitations, and recommendation |
+| [Business case](case_study/business_case.md) | Decision, constraints, stakeholders, and expected use |
+| [Data dictionary](case_study/data_dictionary.md) | Field definitions, grain, timing, and quality rules |
+| [Reproducible analysis notebook](notebooks/reproducible_analysis.ipynb) | Inspectable workflow from validation through recommendation |
+| [Method notes](method_notes.md) | Design choices, interpretation guidance, and common failure modes |
+| [Analytical methodology](methodology.md) | Reusable execution and review process |
+| [Reference analysis](src/analyze_experiment.py) | Tested statistical and business-impact implementation |
+| [Synthetic-data generator](src/generate_synthetic_data.py) | Deterministic input generation for independent reproduction |
 
-## Case study
+## Delivery workflow
 
-The example in this module uses **NovaPay**, a fictional payments company testing a simplified digital checkout experience. All data are synthetic; the results illustrate the method rather than a production outcome.
+1. Frame the business decision and possible actions.
+2. Define the hypothesis, eligible population, and unit of randomization.
+3. Lock primary, secondary, and guardrail measures before reading outcomes.
+4. Confirm power, minimum detectable effect, and test duration.
+5. Validate implementation, assignment integrity, and analytical data.
+6. Estimate absolute and relative effects with uncertainty.
+7. Review practical significance, important segments, and guardrails.
+8. Translate the result into business impact and a rollout decision.
+9. Define monitoring, rollback conditions, and the next evidence required.
 
-## Running the notebooks
+## Reproduce the evidence
 
 From the `01_ab_testing` directory:
 
 ```bash
 pip install -r requirements.txt
-jupyter notebook notebooks/guided_ab_test_analysis.ipynb
+python src/generate_synthetic_data.py
+python src/analyze_experiment.py
+jupyter notebook notebooks/reproducible_analysis.ipynb
 ```
 
-or:
+An optional [analysis workbench](reference/learning_lab/analysis_workbench.ipynb) is retained in the secondary reference area. It is not part of the primary buyer review path.
 
-```bash
-jupyter notebook notebooks/challenge_ab_test_analysis.ipynb
-```
+## Demonstration boundary
 
-The guided notebook demonstrates the full workflow from raw data to recommendation. The challenge notebook gives the same business problem and synthetic data, but requires the analyst to build the data-quality checks, statistical analysis, segmentation, business-impact estimate, and executive recommendation independently.
+NovaPay, the dataset, and the reported results are synthetic. The case demonstrates analytical design, validation, reproducibility, and executive communication; it does not claim a real checkout lift or authorize a production rollout.
 
-## Important principle
+## Decision principle
 
-Start with the business decision, not the statistical test. The purpose of experimentation is to reduce uncertainty and support a better decision.
+Start with the business decision, not the statistical test. The purpose of experimentation is to reduce uncertainty enough to choose an action responsibly.

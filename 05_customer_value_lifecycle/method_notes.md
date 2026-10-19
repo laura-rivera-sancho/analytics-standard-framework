@@ -1,4 +1,4 @@
-# Customer Value and Lifecycle Analytics Fundamentals
+# Customer Value and Lifecycle Analytics Method Notes
 
 Customer value and lifecycle analytics organize observed customer behavior into interpretable groups that support differentiated decisions. The goal is not to label customers permanently. It is to create a current, auditable view of engagement and value, then connect that view to an appropriate action and measurement plan.
 
