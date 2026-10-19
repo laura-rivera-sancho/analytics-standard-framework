@@ -3,7 +3,7 @@ const pptxgen = require('pptxgenjs');
 const pptx = new pptxgen();
 pptx.layout = 'LAYOUT_WIDE';
 pptx.author = 'Laura Rivera Sancho';
-pptx.company = 'Analytics Standard Framework';
+pptx.company = 'Laura Rivera | Decision Analytics';
 pptx.subject = 'Reusable stakeholder readout template for A/B testing results';
 pptx.theme = { headFontFace: 'Aptos Display', bodyFontFace: 'Aptos', lang: 'en-US' };
 
@@ -74,7 +74,7 @@ slide.addShape(pptx.ShapeType.rect, { x: 4.15, y: 0, w: 0.12, h: 7.5, fill: { co
 text(slide, 'A/B TESTING', 0.58, 0.75, 2.4, 0.3, { size: 11, bold: true, color: 'A8C7FA' });
 text(slide, 'Stakeholder\nReadout Template', 0.58, 1.25, 3.0, 1.7, { size: 30, bold: true, color: C.white, face: 'Aptos Display' });
 text(slide, 'Standard template for communicating controlled-experiment results with business impact and recommendations.', 0.6, 3.45, 2.85, 0.85, { size: 12, color: 'DCE8F6' });
-text(slide, 'Analytics Standard Framework', 0.6, 6.65, 2.8, 0.25, { size: 9, color: 'DCE8F6' });
+text(slide, 'Decision Analytics Case Studies', 0.6, 6.65, 2.8, 0.25, { size: 9, color: 'DCE8F6' });
 text(slide, 'How to use this deck', 4.9, 0.85, 4.4, 0.38, { size: 20, bold: true, color: C.navy, face: 'Aptos Display' });
 text(slide, 'Replace placeholders with experiment-specific evidence. Keep the story decision-focused: what happened, does it matter, and what should we do?', 4.9, 1.35, 6.6, 0.8, { size: 12 });
 label(slide, 'Recommended storyline', 4.9, 2.4);

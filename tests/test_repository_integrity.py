@@ -47,24 +47,24 @@ def test_notebooks_are_valid_json_and_code_cells_compile():
     assert not errors, "Notebook errors:\n" + "\n".join(errors)
 
 
-def test_completed_modules_exist():
-    completed = [
+def test_case_study_evidence_exists():
+    case_studies = [
         "01_ab_testing",
         "02_pre_post_analysis",
         "03_target_analysis",
         "04_ad_hoc_analysis",
         "05_customer_value_lifecycle",
     ]
-    for module in completed:
+    for module in case_studies:
         root = ROOT / module
         assert (root / "README.md").exists()
         assert (root / "methodology.md").exists()
         assert (root / "case_study/business_case.md").exists()
         assert (root / "case_study/data_dictionary.md").exists()
-        assert list(root.glob("*fundamentals*.md"))
-        assert list((root / "notebooks").glob("guided*.ipynb"))
+        assert (root / "method_notes.md").exists()
+        assert (root / "notebooks/reproducible_analysis.ipynb").exists()
         if module != "05_customer_value_lifecycle":
-            assert list((root / "notebooks").glob("challenge*.ipynb"))
+            assert (root / "reference/learning_lab/analysis_workbench.ipynb").exists()
         assert list((root / "src").glob("*.py"))
         assert list((root / "templates").glob("*readout*.md"))
 
@@ -115,7 +115,7 @@ def test_community_health_files_exist_and_are_linked():
 def test_citation_metadata_identifies_repository_and_license():
     citation = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
     assert "cff-version: 1.2.0" in citation
-    assert 'title: "Analytics Standard Framework"' in citation
+    assert 'title: "Decision Analytics Case Studies"' in citation
     assert "license: MIT" in citation
     assert "laura-rivera-sancho/analytics-standard-framework" in citation
 
@@ -176,9 +176,9 @@ def test_markdown_accessibility_basics():
     assert not errors, "Markdown accessibility errors:\n" + "\n".join(errors)
 
 
-def test_recruiter_shortcuts_link_to_finished_reports():
+def test_buyer_review_paths_link_to_finished_reports():
     root_readme = (ROOT / "README.md").read_text(encoding="utf-8")
-    assert "## Explore the Analytics portfolio" in root_readme
+    assert "## Start with the executive evidence" in root_readme
 
     for module in [
         "01_ab_testing",
@@ -187,18 +187,17 @@ def test_recruiter_shortcuts_link_to_finished_reports():
         "04_ad_hoc_analysis",
     ]:
         module_readme = (ROOT / module / "README.md").read_text(encoding="utf-8")
-        assert "**Portfolio shortcut:**" in module_readme
-        assert "[Finished stakeholder readout](reports/stakeholder_readout.md)" in module_readme
+        assert "## Review path" in module_readme
+        assert "reports/stakeholder_readout.md" in module_readme
 
 
-def test_a6_completed_module_uses_guided_notebook_standard():
+def test_a6_publishes_reproducible_analysis_evidence():
     module = ROOT / "05_customer_value_lifecycle"
     assert (module / "README.md").exists()
     assert (module / "method_notes.md").exists()
     assert (module / "methodology.md").exists()
     assert (module / "case_study/expected_results.md").exists()
-    assert list((module / "notebooks").glob("guided*.ipynb"))
-    assert not list((module / "notebooks").glob("challenge*.ipynb"))
+    assert (module / "notebooks/reproducible_analysis.ipynb").exists()
     assert (module / "reports/executive_summary.png").read_bytes().startswith(b"\x89PNG\r\n\x1a\n")
     assert (module / "reports/stakeholder_readout.pptx").read_bytes().startswith(b"PK")
 
@@ -216,8 +215,7 @@ def test_a7_foundation_is_decision_ready():
     assert (module / "src/validate_experiment_data.py").exists()
     assert (module / "src/analyze_marketing_experiments.py").exists()
     assert (module / "data/raw/harbor_pine_experiment_assignments_sample.csv").exists()
-    assert list((module / "notebooks").glob("guided*.ipynb"))
-    assert not list((module / "notebooks").glob("challenge*.ipynb"))
+    assert (module / "notebooks/reproducible_analysis.ipynb").exists()
     assert list((module / "templates").glob("*readout*.md"))
 
     report = (module / "reports/stakeholder_readout.md").read_text(encoding="utf-8")
@@ -230,4 +228,4 @@ def test_a7_foundation_is_decision_ready():
     business_case = (module / "case_study/business_case.md").read_text(encoding="utf-8")
     assert "Experiment 1 — Lifecycle-message split test" in business_case
     assert "Experiment 2 — Full-factorial multivariate test" in business_case
-    assert "one guided notebook and no challenge notebook" in business_case
+    assert "one reproducible analysis notebook" in business_case

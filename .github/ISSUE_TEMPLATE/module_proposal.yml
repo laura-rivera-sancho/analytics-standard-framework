@@ -7,7 +7,7 @@ body:
   - type: textarea
     id: decision
     attributes:
-      label: Decision or learner need
+      label: Decision or stakeholder need
       description: What business decision or learning objective should this address?
     validations:
       required: true

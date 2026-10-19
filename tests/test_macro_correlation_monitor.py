@@ -66,13 +66,13 @@ def test_invalid_series_contract_fails_loudly():
         )
 
 
-def test_fundamentals_and_intelligence_contract_preserve_analysis_scope():
+def test_method_notes_and_intelligence_contract_preserve_analysis_scope():
     module_root = MODULE.parents[1]
-    fundamentals = (module_root / "method_notes.md").read_text(encoding="utf-8")
+    method_notes = (module_root / "method_notes.md").read_text(encoding="utf-8")
     contract = (module_root / "case_study" / "intelligence_layer_contract.md").read_text(
         encoding="utf-8"
     )
-    assert "interview" not in fundamentals.lower()
-    assert "correlation" in fundamentals.lower()
+    assert "interview" not in method_notes.lower()
+    assert "correlation" in method_notes.lower()
     assert "cited llm research" in contract.lower()
     assert "mandatory human approval" in contract.lower()

@@ -2,7 +2,7 @@ const pptxgen = require('pptxgenjs');
 
 const pptx = new pptxgen();
 pptx.layout = 'LAYOUT_WIDE';
-pptx.author = 'Analytics Standard Framework';
+pptx.author = 'Laura Rivera | Decision Analytics';
 pptx.subject = 'Pre/Post stakeholder readout template';
 pptx.title = 'Pre/Post Impact Analysis Stakeholder Readout Template';
 pptx.company = 'Portfolio / Training Template';
@@ -38,7 +38,7 @@ function title(slide, title, subtitle) {
 
 function footer(slide, n) {
   slide.addShape(pptx.ShapeType.rect, { x: 0, y: 7.18, w: 13.333, h: 0.04, fill: { color: C.blue }, line: { color: C.blue } });
-  slide.addText('Pre/Post Analysis Standard Framework | Stakeholder Readout Template', { x: 0.65, y: 7.22, w: 9, h: 0.22, fontSize: 8, color: C.gray, margin: 0 });
+  slide.addText('Launch Impact Assessment | Stakeholder Readout Template', { x: 0.65, y: 7.22, w: 9, h: 0.22, fontSize: 8, color: C.gray, margin: 0 });
   slide.addText(String(n), { x: 12.3, y: 7.22, w: 0.45, h: 0.22, fontSize: 8, color: C.gray, align: 'right', margin: 0 });
 }
 
