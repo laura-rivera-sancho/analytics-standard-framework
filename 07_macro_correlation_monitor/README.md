@@ -1,8 +1,8 @@
 # Macro Correlation Monitor
 
-**Evidence status:** Live research dashboard with governed source metadata, tested analytical utilities, deterministic fallback behavior, and an executive readout.
+**Evidence status:** Working research dashboard with governed source metadata, tested analytical utilities, deterministic fallback behavior, and an executive readout.
 
-**Portfolio shortcut:** [Open the private live dashboard](https://macro-correlation-monitor.nachilu10.chatgpt.site)
+**Start here:** [Read the stakeholder interpretation](reports/stakeholder_readout.md) or [inspect the dashboard source](site).
 
 ## Business question
 

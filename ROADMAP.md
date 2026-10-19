@@ -17,7 +17,7 @@ The portfolio is organized around two complementary business domains:
 | 4. AI Agentic Frameworks | `agentic-ai-framework` | A controlled research and paper-trading workflow with mandatory human approval | **Planned** |
 | 5. Data Warehousing & Modeling | [`data-architecture-standard-framework`](https://github.com/laura-rivera-sancho/data-architecture-standard-framework) | A governed omnichannel marketing warehouse, marts, and semantic layer | **Evidence available** |
 
-The two remaining repository names are working names and will become links after those repositories are created. A future GitHub profile README will act as the portfolio landing page, while the [Data & AI Portfolio Roadmap](https://github.com/users/laura-rivera-sancho/projects/2) GitHub Project coordinates work across all five repositories.
+The two remaining repository names are working names and will become links after those repositories are created. The GitHub profile README acts as the public portfolio landing page; detailed implementation sequencing remains an internal delivery artifact.
 
 ## Repository strategy
 
@@ -190,9 +190,9 @@ The build order follows data and capability dependencies while delivering indepe
 
 This sequence is directional, not date-bound. Dates will be added only after delivery cadence and project scope are agreed.
 
-## GitHub Project workflow
+## Internal delivery workflow
 
-The [Data & AI Portfolio Roadmap](https://github.com/users/laura-rivera-sancho/projects/2) GitHub Project is the cross-repository execution layer. It should use:
+The internal cross-repository delivery board should use:
 
 - **Board:** Backlog, Planned, In progress, In review, and Complete
 - **Roadmap:** sequencing by Start date and Target date once dates are agreed

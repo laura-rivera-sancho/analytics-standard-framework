@@ -12,6 +12,10 @@
 
 This repository shows how I turn a high-value business question into a validated analysis, an evidence-calibrated recommendation, and an executive readout. It is designed for product, growth, operations, customer, and analytics leaders who need a defensible answer—not another dashboard without a decision.
 
+[![NovaPay executive result preview showing a synthetic checkout experiment's completion lift, checkout-time change, sample size, and rollout recommendation](01_ab_testing/reports/executive_summary.png)](01_ab_testing/reports/stakeholder_readout.md)
+
+*Synthetic demonstration evidence—[read the decision memo](01_ab_testing/reports/stakeholder_readout.md) or [review the full set of case studies](#demonstration-evidence-by-decision).*
+
 ## The decisions this work supports
 
 | Situation | Decision |
